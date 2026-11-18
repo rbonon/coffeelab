@@ -91,6 +91,8 @@ Coffee Lab SHALL support individual grinders, brewers, espresso machines, scales
 
 Coffee Lab SHALL preserve the grinder identity and setting used in each brew where those values are known.
 
+Coffee Lab SHALL require only a name and equipment type to save an equipment record.
+
 Acceptance criteria
 
 - Multiple grinders and brewers can be recorded in one account.
@@ -105,6 +107,10 @@ Coffee Lab SHALL support Pour Over, AeroPress, French Press, Manual Espresso, an
 Coffee Lab SHALL provide a selectable pour-over brewer with V60, Kalita Wave, Chemex, and Origami as an extendable starter list, distinguishing the brewer from the recipe's technique, pours, timing, temperature, and agitation.
 
 Coffee Lab SHALL support Experimental and Keeper recipe statuses, source links, attribution, adaptation notes, and explicit quantities and steps for each saved recipe.
+
+Coffee Lab SHALL allow a recipe to be saved with only its name and brewing category and enriched later with instructions and quantities.
+
+Coffee Lab SHALL default new recipes and variants to Experimental and allow the user to select Keeper status.
 
 Coffee Lab SHALL support exact targets and ranges for recipe parameters, including timing and temperature, alongside written step instructions.
 
@@ -127,6 +133,8 @@ Coffee Lab SHALL allow the user to update an experiment or save an adjusted reci
 Coffee Lab SHALL allow execution-specific adjustments, including ratio and grind setting, and support saving an execution's chosen settings as a recipe variant on user instruction, retaining links to its base recipe, coffee identity, relevant equipment, and originating execution.
 
 Coffee Lab SHALL suggest the coffee-specific variant's saved settings as a starting point for a new bag of the same coffee and allow adjustments for that bag.
+
+Coffee Lab SHALL require a name, base recipe, and coffee identity for a coffee-specific variant and inherit its brewing category from the base recipe.
 
 Acceptance criteria
 
@@ -163,6 +171,8 @@ Acceptance criteria
 - Recipe reading supports the five selected brewing categories.
 
 ## R08 — Brew records and gradual entry
+
+Coffee Lab SHALL require only a bag, brewing category, and date to save an execution, allowing other details to be added later.
 
 Coffee Lab SHALL save a self-contained recipe snapshot for a brew with a known recipe, including its steps, target quantities, temperature, and grind setting where supplied, alongside recorded execution data.
 
@@ -311,3 +321,54 @@ Acceptance criteria
 
 - The release checklist contains evidence of a successful restore test covering records and photos.
 - Backup frequency, retention, recovery objectives, and staging/production procedures are specified during operations design.
+
+## Proposed field matrix for review
+
+This matrix organizes agreed fields and minimum save requirements. AI-assisted entry should populate all available relevant details; the minimums allow partial records when information is unavailable. Account ownership and generated record identifiers are system-managed.
+
+| Record | Proposed minimum to save | Optional or conditional information |
+| --- | --- | --- |
+| Coffee identity | Name | Roaster, origin, producer/farm, variety, processing, roast level, packaging descriptors |
+| Individual bag | Name | Associated coffee identity, roast date, purchase date, price/currency, retailer, multiple packaging photos. Resolve or create the coffee identity when linking a variant across bags. |
+| Equipment | Name and equipment type | Model, notes, actual photos. Types are grinder, brewer, espresso machine, scale, kettle. |
+| Base recipe | Name and brewing category | Ordered steps, explicit quantities, target ranges, equipment/grind guidance, sources, attribution, adaptation notes. Status defaults to Experimental and may be changed to Keeper. |
+| Recipe variant | Name, base recipe, associated coffee identity; category inherited from base recipe | Saved chosen quantities, steps, equipment and grind settings, status, sources, adaptation notes. Retain an originating execution when created from one. |
+| Recorded execution | Bag, brewing category, date | Recipe/variant, planned snapshot, actual quantities and settings, elapsed time, temperature, photos, description, sensory scales, quick rating. These are optional so partial and casual entries remain possible. |
+
+Approved behavior for incomplete recipes: allow saving before steps or quantities are complete, preserving any supplied instructions and showing the targets that are available when reading it. Missing values remain empty, and viewing the recipe does not require execution logging.
+
+### Recipe and execution quantities
+
+| Field | Recipe representation | Execution representation |
+| --- | --- | --- |
+| Dose | Exact quantity or range | Recorded dose; optional |
+| Brewing water | Exact quantity or range | Recorded input; optional |
+| Bypass water | Explicit quantity, range, or top-up instruction | Recorded addition when supplied; optional |
+| Finished drink | Target quantity or range | Recorded final quantity; optional for filter brews |
+| Temperature | Exact target or range | Recorded temperature when supplied |
+| Time | Total target and step timing, each exact or a range | Recorded elapsed time and optional step observations |
+| Grinder | Suggested equipment and grinder-specific setting | Grinder identity and setting used when known |
+| Ratio | Derived from quantities with the agreed method-specific basis | Derived from recorded quantities, preserving the recipe's intended ratio separately |
+| Observations | Recipe guidance and adaptation notes | Optional free text, photos, four intensity scales, and three-choice overall enjoyment |
+
+Amounts carry units. Unknown and zero are distinct. A missing bypass amount does not imply zero; an explicit no-bypass instruction can represent that choice. Step timing can include a start time, duration, or written timing instruction, with the reference point stated when needed. Espresso timing should state whether pre-infusion is included.
+
+### Method-specific instructions
+
+| Category | Quantities and targets when supplied | Flexible written technique |
+| --- | --- | --- |
+| Pour Over | Dose, brewing water, temperature, grind, total time, pour additions and cumulative targets | Brewer, filter preparation, bloom, pour pattern, agitation and drawdown |
+| AeroPress | Dose, brewing water, bypass, final drink target, temperature, grind, immersion/settling/press timing | Orientation, swirl/stir instructions, pressing and top-up instructions |
+| French Press | Dose, brewing water, temperature, grind, steeping and settling timing, optional finished yield | Agitation, crust handling, plunging and decanting |
+| Manual Espresso | Dose, beverage yield, temperature, grind, pre-infusion and total time | Lever operation, pre-infusion and pressure instructions |
+| Espresso | Dose, beverage yield, temperature, grind, pre-infusion and total time | Machine preparation, pre-infusion and pressure instructions |
+
+These technique examples guide written instructions; they do not each require a separate database field.
+
+### Completed untracked execution
+
+A user may select a standard recipe to supply the execution quantities, then save the entry as completed and untracked. Those quantities count as actuals in ordinary statistics without estimate labels. Preserve the source snapshot and the untracked designation. No rating, photo, or follow-up measurement is required. If no recipe or quantity is supplied, keep unknown amounts empty.
+
+### Historical import check
+
+Reconcile this matrix with the complete Receitas Pour Over and Receita AeroPress export when it arrives. The current matrix does not establish that the older records or original photos have been fully retrieved.

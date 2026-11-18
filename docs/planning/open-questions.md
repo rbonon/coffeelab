@@ -5,7 +5,7 @@ The consolidated [requirements](../spec/requirements.md), [user stories](../spec
 ## Remaining Specification decisions
 
 1. Home priorities are approved: recipe retrieval first, journal and recent activity second. Detailed UI/UX is delegated to the agent. The target phone is Samsung S25 Ultra with Brave or Dia. Verify the available browser setup and validate long-recipe readability and screen-awake behavior during UI/UX.
-2. Complete the final required/optional field matrix using the confirmed coffee descriptors, name-only bag entry, ratio conventions, exact targets and ranges, pour increments and cumulative targets, separate water/bypass/yield fields, and flexible method-specific instructions. The approved starter brewers are V60, Kalita Wave, Chemex, and Origami. Reconcile the matrix with the full ChatGPT export when available.
+2. The field minimums and Experimental default are approved across the matrix, including coffee-specific variant name, base recipe, and coffee identity with inherited category. Reconcile the five-category matrix with the full ChatGPT export when available.
 3. Resolved: allow record correction and archive restoration; permanent deletion requires an explicit action and preserves existing brew snapshots when source records are removed.
 4. Resolved: recipe-result comparisons and overall ratings take priority. Brew count, coffee brewed, grounds used, brews over time, methods, and equipment summaries describe recorded executions only. Untracked brews use expected recipe quantities as actuals without estimate labels. Keep water input distinct from finished coffee in recipe fields.
 5. The assembled first-release scope and acceptance criteria are approved. Keep explicitly open choices visible as they are resolved.

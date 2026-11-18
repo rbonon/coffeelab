@@ -506,3 +506,27 @@ This file and `AGENTS.md` are the shared memory of this project across sessions 
 **Decision:** Include V60, Kalita Wave, Chemex, and Origami in the starter pour-over brewer list, with custom additions supported.
 
 **Rationale:** The user approved this starter list during Specification.
+
+### Minimal recipe entry
+
+**Decision:** Allow recipes to be saved with just a name and brewing category, with instructions and quantities added later.
+
+**Rationale:** The user approved saving partial recipes for later enrichment.
+
+### Default recipe status
+
+**Decision:** New recipes and variants default to Experimental. The user selects Keeper status when desired.
+
+**Rationale:** The user approved this default during Specification.
+
+### Equipment and execution minimum fields
+
+**Decision:** Require name and type to save equipment, and bag, brewing category, and date to save an execution. Other details can be added later.
+
+**Rationale:** The user approved these minimums for lightweight entry.
+
+### Variant minimums and rich AI entry
+
+**Decision:** A coffee-specific variant requires a name, base recipe, and coffee identity, with its category inherited from the base recipe. Minimum fields define the threshold for saving partial records. AI-assisted entry should include all available relevant information, preserving unavailable details as missing.
+
+**Rationale:** The user accepted the minimum-field approach and expects AI-assisted entry to usually supply comprehensive details.
