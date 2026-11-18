@@ -12,8 +12,8 @@ The shared pour-over source is captured locally with a readable transcript and s
 
 The source-field review added optional manufacture and best-before dates, original bag weight, altitude, storage notes, and historical identifier aliases. Source gaps remain an import-reconciliation follow-up.
 
-The four approved UI/UX tasks are #22–#25, linked from [screens](docs/spec/screens.md#approved-uiux-tasks). They are assigned to v0. #22 is In Progress; #23–#25 remain Todo.
+The four approved UI/UX tasks are #22–#25, linked from [screens](docs/spec/screens.md#approved-uiux-tasks). They are assigned to v0. #22 is complete; #23–#25 remain Todo.
 
-The six [user journeys](docs/spec/user-journeys.md) for #22 are implemented on `feat/map-recipe-brewing-result-journeys` and await human review. Next step: Review the journeys; archive and merge require explicit authorization. See [later-stage follow-ups](docs/planning/open-questions.md).
+The user approved the six [user journeys](docs/spec/user-journeys.md) for #22 and authorized archive and merge. Next step: #23 — Define screens and responsive visual direction. See [later-stage follow-ups](docs/planning/open-questions.md).
 
 [GitHub Project](https://github.com/users/rbonon/projects/8)
