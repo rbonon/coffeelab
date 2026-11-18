@@ -44,3 +44,9 @@ This file and `AGENTS.md` are the shared memory of this project across sessions 
 **Implications:**
 - This approval applies to the initial Foundation batch.
 - From Specification onward, each leaf uses its own GitHub issue, OpenSpec change, and feature branch.
+
+### Discuss architecture during Specification
+
+**Decision:** Discuss architecture alongside the requirements it affects. Use the Architecture stage to assemble and review the whole-system design.
+
+**Rationale:** Offline brewing, access, and historical recipe settings affect both user experience and technical design.

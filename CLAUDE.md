@@ -14,4 +14,4 @@ Follow `docs/planning/workflow.md`. Refresh the roadmap with `scripts/refresh-ro
 
 ## Milestone
 
-Foundation is in progress. Track the current stage in `STATUS.md`.
+Foundation is complete. Specification is active. Track the current stage in `STATUS.md`.

@@ -1,7 +1,7 @@
 # Coffee Lab status
 
-Foundation is in progress. Review the scaffold and confirm the initial landing before closing the stage.
+Foundation is complete. [#2 — Specification](https://github.com/rbonon/coffeelab/issues/2) is in progress.
 
-Next stage: Specification. Start with the [open questions](docs/planning/open-questions.md).
+Next step: Review the proposed Specification tasks, then discuss the brew workflow and its architecture implications using the [open questions](docs/planning/open-questions.md).
 
 [GitHub Project](https://github.com/users/rbonon/projects/8)
