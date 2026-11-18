@@ -4,4 +4,4 @@
 
 Run `scripts/refresh-roadmap.sh` after issue changes to regenerate the local roadmap and issue hierarchy from GitHub. Use `rbo-handoff` at chat boundaries and `rbo-catch-up` to resume.
 
-The planning portal is available locally in `docs/index.html`. To preview it with build metadata, run `python3 -m http.server --bind 127.0.0.1 --directory docs`. The private repository on GitHub Free cannot publish through Pages.
+The [planning portal](https://rbonon.github.io/coffeelab/) is published from `main:/docs` through GitHub Pages. To preview it locally, run `python3 -m http.server --bind 127.0.0.1 --directory docs`.
