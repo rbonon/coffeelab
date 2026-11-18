@@ -12,13 +12,13 @@ The user delegates detailed layout and interaction choices to the agent, using t
 
 The user intends to use a Samsung S25 Ultra with Brave or Dia. Validate recipe readability and screen-awake behavior on the actual available browser setup during UI/UX.
 
-## Proposed UI/UX tasks for review
+## Approved UI/UX tasks
 
-| Proposed task | Deliverable |
+| Task | Deliverable |
 | --- | --- |
-| [Design] Map recipe selection, brewing, and result-entry journeys | Journeys for routine Keeper reading, experiment execution, ChatGPT entry, and app correction; no mandatory logging |
-| [Design] Define screens and responsive visual direction | Screen inventory, navigation, recipe-first home, journal/comparison layouts, and use of the existing mockup |
-| [Design] Design recipe reading for the target phone | Long-recipe step presentation, readable quantities, English/pt-BR layouts, independent units, and screen-awake behavior |
-| [Design] Define reusable components and validate the UI | Design tokens and components, entry forms, empty/partial states, comparison patterns, and user visual validation |
+| [#22 — Map recipe selection, brewing, and result-entry journeys](https://github.com/rbonon/coffeelab/issues/22) | Journeys for routine Keeper reading, experiment execution, ChatGPT entry, and app correction; no mandatory logging |
+| [#23 — Define screens and responsive visual direction](https://github.com/rbonon/coffeelab/issues/23) | Screen inventory, navigation, recipe-first home, journal/comparison layouts, and use of the existing mockup |
+| [#24 — Design recipe reading for the target phone](https://github.com/rbonon/coffeelab/issues/24) | Long-recipe step presentation, readable quantities, English/pt-BR layouts, independent units, and screen-awake behavior |
+| [#25 — Define reusable components and validate the UI](https://github.com/rbonon/coffeelab/issues/25) | Design tokens and components, entry forms, empty/partial states, comparison patterns, and user visual validation |
 
-Propose these under #3 — UI/UX before creating its leaf issues. The user has delegated detailed layout choices. Validate concrete designs at the relevant review points.
+These approved tasks are sub-issues of #3 — UI/UX, assigned to milestone v0 and initially Todo. The user has delegated detailed layout choices. Use rbo-create-change to start a leaf and validate concrete designs at the relevant review points.

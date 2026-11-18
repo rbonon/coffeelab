@@ -15,4 +15,4 @@
 | Execution | Build and validate releases | Assigned by release |
 | Evolution | Maintain and extend the product | Assigned by release |
 
-Foundation and Specification are complete. UI/UX is the current stage, with its leaf tasks proposed for review. Close each definition stage before opening the next. Build starts after all v0 definition work is approved. Validate each release on staging before production promotion.
+Foundation and Specification are complete. UI/UX is the current stage, with approved leaf tasks #22–#25 ready to start. Close each definition stage before opening the next. Build starts after all v0 definition work is approved. Validate each release on staging before production promotion.

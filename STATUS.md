@@ -12,6 +12,8 @@ The shared pour-over source is captured locally with a readable transcript and s
 
 The source-field review added optional manufacture and best-before dates, original bag weight, altitude, storage notes, and historical identifier aliases. Source gaps remain an import-reconciliation follow-up.
 
-Next step: Review the four proposed UI/UX tasks in [screens](docs/spec/screens.md#proposed-uiux-tasks-for-review), then create the approved leaf issues and use the issue/branch/OpenSpec lifecycle. See [later-stage follow-ups](docs/planning/open-questions.md).
+The four approved UI/UX tasks are #22–#25, linked from [screens](docs/spec/screens.md#approved-uiux-tasks). They are Todo on the board and assigned to v0.
+
+Next step: Start #22 — Map recipe selection, brewing, and result-entry journeys through rbo-create-change and its proposal review. See [later-stage follow-ups](docs/planning/open-questions.md).
 
 [GitHub Project](https://github.com/users/rbonon/projects/8)

@@ -11,7 +11,7 @@ The functional requirements, field minimums, ratio presentation, optional sensor
 - Use the approved recipe-first priorities and delegated layout choices to produce the journeys, screen inventory, and reusable design components.
 - Validate long-recipe readability and screen-awake behavior on the Samsung S25 Ultra with the available Brave or Dia browser.
 - Check English/pt-BR layouts, independent measurement settings, incomplete entries, optional rating controls, and routine Keeper use without logging.
-- Review the proposed tasks in `docs/spec/screens.md` before creating UI/UX leaf issues.
+- Approved UI/UX tasks #22–#25 are linked in `docs/spec/screens.md`. Start each leaf through the issue/branch/OpenSpec lifecycle.
 
 ## Historical source verification
 
