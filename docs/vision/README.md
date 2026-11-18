@@ -36,4 +36,4 @@ The candidates are staged data for the future application. They have not been im
 
 ## Field audit
 
-The source supports the current dose, water, temperature, grind, timing, range, pour-target, technique, photo, and narrative-observation fields. It additionally exposes manufacture date, best-before date, original bag weight, origin altitude, storage notes, and corrected historical identifiers. These are review candidates in the import file, pending Specification review. Original bag weight does not require automatic remaining-inventory tracking.
+The source supports the current dose, water, temperature, grind, timing, range, pour-target, technique, photo, and narrative-observation fields. The Specification field review added optional manufacture date, best-before date, original bag weight, origin altitude, storage notes, and corrected historical identifiers. The staged import file preserves the source evidence for these additions. Original bag weight does not require automatic remaining-inventory tracking.

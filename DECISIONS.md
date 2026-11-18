@@ -544,3 +544,11 @@ This file and `AGENTS.md` are the shared memory of this project across sessions 
 **Rationale:** The user explicitly instructed the agent to recover the material from the shared link as the data source for Coffee Lab.
 
 **Implications:** Preserve message IDs, tables, corrections, and missing-content references. Normalize B02 to its corrected B01 identity and retain plans separately from executions. The shared rendering omits some user text and original uploads, so the import remains staged with documented coverage limits.
+
+### Source-field review and Specification close-out
+
+**Decision:** Following the user's instruction to back up sources, finish the field review, complete Specification, and prepare UI/UX, include optional manufacture date, best-before date, original bag weight, origin altitude, storage notes, and historical identifier aliases. Track unavailable original images and user text as an import-reconciliation follow-up.
+
+**Rationale:** These fields and corrections are supported by the recovered source. Keeping them preserves useful information without expanding into inventory automation.
+
+**Implications:** Specification defines import behavior and acceptance criteria; source completeness is verified during actual import. The stage's documentation was produced through user-approved checkpoints on main rather than per-leaf OpenSpec changes. Preserve that history honestly. Subsequent UI/UX leaves follow the issue, branch, and OpenSpec lifecycle.

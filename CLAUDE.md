@@ -14,4 +14,4 @@ Follow `docs/planning/workflow.md`. Refresh the roadmap with `scripts/refresh-ro
 
 ## Milestone
 
-Foundation is complete. Specification is active, with `docs/spec/requirements.md`, `user-stories.md`, and `non-goals.md` aligned around recipe learning, variants across bags, and selective execution logging. Railway hosting is selected. English/pt-BR and independent measurement preferences are required. Track the current stage in `STATUS.md`.
+Foundation and Specification are complete. UI/UX is current with four proposed tasks in `docs/spec/screens.md`. The spec centers on recipe learning, variants across bags, and selective execution logging. Railway hosting is selected. English/pt-BR and independent measurement preferences are required. Historical source gaps are tracked for import reconciliation. Track the next action in `STATUS.md`.

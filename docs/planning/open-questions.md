@@ -2,13 +2,16 @@
 
 The consolidated [requirements](../spec/requirements.md), [user stories](../spec/user-stories.md), and [first-release boundaries](../spec/non-goals.md) reflect the approved direction toward recipe learning, coffee-specific variants, and selective execution logging. Approved interview choices are recorded in [DECISIONS.md](../../DECISIONS.md).
 
-## Remaining Specification decisions
+## Specification review complete
 
-1. Home priorities are approved: recipe retrieval first, journal and recent activity second. Detailed UI/UX is delegated to the agent. The target phone is Samsung S25 Ultra with Brave or Dia. Verify the available browser setup and validate long-recipe readability and screen-awake behavior during UI/UX.
-2. The field minimums and Experimental default are approved across the matrix, including coffee-specific variant name, base recipe, and coffee identity with inherited category. Reconcile the five-category matrix with the full ChatGPT export when available.
-3. Resolved: allow record correction and archive restoration; permanent deletion requires an explicit action and preserves existing brew snapshots when source records are removed.
-4. Resolved: recipe-result comparisons and overall ratings take priority. Brew count, coffee brewed, grounds used, brews over time, methods, and equipment summaries describe recorded executions only. Untracked brews use expected recipe quantities as actuals without estimate labels. Keep water input distinct from finished coffee in recipe fields.
-5. The assembled first-release scope and acceptance criteria are approved. Keep explicitly open choices visible as they are resolved.
+The functional requirements, field minimums, ratio presentation, optional sensory entry, archive/deletion behavior, recipe variants, and recorded-execution statistics are defined. Source-backed optional fields are included. No product interview question remains open for this stage.
+
+## UI/UX follow-ups
+
+- Use the approved recipe-first priorities and delegated layout choices to produce the journeys, screen inventory, and reusable design components.
+- Validate long-recipe readability and screen-awake behavior on the Samsung S25 Ultra with the available Brave or Dia browser.
+- Check English/pt-BR layouts, independent measurement settings, incomplete entries, optional rating controls, and routine Keeper use without logging.
+- Review the proposed tasks in `docs/spec/screens.md` before creating UI/UX leaf issues.
 
 ## Historical source verification
 
@@ -20,7 +23,7 @@ The current specification covers brewing and bypass water, finished yield, exact
 - Brewer model and capacity constraints. The source questions whether the larger adapted water quantity fits an AeroPress Original.
 - Preserve the distinction between the source method, proposed adaptations, and the user's selected version when importing recipes.
 
-The shared Receitas Pour Over link now supplies accessible earlier recipe and execution content. See the [capture, coverage report, and import candidates](../vision/README.md#historical-pour-over-source). The capture preserves all 177 message positions and 63 tables; 75 user bodies and original bytes for 17 uploaded-image references remain unavailable. Review manufacture date versus roast date, best-before date, original bag weight, altitude, storage notes, and corrected historical identifiers as additional source fields. Resolve historical source gaps before final application import.
+The shared Receitas Pour Over link now supplies accessible earlier recipe and execution content. See the [capture, coverage report, and import candidates](../vision/README.md#historical-pour-over-source). The capture preserves all 177 message positions and 63 tables; 75 user bodies and original bytes for 17 uploaded-image references remain unavailable. The field audit includes optional manufacture date distinct from roast date, best-before date, original bag weight, altitude, storage notes, and corrected historical identifiers. Resolve historical source gaps before final application import.
 
 ## Architecture and later-stage questions
 

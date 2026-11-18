@@ -1,6 +1,6 @@
 # User stories
 
-Draft consolidated from the user-confirmed workflow. Each story refers to acceptance criteria in the [product specification](requirements.md).
+Consolidated from the user-confirmed workflow for the completed Specification stage. Each story refers to acceptance criteria in the [product specification](requirements.md).
 
 ## U01 — Develop an experiment with AI
 

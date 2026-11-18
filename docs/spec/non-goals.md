@@ -1,6 +1,6 @@
 # First-release boundaries
 
-Draft for review alongside the [product specification](requirements.md). These boundaries reflect the interview and preserve open decisions.
+First-release boundaries for the completed [product specification](requirements.md), reflecting the interview and recorded decisions.
 
 ## Deferred by agreement
 
@@ -33,4 +33,4 @@ These were mentioned or remain undecided and are excluded from the current draft
 
 ## Technical verification before implementation planning
 
-Prove the intended ChatGPT connection can authorize access, save structured records, and transfer original photos. Confirm phone recipe readability and screen-awake behavior on the intended device/browser. Resolve the remaining [open questions](../planning/open-questions.md) before calling Specification complete.
+Prove the intended ChatGPT connection can authorize access, save structured records, and transfer original photos during technical design. Validate phone recipe readability and screen-awake behavior during UI/UX. The [follow-ups](../planning/open-questions.md) identify these checks and the source reconciliation needed before actual historical import.

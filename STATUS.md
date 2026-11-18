@@ -1,6 +1,6 @@
 # Coffee Lab status
 
-Foundation is complete. [#2 — Specification](https://github.com/rbonon/coffeelab/issues/2) is in progress.
+Foundation and [#2 — Specification](https://github.com/rbonon/coffeelab/issues/2) are complete. [#3 — UI/UX](https://github.com/rbonon/coffeelab/issues/3) is the current stage.
 
 The user approved the consolidated [product specification](docs/spec/requirements.md), [user stories](docs/spec/user-stories.md), and [first-release boundaries](docs/spec/non-goals.md).
 
@@ -10,6 +10,8 @@ The required/optional field matrix and recipe defaults are approved. Minimums su
 
 The shared pour-over source is captured locally with a readable transcript and structured historical import candidates. See the [source inventory and coverage report](docs/vision/README.md#historical-pour-over-source). The shared rendering omits 75 user-message bodies and the original bytes for 17 uploaded-image references.
 
-Next step: Review the additional source fields and import corrections, then resolve source gaps as the original export becomes available. Method-specific ratios, flexible steps, and the starter brewer list are approved. See [Specification questions](docs/planning/open-questions.md). The six Specification tasks remain open pending completion of their remaining scope.
+The source-field review added optional manufacture and best-before dates, original bag weight, altitude, storage notes, and historical identifier aliases. Source gaps remain an import-reconciliation follow-up.
+
+Next step: Review the four proposed UI/UX tasks in [screens](docs/spec/screens.md#proposed-uiux-tasks-for-review), then create the approved leaf issues and use the issue/branch/OpenSpec lifecycle. See [later-stage follow-ups](docs/planning/open-questions.md).
 
 [GitHub Project](https://github.com/users/rbonon/projects/8)

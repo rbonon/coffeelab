@@ -1,6 +1,6 @@
 # Coffee Lab product specification
 
-Consolidated from the product interview and initial review on 2026-11-18, then aligned with the user's approved direction toward recipe learning, coffee-specific variants, and selective execution logging. Specification remains in progress while the explicitly documented [open questions](../planning/open-questions.md) are resolved.
+Specification completed on 2026-11-18 from the product interview, approved reviews, and recovered source-field audit. The product centers on recipe learning, coffee-specific variants, and selective execution logging. UI/UX, technical design, and import-reconciliation follow-ups are tracked in [open questions](../planning/open-questions.md).
 
 [User stories](user-stories.md) · [First-release boundaries](non-goals.md) · [Decision history](../../DECISIONS.md) · [Source discussion](../vision/receitas-pour-over.md)
 
@@ -75,6 +75,8 @@ Coffee Lab SHALL associate individual bags with a reusable coffee identity so co
 
 Coffee Lab SHALL support optional roaster, origin, producer or farm, variety, processing, roast level, and packaging tasting descriptors, keeping packaging descriptors distinct from the user's tasting observations.
 
+Coffee Lab SHALL support optional origin altitude on the coffee record and manufacture date, best-before date, original bag weight, and storage notes on the individual bag. Manufacture date SHALL remain distinct from roast date.
+
 Acceptance criteria
 
 - Separate purchases can have separate roast and purchase details.
@@ -84,6 +86,8 @@ Acceptance criteria
 - A brew references the individual bag used.
 - An unavailable roast date or descriptive field stays empty.
 - Packaging descriptors and the user's own tasting observations can be viewed independently.
+- Vô Zico's manufacture date can be saved while its unknown roast date stays empty.
+- Stardust's 250 g original bag weight and 1,100 m origin altitude can be retained without enabling automatic remaining-inventory deduction.
 
 ## R05 — Equipment
 
@@ -283,6 +287,8 @@ Acceptance criteria
 
 Coffee Lab SHALL support initial import of existing coffee records, recipes, and brews from Receitas Pour Over as the primary source and Receita AeroPress as the secondary source, retaining provenance and preserving unavailable values.
 
+Coffee Lab SHALL preserve corrected historical identifiers and aliases during import and separate planned or superseded recipes from recorded executions, preventing duplicate executions from renamed identifiers.
+
 Coffee Lab SHALL provide a full export of the authorized account's records and original photos.
 
 Coffee Lab SHALL provide readable PDFs of full recipe details and journal records, including relevant instructions, planned and actual values, notes, ratings, and photos, with photos included by default and an option to omit them.
@@ -293,6 +299,8 @@ Acceptance criteria
 
 - Import candidates distinguish recorded brews from proposed recipes and illustrative mockup values.
 - Available originals and missing source data are identified before importing.
+- The historical B02-to-B01 correction creates one execution with its former identifier retained as an alias.
+- A03 and A05 plans and the superseded Kasuya A06 assignment remain distinct from the recorded Hoffmann A06 execution.
 - A full account export includes its records and original photos.
 - A filtered journal PDF includes the matching records only.
 - Both PDF languages and measurement preferences in R03 are respected.
@@ -328,8 +336,8 @@ This matrix organizes agreed fields and minimum save requirements. AI-assisted e
 
 | Record | Minimum to save | Optional or conditional information |
 | --- | --- | --- |
-| Coffee identity | Name | Roaster, origin, producer/farm, variety, processing, roast level, packaging descriptors |
-| Individual bag | Name | Associated coffee identity, roast date, purchase date, price/currency, retailer, multiple packaging photos. Resolve or create the coffee identity when linking a variant across bags. |
+| Coffee identity | Name | Roaster, origin, origin altitude, producer/farm, variety, processing, roast level, packaging descriptors |
+| Individual bag | Name | Associated coffee identity, roast date, manufacture date, best-before date, original bag weight, storage notes, purchase date, price/currency, retailer, multiple packaging photos. Resolve or create the coffee identity when linking a variant across bags. |
 | Equipment | Name and equipment type | Model, notes, actual photos. Types are grinder, brewer, espresso machine, scale, kettle. |
 | Base recipe | Name and brewing category | Ordered steps, explicit quantities, target ranges, equipment/grind guidance, sources, attribution, adaptation notes. Status defaults to Experimental and may be changed to Keeper. |
 | Recipe variant | Name, base recipe, associated coffee identity; category inherited from base recipe | Saved chosen quantities, steps, equipment and grind settings, status, sources, adaptation notes. Retain an originating execution when created from one. |
