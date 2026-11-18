@@ -65,5 +65,5 @@
 - Use one GitHub issue, one `feat/<change-name>` branch, and one OpenSpec change per leaf. Epics group issues.
 - Ask one design question at a time. Refer to issues by number and title.
 - Use the `coffeelab` GitHub Project. Regenerate `ROADMAP.md` and `docs/planning/board-hierarchy.md` using the REST refresh script. Use bounded Project writes and stop on API errors.
-- Use English for repository planning, portal copy, and Stage values. English is the bootstrap default for the app UI, subject to the product specification.
+- Use English for repository planning, portal copy, and Stage values. Support English and pt-BR in the app, validation messages, and PDF-generated labels from the first release. Preserve the original language of recipes and personal notes.
 - Create GitHub Releases after explicit user confirmation.

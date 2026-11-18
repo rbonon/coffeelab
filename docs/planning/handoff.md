@@ -1,7 +1,7 @@
 # Handoff — coffeelab — 2026-11-18
 
 **Updated:** 2026-11-18T12:25:33-03:00
-**Status:** active
+**Status:** consumed
 
 The GitHub Project and `STATUS.md` record the current stage and next work.
 
