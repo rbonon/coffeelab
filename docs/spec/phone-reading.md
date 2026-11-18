@@ -14,7 +14,7 @@ The prototype's five-category fixtures and long/partial examples are synthetic l
 
 ## Concrete prototype
 
-Open [recipe-reading.html](../prototypes/recipe-reading.html) through an HTTP(S) server. Choose a recipe on the opening screen. A small gear opens a separate Settings screen containing language, weight and temperature fields, with a Back action. Configuration fields stay off the opening and focused-reading screens. The reading screen contains the title, supplied target tiles, one instruction, paging controls, screen-awake status and exit.
+Open [recipe-reading.html](../prototypes/recipe-reading.html) through an HTTP(S) server. The opening screen trials a small centered bean-and-drop logo with the Coffee Lab wordmark. Branding appears here only; settings and focused reading retain compact navigation without the logo. Choose a recipe on the opening screen. A small gear opens a separate Settings screen containing language, weight and temperature fields, with a Back action. Configuration fields stay off the opening and focused-reading screens. The reading screen contains the title, supplied target tiles, one instruction, paging controls, screen-awake status and exit.
 
 The layout uses the existing warm palette via semantic CSS properties and roomy touch controls. The page is allowed to overflow at enlarged text or unusually small viewports so content is never clipped. That fallback is not a passed no-scroll check. Default-size readability and absence of required scrolling on the target phone must be verified by the user. Do not reduce text size or hide an instruction merely to claim a fit.
 

@@ -82,7 +82,7 @@ if (typeof document !== 'undefined') {
   const wake = new ReadingWakeLock(globalThis.isSecureContext ? navigator.wakeLock : null, state => { wakeState = state; $('wake-status').textContent = t(wakeLabels[state]); });
   const labels = {
     'demo': ['Illustrative recipes', 'Receitas ilustrativas'],
-    'setup-title': ['What shall we brew?', 'Qual café vamos preparar?'],
+    'setup-title': ['Coffee Lab', 'Coffee Lab'],
     'intro': ['Choose a recipe to begin.', 'Escolha uma receita para começar.'],
     'settings-title': ['Settings', 'Configurações'], 'settings-back': ['Back', 'Voltar'],
     'language-label': ['Language', 'Idioma'], 'method-label': ['Recipe', 'Receita'],

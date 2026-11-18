@@ -564,3 +564,9 @@ This file and `AGENTS.md` are the shared memory of this project across sessions 
 **Decision:** The user requests a refined, minimalist, elegant design. A simple gear icon opens a separate, simple configuration screen for language and units. These fields must not be primary home-screen elements.
 
 **Implications:** Recipe selection remains the opening focus. The #24 prototype now follows this arrangement; broader visual refinement remains iterative and human validation is pending.
+
+## 2026-11-18 — Home-only centered branding trial
+
+**Decision:** Try a centered vertical logo treatment on mobile Home only. Other screens reserve space for their own title, navigation and content, especially brewing instructions.
+
+**Implications:** The prototype trials the bean-and-drop concept with a live Coffee Lab wordmark and a top-right settings gear. This is a visual trial, not final logo approval.
