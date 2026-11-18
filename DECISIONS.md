@@ -552,3 +552,9 @@ This file and `AGENTS.md` are the shared memory of this project across sessions 
 **Rationale:** These fields and corrections are supported by the recovered source. Keeping them preserves useful information without expanding into inventory automation.
 
 **Implications:** Specification defines import behavior and acceptance criteria; source completeness is verified during actual import. The stage's documentation was produced through user-approved checkpoints on main rather than per-leaf OpenSpec changes. Preserve that history honestly. Subsequent UI/UX leaves follow the issue, branch, and OpenSpec lifecycle.
+
+## 2026-11-18 — Remaining UI/UX workflow authorization
+
+**Decision:** The user authorized proposals, apply, commits, pushes, archives, and merges for Coffee Lab's remaining UI/UX work without intermediate approval. Pause for material product decisions or human visual checks. Continue announcing every skill used.
+
+**Implications:** This project-scoped authorization overrides routine approval gates in the applicable skills for issues #23–#25. It does not count as a passed device or visual check, and does not extend to later technical or implementation stages. The user approved #23's screen plan before granting this authorization.
