@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs';
 import assert from 'node:assert/strict';
 import { examples, weightValue, temperatureValue, ratioValue, ReadingWakeLock } from '../docs/assets/recipe-reading.mjs';
 assert.ok(Math.abs(weightValue(400, 'oz') * 28.349523125 - 400) < 1e-9);
@@ -33,3 +34,17 @@ const late = new ReadingWakeLock({request: () => new Promise(r => { resolve = r;
 const pending = late.start(); await late.stop(); resolve(lateLock); await pending;
 assert.ok(lateLock.released); assert.equal(late.lock, null); assert.equal(states.at(-1), 'off');
 console.log('PASS: bilingual fixtures, equivalent conversions, method ratio bases, and wake-lock lifecycle including late completion');
+
+const captured = JSON.parse(readFileSync(new URL('../docs/vision/receitas-pour-over-import.json', import.meta.url)));
+for (const recipe of Object.values(examples).filter(recipe => recipe.sourceKey)) {
+  const original = captured.recipes.find(item => item.source_key === recipe.sourceKey);
+  assert.ok(original);
+  assert.equal(recipe.dose, original.parameters.dose_g);
+  assert.equal(recipe.water, original.parameters.brewing_water_g);
+  assert.equal(recipe.temp, original.parameters.temperature_c);
+  assert.equal(recipe.grinder, original.parameters.grinder_setting);
+  assert.deepEqual(recipe.sourceRefs, original.source_refs);
+  assert.equal(recipe.steps.reduce((sum, step) => sum + (step.add ?? 0), 0), recipe.water);
+  for (const step of recipe.steps) assert.equal(step.text[0], step.text[1], 'Source language must be retained');
+}
+console.log('PASS: three source-derived recipes match captured parameters/provenance and retain Portuguese instructions');

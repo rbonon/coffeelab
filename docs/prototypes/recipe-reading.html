@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Recipe reading · Coffee Lab design</title>
-  <link rel="stylesheet" href="../assets/recipe-reading.css?v=quiet-picker-1">
-  <script type="module" src="../assets/recipe-reading.mjs?v=quiet-picker-1"></script>
+  <link rel="stylesheet" href="../assets/recipe-reading.css?v=source-recipes-1">
+  <script type="module" src="../assets/recipe-reading.mjs?v=source-recipes-1"></script>
 </head>
 <body>
   <main>
@@ -17,17 +17,17 @@
         <img class="home-logo" src="../assets/coffee-lab-filter-concept.png" alt="" width="80" height="80">
         <h1 id="setup-title">Coffee Lab</h1>
       </div>
-      <p class="eyebrow" id="demo">Illustrative recipes</p>
+      <p class="eyebrow" id="demo">From your recipe journal</p>
       <p id="intro">Choose a recipe to begin.</p>
       <div class="recipe-choice">
         <span id="method-label" class="field-label">Recipe</span>
-        <input type="hidden" id="method" value="pour">
+        <input type="hidden" id="method" value="hoffmann-stardust">
         <details id="recipe-picker">
-          <summary aria-labelledby="method-label selected-recipe"><span id="selected-recipe">Pour Over</span><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="m5 8 5 5 5-5"/></svg></summary>
+          <summary aria-labelledby="method-label selected-recipe"><span id="selected-recipe">Hoffmann · Stardust</span><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="m5 8 5 5 5-5"/></svg></summary>
           <div id="recipe-options" class="recipe-options" aria-labelledby="method-label"></div>
         </details>
       </div>
-      <button id="start" class="primary">Read recipe</button>
+      <button id="start" class="reading-action">Read recipe <span aria-hidden="true">→</span></button>
     </section>
     <section id="configuration" hidden aria-labelledby="settings-title">
       <header><button id="close-settings">← <span id="settings-back">Back</span></button></header>
@@ -42,6 +42,7 @@
     <section id="reader" hidden aria-labelledby="recipe-title">
       <header><button id="exit">← <span id="exit-label">Recipes</span></button><span class="eyebrow" id="reading-label">READING ONLY</span></header>
       <h1 id="recipe-title"></h1>
+      <p id="recipe-context" class="recipe-context"></p>
       <div id="quantities" class="quantities"></div>
       <article id="instruction" tabindex="-1" aria-labelledby="step-title">
         <p id="progress" class="eyebrow"></p>

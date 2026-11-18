@@ -582,3 +582,9 @@ This file and `AGENTS.md` are the shared memory of this project across sessions 
 **Decision:** The user moved keep-screen-awake control into Settings and explicitly removed its status markers from every page. Home recipe selection should feel light and elegant rather than using the native browser dropdown.
 
 **Implications:** The prototype uses a custom disclosure/button picker with keyboard focus and Escape support. The settings switch governs wake-lock requests during reading; lifecycle remains tested internally without visible status. This supersedes the earlier visible-status prototype design. Actual-device timeout validation remains pending.
+
+## 2026-11-18 — Source-based recipe preview and understated reading action
+
+**Decision:** The user requested a smaller, quieter button and actual recipes from the captured source for the prototype.
+
+**Implications:** Home uses a compact text-style reading action and three source-derived pour-over recipes: Hoffmann/Stardust, Hoffmann/Café do Vô Zico, and revised A02. Preserve planned versus measured quantities, source references, Portuguese instruction language and unknown values. Synthetic category fixtures remain test-only, outside Home selection.

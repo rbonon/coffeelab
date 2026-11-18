@@ -46,7 +46,10 @@ small { color: var(--reading-muted); }
 #setup h1 { font: 400 clamp(2.4rem, 9vw, 3rem)/1.1 Georgia, serif; letter-spacing: -.045em; margin: .5rem 0 0; }
 #intro { color: var(--reading-muted); margin: .5rem 0 1.75rem; text-align: center; }
 .recipe-choice { margin-bottom: 1rem; }
-#start { width: 100%; }
+#start { display: block; width: auto; min-height: 2.75rem; margin: 1.25rem auto 0; padding: .5rem 1rem; border: 0; border-radius: .4rem; background: transparent; color: var(--reading-accent); font-size: .95rem; font-weight: 500; }
+#start:hover { background: var(--reading-surface); }
+.recipe-context { margin: -.35rem 0 0; font-size: .85rem; color: var(--reading-muted); }
+.recipe-context:empty { display: none; }
 #configuration h1 { margin-top: 2rem; }
 
 #setup { max-width: 26rem; margin-inline: auto; }
@@ -66,3 +69,5 @@ small { color: var(--reading-muted); }
 .toggle-setting input::after { content: ''; display: block; position: absolute; top: .2rem; left: .2rem; width: 1.2rem; height: 1.2rem; border-radius: 50%; background: var(--reading-surface); }
 .toggle-setting input:checked { background: var(--reading-accent); }
 .toggle-setting input:checked::after { transform: translateX(1.2rem); }
+
+#start::after { content: ' →'; margin-left: .35rem; }

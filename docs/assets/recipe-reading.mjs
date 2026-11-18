@@ -1,5 +1,6 @@
+import { sourceRecipes } from './source-recipes.mjs';
 // Illustrative layout fixtures. These are not imported recipes or historical records.
-export const examples = {
+const illustrativeExamples = {
   pour: { title: ['Pour Over · five pours', 'Coado · cinco despejos'], dose: 15, water: 250, temp: 96, steps: Array.from({length: 5}, (_, i) => ({ title: [`Pour ${i + 1}`, `Despejo ${i + 1}`], text: ['Add water gently, then allow it to drain. Follow the timing of your recipe on the scale.', 'Adicione a água suavemente e deixe escoar. Siga os tempos da sua receita no cronômetro da balança.'], add: 50, cumulative: (i + 1) * 50 })) },
   aero: { title: ['AeroPress · with bypass', 'AeroPress · com diluição'], dose: 20, water: 200, yield: 400, temp: 90, steps: [
     { title: ['Immerse', 'Infusão'], text: ['Add the brewing water. Use the scale timer to follow the recipe’s immersion interval.', 'Adicione a água de infusão. Acompanhe o intervalo de infusão da receita no cronômetro da balança.'] },
@@ -25,6 +26,7 @@ export const examples = {
     { title: ['Prepare · 3 of 3', 'Preparo · 3 de 3'], text: ['Follow the written pouring sequence. Each addition and cumulative target must remain distinct. Continue manually when ready; advancing a card does not save a brew.', 'Siga a sequência escrita de despejos. A quantidade adicionada e a meta acumulada devem permanecer distintas. Avance quando desejar; mudar de cartão não salva uma extração.'] }
   ] }
 };
+export const examples = { ...sourceRecipes, ...illustrativeExamples };
 export const weightValue = (g, unit) => unit === 'oz' ? g / 28.349523125 : g;
 export const temperatureValue = (c, unit) => unit === 'F' ? c * 9 / 5 + 32 : c;
 export const ratioValue = (dose, amount) => dose > 0 && amount != null ? amount / dose : null;
@@ -73,7 +75,7 @@ if (typeof document !== 'undefined') {
   const mass = g => `${num(weightValue(g, $('weight').value))} ${$('weight').value}`;
   const wake = new ReadingWakeLock(globalThis.isSecureContext ? navigator.wakeLock : null, () => {});
   const labels = {
-    'demo': ['Illustrative recipes', 'Receitas ilustrativas'],
+    'demo': ['From your recipe journal', 'Do seu caderno de receitas'],
     'setup-title': ['Coffee Lab', 'Coffee Lab'],
     'intro': ['Choose a recipe to begin.', 'Escolha uma receita para começar.'],
     'settings-title': ['Settings', 'Configurações'], 'settings-back': ['Back', 'Voltar'],
@@ -89,7 +91,7 @@ if (typeof document !== 'undefined') {
     Object.entries(labels).forEach(([id,pair]) => $(id).textContent = t(pair));
     $('selected-recipe').textContent = t(examples[$('method').value].title);
     $('recipe-options').replaceChildren();
-    for (const [key, recipe] of Object.entries(examples)) {
+    for (const [key, recipe] of Object.entries(sourceRecipes)) {
       const option = document.createElement('button');
       option.type = 'button'; option.textContent = t(recipe.title);
       option.setAttribute('aria-pressed', String(key === $('method').value));
@@ -103,6 +105,7 @@ if (typeof document !== 'undefined') {
     $('open-settings').setAttribute('aria-label',t(['Settings','Configurações']));
     const recipe = examples[$('method').value];
     $('recipe-title').textContent = t(recipe.title);
+    $('recipe-context').textContent = recipe.grinder ? `V60 · JX-Pro ${recipe.grinder}` : '';
     $('quantities').replaceChildren();
     function tile(label, value) {
       const el = document.createElement('div'); el.className = 'quantity';
@@ -118,7 +121,7 @@ if (typeof document !== 'undefined') {
     if (ratioValue(recipe.dose, basis) != null) tile(recipe.water != null ? ['Dose : brewing water', 'Dose : água de infusão'] : ['Dose : drink', 'Dose : bebida'], `1:${num(ratioValue(recipe.dose, basis))}`);
     if (recipe.water != null && recipe.yield != null) tile(['Dose : final drink', 'Dose : bebida final'], `1:${num(ratioValue(recipe.dose, recipe.yield))}`);
     const step = recipe.steps[page];
-    $('progress').textContent = t([`Instruction ${page+1} of ${recipe.steps.length}`, `Instrução ${page+1} de ${recipe.steps.length}`]);
+    $('progress').textContent = t([`Instruction ${page+1} of ${recipe.steps.length}`, `Instrução ${page+1} de ${recipe.steps.length}`]) + (step.time ? ` · ${step.time}` : '');
     $('step-title').textContent = t(step.title); $('step-text').textContent = t(step.text);
     $('step-target').textContent = step.add != null ? t([`Add ${mass(step.add)} → reach ${mass(step.cumulative)}`, `Adicione ${mass(step.add)} → atinja ${mass(step.cumulative)}`]) : step.final != null ? t([`Final drink: ${mass(step.final)}`, `Bebida final: ${mass(step.final)}`]) : '';
     $('previous').disabled = page === 0; $('next').disabled = page === recipe.steps.length - 1;
