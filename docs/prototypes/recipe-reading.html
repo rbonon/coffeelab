@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Recipe reading · Coffee Lab design</title>
+  <link rel="stylesheet" href="../assets/recipe-reading.css">
+  <script type="module" src="../assets/recipe-reading.mjs"></script>
+</head>
+<body>
+  <main>
+    <section id="setup" aria-labelledby="setup-title">
+      <a href="../planning/screens.html">Coffee Lab planning</a>
+      <p class="eyebrow" id="demo">Illustrative design prototype · no records saved</p>
+      <h1 id="setup-title">A recipe, clearly.</h1>
+      <p id="intro">Choose an example. Use your scale for timing.</p>
+      <div class="settings">
+        <label><span id="language-label">Language</span><select id="language"><option value="en">English</option><option value="pt-BR">Português (Brasil)</option></select></label>
+        <label><span id="method-label">Example</span><select id="method"><option value="pour">Pour Over</option><option value="aero">AeroPress</option><option value="french">French Press</option><option value="lever">Manual Espresso</option><option value="espresso">Espresso</option><option value="partial">Partial recipe</option><option value="long">Long instructions</option></select></label>
+        <label><span id="weight-label">Weight</span><select id="weight"><option value="g">g</option><option value="oz">oz</option></select></label>
+        <label><span id="temperature-label">Temperature</span><select id="temperature"><option value="C">°C</option><option value="F">°F</option></select></label>
+      </div>
+      <button id="start" class="primary">Read recipe</button>
+    </section>
+    <section id="reader" hidden aria-labelledby="recipe-title">
+      <header><button id="exit">← <span id="exit-label">Recipes</span></button><span class="eyebrow" id="reading-label">READING ONLY</span></header>
+      <h1 id="recipe-title"></h1>
+      <div id="quantities" class="quantities"></div>
+      <article id="instruction" tabindex="-1" aria-labelledby="step-title">
+        <p id="progress" class="eyebrow"></p>
+        <h2 id="step-title"></h2>
+        <p id="step-text"></p>
+        <strong id="step-target"></strong>
+      </article>
+      <nav class="paging" aria-label="Instruction pages"><button id="previous">Previous</button><button id="next" class="primary">Next</button></nav>
+      <footer><button id="wake" aria-describedby="wake-status">Keep screen awake</button><p id="wake-status" role="status"></p><small id="scale-note">Use the timer on your scale. Nothing is recorded.</small></footer>
+    </section>
+    <noscript>This design prototype needs JavaScript to show instruction cards.</noscript>
+  </main>
+</body>
+</html>

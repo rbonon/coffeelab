@@ -14,6 +14,8 @@ The [user journeys](user-journeys.md) map recipe reading, optional execution cap
 
 The screen inventory and rough layouts below implement #23 for review. They describe intended screens, not a running application. The original [mockup](../../mockups/Painel%20Coffee%202026_%20receitas%20e%20extrações.png) remains the visual reference. Detailed brewing presentation follows in #24 and components/states in #25.
 
+See the [phone-reading design and concrete prototype](phone-reading.md) for #24. Human device validation is pending.
+
 ## Target phone
 
 The user intends to use a Samsung S25 Ultra with Brave or Dia. Validate recipe readability and screen-awake behavior on the actual available browser setup during UI/UX.
