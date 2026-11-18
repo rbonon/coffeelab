@@ -1,0 +1,2791 @@
+{
+  "format": "coffeelab-historical-import-candidates",
+  "format_version": 1,
+  "source_url": "https://chatgpt.com/share/6afe1ae4-f7cc-83e8-8ce7-4df7543cae95",
+  "captured_on": "2026-11-18",
+  "status": "staged_for_review_before_application_import",
+  "coverage": {
+    "messages": 177,
+    "assistant_messages": 89,
+    "unavailable_user_bodies": 75,
+    "original_uploaded_images_unavailable": 17
+  },
+  "coffees": [
+    {
+      "source_key": "vo-zico",
+      "name": "Café do Vô Zico — Especial",
+      "roaster": null,
+      "species": "Arabica",
+      "variety": "Catuaí Vermelho",
+      "processing": "Natural",
+      "origin": "Cabo Verde, MG",
+      "roast_level_label": "Clara",
+      "packaging_descriptors": [
+        "Chocolate 70%",
+        "Caramelo"
+      ],
+      "source_refs": [
+        {
+          "sequence": 20,
+          "message_id": "446974e0-b48b-44f8-8ce3-2194c8b7d85a"
+        }
+      ],
+      "review_notes": [
+        "Assistant's visual roast speculation is separate from the labeled roast level."
+      ]
+    },
+    {
+      "source_key": "stardust",
+      "name": "Stardust",
+      "brand_or_roaster_label": "Abigail Coffee Co.",
+      "producer": "Fazenda Daterra Coffee",
+      "origin": "Cerrado Mineiro",
+      "altitude_m": 1100,
+      "processing": "Natural",
+      "roast_level_label": null,
+      "packaging_descriptors": [
+        "Ameixa amarela",
+        "Pêssego bem maduro",
+        "Damasco",
+        "Toque de frutas vermelhas",
+        "Acidez láctica lembrando iogurte"
+      ],
+      "source_refs": [
+        {
+          "sequence": 102,
+          "message_id": "298a5a4f-97cf-4fa0-9015-9ccf147f4015"
+        }
+      ],
+      "review_notes": [
+        "Preserve source spelling. Original packaging photos are unavailable."
+      ]
+    }
+  ],
+  "bags": [
+    {
+      "source_key": "vo-zico-historical-bag-context",
+      "coffee_key": "vo-zico",
+      "roast_date": null,
+      "manufacture_date": "2026-09-15",
+      "best_before_date": "2027-09-15",
+      "purchase_date": null,
+      "retailer": null,
+      "price": null,
+      "source_refs": [
+        {
+          "sequence": 22,
+          "message_id": "fac41b2e-7649-438a-b7dd-c06c2c85ff93"
+        },
+        {
+          "sequence": 24,
+          "message_id": "d6823350-b314-4d8d-82ba-77075b2846e4"
+        }
+      ],
+      "review_notes": [
+        "Manufacture date must not become roast date.",
+        "The source mentions reserve packaging and mason jars. The exact physical bag count/assignment cannot be reconstructed. This key represents the historical bag context pending review."
+      ]
+    },
+    {
+      "source_key": "stardust-historical-bag-context",
+      "coffee_key": "stardust",
+      "roast_date": null,
+      "bag_weight_g": 250,
+      "purchase_date": null,
+      "retailer": "Abigail Cafés Campinas",
+      "price": null,
+      "source_refs": [
+        {
+          "sequence": 101,
+          "message_id": "bbb21e75-e674-4a6a-9129-df2c60f4a6ac"
+        },
+        {
+          "sequence": 102,
+          "message_id": "298a5a4f-97cf-4fa0-9015-9ccf147f4015"
+        }
+      ],
+      "review_notes": [
+        "Retailer comes from direct user text. The source says roast information was unavailable on the photographed packaging."
+      ]
+    }
+  ],
+  "equipment": [
+    {
+      "source_key": "jx-pro",
+      "type": "grinder",
+      "name": "1Zpresso JX-Pro",
+      "ownership_evidence": [
+        {
+          "sequence": 44,
+          "message_id": "1e2437b5-06ea-43e6-93c8-3c43f6114eba"
+        },
+        {
+          "sequence": 46,
+          "message_id": "54a4da70-168e-4db1-bead-8297c3fe79b1"
+        },
+        {
+          "sequence": 66,
+          "message_id": "64acb4b7-80b6-4209-8558-5c5ac95de850"
+        },
+        {
+          "sequence": 128,
+          "message_id": "bcee78cc-7379-4185-8540-7e1a21fa02ee"
+        }
+      ],
+      "source_settings": [
+        {
+          "notation": "3.5.0",
+          "clicks": 140
+        },
+        {
+          "notation": "3.8.0",
+          "clicks": 152
+        },
+        {
+          "notation": "4.0.0",
+          "clicks": 160
+        },
+        {
+          "notation": "4.5.0",
+          "clicks": 180
+        }
+      ],
+      "review_notes": [
+        "Setting conversions are source claims. Do not generalize to other grinders or zero calibrations."
+      ]
+    },
+    {
+      "source_key": "v60",
+      "type": "brewer",
+      "name": "V60",
+      "model": null,
+      "ownership_evidence": [
+        {
+          "sequence": 44,
+          "message_id": "1e2437b5-06ea-43e6-93c8-3c43f6114eba"
+        },
+        {
+          "sequence": 66,
+          "message_id": "64acb4b7-80b6-4209-8558-5c5ac95de850"
+        },
+        {
+          "sequence": 128,
+          "message_id": "bcee78cc-7379-4185-8540-7e1a21fa02ee"
+        }
+      ],
+      "review_notes": [
+        "External ceramic V60 product imagery is not proof of the user's exact brewer material or size."
+      ]
+    }
+  ],
+  "recipes": [
+    {
+      "source_key": "v60-balanced-initial",
+      "name": "V60 equilibrado e doce — initial proposal",
+      "brewing_category": "Pour Over",
+      "brewer": "V60",
+      "source_state": "proposed",
+      "app_status": null,
+      "base_recipe_key": null,
+      "coffee_key": null,
+      "parameters": {
+        "dose_g": 20,
+        "brewing_water_g": 320,
+        "temperature_c": 93,
+        "grinder_setting": "3.0.0",
+        "finished_drink_g": null
+      },
+      "source_refs": [
+        {
+          "sequence": 2,
+          "message_id": "4691d1a1-bade-43b6-be30-d2f559f661a9"
+        }
+      ],
+      "source_instructions": [
+        {
+          "sequence": 2,
+          "text": "Receitas Pour Over — Coffee 2026\n\nVamos organizar aqui as receitas de café filtrado por método pour over, começando pelo V60, com foco em doçura natural, clareza de sabores e mínimo amargor.\n\nReceita 01 — V60 equilibrado e doce\n \n\nRECEITA BASE • TESTE 01\n\nV60 — 20 g / 320 g\n\nProposta inicial para cafés de torra clara a média-clara, buscando doçura, equilíbrio e boa definição sensorial.\n\nCafé\n\n20 g\n\nÁgua\n\n320 g\n\nProporção\n\n1:16\n\nTemperatura\n\n93 °C\n\nMoedor JX-Pro\n\n3.0.0 (inicial)\n\nTempo-alvo\n\n2:45–3:30\nProcedimento\n\nTempo\n\n\t\n\nAção\n\n\t\n\nÁgua acumulada\n\n\n\n\n0:00\n\n\t\n\nBloom, molhando todo o café\n\n\t\n\n50 g\n\n\n\n\n0:40\n\n\t\n\nSegunda adição, circular e suave\n\n\t\n\n160 g\n\n\n\n\n1:15\n\n\t\n\nTerceira adição\n\n\t\n\n240 g\n\n\n\n\n1:50\n\n\t\n\nÚltima adição\n\n\t\n\n320 g\n\n\n\n\n2:45–3:30\n\n\t\n\nFinalizar a drenagem\n\n\t\n\n—\n\nNotas técnicas: utilizar filtro de papel enxaguado, evitar despejar diretamente nas paredes do filtro e manter agitação moderada. O ajuste 3.0.0 é apenas um ponto de partida para o JX-Pro, não uma moagem já validada.\n\nRegistro do teste",
+          "tables": [
+            [
+              [
+                "Tempo",
+                "Ação",
+                "Água acumulada"
+              ],
+              [
+                "0:00",
+                "Bloom, molhando todo o café",
+                "50 g"
+              ],
+              [
+                "0:40",
+                "Segunda adição, circular e suave",
+                "160 g"
+              ],
+              [
+                "1:15",
+                "Terceira adição",
+                "240 g"
+              ],
+              [
+                "1:50",
+                "Última adição",
+                "320 g"
+              ],
+              [
+                "2:45–3:30",
+                "Finalizar a drenagem",
+                "—"
+              ]
+            ]
+          ]
+        }
+      ],
+      "review_notes": [],
+      "external_source_links": []
+    },
+    {
+      "source_key": "hedrick-two-pour",
+      "name": "Lance Hedrick — simplified two-pour reference",
+      "brewing_category": "Pour Over",
+      "brewer": "V60",
+      "source_state": "reference",
+      "app_status": null,
+      "base_recipe_key": null,
+      "coffee_key": null,
+      "parameters": {
+        "dose_g": 20,
+        "brewing_water_g": 340,
+        "temperature_c": 95,
+        "grinder_setting": null,
+        "finished_drink_g": null
+      },
+      "source_refs": [
+        {
+          "sequence": 4,
+          "message_id": "3a594e1d-e1fd-4008-a061-a248cbb573a0"
+        }
+      ],
+      "source_instructions": [
+        {
+          "sequence": 4,
+          "text": "A receita típica de Lance Hedrick para V60 é conhecida pela abordagem de poucas adições de água, buscando alta extração, clareza e doçura.\n\nV60 — Método de 2 pours (Lance Hedrick)\n\nParâmetro\n\n\t\n\nReceita\n\n\n\n\nCafé\n\n\t\n\n20 g\n\n\n\n\nÁgua\n\n\t\n\n340 g\n\n\n\n\nProporção\n\n\t\n\n1:17\n\n\n\n\nTemperatura\n\n\t\n\n95 °C (torra clara)\n\n\n\n\nMoagem\n\n\t\n\nMédia a média-grossa\n\n\n\n\nTempo total\n\n\t\n\nAproximadamente 3–4 min\n\nProcedimento\n\n0:00 — Bloom: despejar 60 g de água, garantindo saturação completa. Aguardar até 2:00.\n\n2:00 — Segundo pour: adicionar os 280 g restantes, com fluxo controlado e agitação moderada, chegando a 340 g.\n\nDeixar a água escoar completamente.\n\nEssa é uma versão simplificada do método de dois pours associado a Lance Hedrick; ele também utiliza outras receitas e variações.\n\nPara o seu perfil: começaria com 20 g, 340 g e 94–95 °C, usando o JX-Pro com moagem média-grossa. A proporção 1:17 tende a favorecer uma bebida mais leve e transparente, embora a doçura dependa do café e da extração.\n\nPodemos também comparar esse método com a receita de 1-2-1 de Lance Hedrick, que é uma referência bastante conhecida dele.",
+          "tables": [
+            [
+              [
+                "Parâmetro",
+                "Receita"
+              ],
+              [
+                "Café",
+                "20 g"
+              ],
+              [
+                "Água",
+                "340 g"
+              ],
+              [
+                "Proporção",
+                "1:17"
+              ],
+              [
+                "Temperatura",
+                "95 °C (torra clara)"
+              ],
+              [
+                "Moagem",
+                "Média a média-grossa"
+              ],
+              [
+                "Tempo total",
+                "Aproximadamente 3–4 min"
+              ]
+            ]
+          ]
+        }
+      ],
+      "review_notes": [],
+      "external_source_links": []
+    },
+    {
+      "source_key": "a02-early",
+      "name": "A02 — earlier two-pour proposal",
+      "brewing_category": "Pour Over",
+      "brewer": "V60",
+      "source_state": "superseded_proposal",
+      "app_status": null,
+      "base_recipe_key": "hedrick-two-pour",
+      "coffee_key": "vo-zico",
+      "parameters": {
+        "dose_g": 20,
+        "brewing_water_g": 340,
+        "temperature_c": 94,
+        "grinder_setting": "3.5.0",
+        "finished_drink_g": null
+      },
+      "source_refs": [
+        {
+          "sequence": 48,
+          "message_id": "8298a336-24fd-4854-bcbb-1559dfd19406"
+        },
+        {
+          "sequence": 52,
+          "message_id": "bfed3842-1893-4faf-849b-c71ee60a3736"
+        }
+      ],
+      "source_instructions": [
+        {
+          "sequence": 48,
+          "text": "V60 — Teste 02 | Amanhã, 13/11/2026\n\nVamos manter a receita de Lance Hedrick com duas adições, bloom de 1:30 e reduzir a turbulência durante o segundo despejo. Também utilizaremos a regulagem atual do JX-Pro, 3.5.0 (140 cliques).\n\nCafé\n\n20 g\n\nÁgua\n\n340 g\n\nTemperatura\n\n94 °C\n\nMoagem JX-Pro\n\n3.5.0\n\nBloom\n\n1:30\n\nProporção\n\n1:17\nProcedimento\n\n0:00 — Bloom\n\nAdicionar 60 g de água, molhando todo o café. Fazer uma leve movimentação apenas se necessário para saturar o pó.\n\n0:00–1:30 — Espera\n\nDeixar o café liberar gases sem agitação adicional.\n\n1:30 — Segundo despejo\n\nAdicionar continuamente os 280 g restantes até atingir 340 g, preferencialmente em 45–60 segundos.\n\nManter o bico próximo à superfície, com fluxo estável e movimentos circulares suaves, evitando despejar diretamente sobre o papel.\n\nApós o despejo — Drenagem\n\nNão fazer swirl nem agitar o V60. Aguardar o escoamento completo e registrar o tempo.\n\nO que estamos testando\n\nEm relação ao Teste 01, teremos duas mudanças:\n\nMoagem: 4.0.0 → 3.5.0 (mais fina).\n\nAgitação: menor turbulência no segundo despejo.\n\nComo mudaremos duas variáveis, não conseguiremos atribuir eventuais diferenças a uma causa isolada. Mas é um teste prático para buscar mais doçura e menos amargor.\n\nTempo: não vamos forçar um tempo-alvo. Registraremos o resultado e avaliaremos principalmente o sabor.\n\nAvaliação após o preparo\nTempo total (min:ss)\nDoçura\n\n3/5\n\n1\n2\n3\n4\n5\nAcidez\n\n3/5\n\n1\n2\n3\n4\n5\nAmargor\n\n3/5\n\n1\n2\n3\n4\n5\nCorpo\n\n3/5\n\n1\n2\n3\n4\n5\nObservações de sabor\nRegistrar resultado do Teste 02\n\nAmanhã, após provar, vamos comparar especialmente a doçura e o amargor residual com o Teste 01.",
+          "tables": []
+        },
+        {
+          "sequence": 52,
+          "text": "V60 — Teste 02\n\n13/11/2026 • Receita adaptada de Lance Hedrick\n\nCafé\n\n20 g\n\nÁgua\n\n340 g\n\nTemperatura\n\n94 °C\n\nJX-Pro\n\n3.5.0\n\nBloom\n\n1 min 30 s\n\nProporção\n\n1:17\nPreparação\nAquecer a água a 94 °C.\nAjustar o JX-Pro em 3.5.0 (140 cliques).\nMoer 20 g de café.\nColocar o filtro no V60 e enxaguar com água quente.\nDescartar a água do enxágue.\nAdicionar o café moído, nivelar e zerar a balança.\nExtração\n0:00\n\n60 g\n\n1. Bloom\n\nIniciar o cronômetro no primeiro contato da água com o café.\n\nAdicionar 60 g de água, molhando todo o pó. Movimentar levemente apenas se necessário.\n\n1:30\n\n340 g\n\n2. Segundo despejo\n\nAdicionar os 280 g restantes de forma contínua, terminando por volta de 2:15–2:30.\n\nMovimentos circulares suaves.\n\nBico próximo à superfície da água.\n\nFluxo estável, sem provocar turbulência excessiva.\n\nEvitar despejar diretamente sobre o papel.\n\nDrenagem\n\n3. Finalização\n\nNão agitar nem fazer swirl. Deixar toda a água escoar.\n\nRegistrar o tempo total desde 0:00 até o final da drenagem.\n\nAvaliação\n\nProvar o café quente e novamente quando estiver morno.\n\nObserve apenas:\n\nFicou mais ou menos ácido?\n\nO amargor diminuiu?\n\nFicou mais encorpado?\n\nGostou mais ou menos do que o Teste 01?\n\nReferência anterior: 4.0.0, 338 g de água, bloom de 1:30, extração de 4:30. Resultado mais ácido, leve e com amargor residual.\n\nObjetivo do Teste 02: buscar mais doçura e equilíbrio, com menos amargor. Estamos usando moagem mais fina e despejo mais suave; portanto, o resultado ajudará a orientar os próximos testes, mas não isolará o efeito de cada mudança.",
+          "tables": []
+        }
+      ],
+      "review_notes": [
+        "Planned 2026-11-13 is not proof of execution date."
+      ],
+      "external_source_links": []
+    },
+    {
+      "source_key": "a02-three-pour",
+      "name": "A02 — revised three-pour recipe",
+      "brewing_category": "Pour Over",
+      "brewer": "V60",
+      "source_state": "recipe_with_recorded_execution",
+      "app_status": null,
+      "base_recipe_key": "hedrick-two-pour",
+      "coffee_key": "vo-zico",
+      "parameters": {
+        "dose_g": 20,
+        "brewing_water_g": 320,
+        "temperature_c": 91,
+        "grinder_setting": "3.5.0",
+        "finished_drink_g": null
+      },
+      "source_refs": [
+        {
+          "sequence": 60,
+          "message_id": "4369aea7-6c6c-42fe-86e2-1ef2edf7e873"
+        },
+        {
+          "sequence": 62,
+          "message_id": "be2d095b-76ae-4339-a01c-4c1220d74bc5"
+        }
+      ],
+      "source_instructions": [
+        {
+          "sequence": 60,
+          "text": "☕ V60 — Teste 02\n\nReceita revisada • Menos amargor, mais doçura e corpo\n\nCafé\n\n20 g\n\nÁgua\n\n320 g\n\nTemperatura\n\n91 °C\n\nJX-Pro\n\n3.5.0\n\nBloom\n\n45 s\n\nProporção\n\n1:16\n1. Preparação\nAquecer água a 91 °C\nMoer 20 g — JX-Pro 3.5.0 (140 cliques)\nEnxaguar o filtro com água quente\nDescartar a água do enxágue\nColocar café, nivelar e zerar a balança\n2. Extração\n0:00\n60 g\n\nBloom\n\nMolhar todo o café com 60 g de água.\n\nDespejo suave. Aguardar até 0:45.\n\n0:45\n190 g\n\nSegundo despejo\n\nAdicionar 130 g em círculos suaves.\n\nBico baixo, fluxo contínuo e sem turbulência excessiva.\n\n1:30\n320 g\n\nTerceiro despejo\n\nAdicionar os 130 g restantes, suavemente.\n\nNão despejar diretamente sobre o papel.\n\nFinal\n\nDrenagem\n\nDeixar escoar naturalmente, sem agitar.\n\nRegistrar o tempo total quando a água desaparecer da superfície do café.\n\n3. Cuidados importantes\n\nFluxo suave: evitar que o jato penetre profundamente na água.\n\nSem swirl: não girar nem sacudir o V60.\n\nNão perseguir um tempo exato: referência inicial de 3–4 minutos, mas registrar o tempo real.\n\n4. Depois de provar\nTempo total\nComparado ao café anterior\nMais agradável\nParecido\nMenos agradável\nAmargor no final\nNão percebi\nMenor\nIgual\nMaior\nOutras observações (opcional)\nRegistrar resultado",
+          "tables": []
+        },
+        {
+          "sequence": 62,
+          "text": "☕ V60 — Teste 02\n\nCafé\n\n20 g\n\nÁgua\n\n320 g\n\nTemp.\n\n91 °C\n\nJX-Pro\n\n3.5.0\n\nBloom\n\n45 s\n\nRatio\n\n1:16\n\n0:00\n\n\t\n60 g\n\tBloom, molhar todo o pó\n\n\n0:45\n\n\t\n190 g\n\tDespejo circular suave\n\n\n1:30\n\n\t\n320 g\n\tDespejo circular suave\nFinal\t3–4 min*\tDrenagem natural\n\nCuidados: bico baixo, fluxo suave, sem swirl. Não despejar no papel.\n\n*Tempo apenas de referência. Registrar o tempo real e avaliar o amargor residual.",
+          "tables": [
+            [
+              [
+                "0:00",
+                "60 g",
+                "Bloom, molhar todo o pó"
+              ],
+              [
+                "0:45",
+                "190 g",
+                "Despejo circular suave"
+              ],
+              [
+                "1:30",
+                "320 g",
+                "Despejo circular suave"
+              ],
+              [
+                "Final",
+                "3–4 min*",
+                "Drenagem natural"
+              ]
+            ]
+          ]
+        }
+      ],
+      "review_notes": [],
+      "external_source_links": []
+    },
+    {
+      "source_key": "a03-repeat",
+      "name": "A03 — repeat A02",
+      "brewing_category": "Pour Over",
+      "brewer": "V60",
+      "source_state": "planned_no_recorded_result",
+      "app_status": null,
+      "base_recipe_key": "a02-three-pour",
+      "coffee_key": "vo-zico",
+      "parameters": {
+        "dose_g": 20,
+        "brewing_water_g": 320,
+        "temperature_c": 91,
+        "grinder_setting": "3.5.0",
+        "finished_drink_g": null
+      },
+      "source_refs": [
+        {
+          "sequence": 72,
+          "message_id": "63e3f733-365b-4a28-a32d-aa6fe97ad54d"
+        },
+        {
+          "sequence": 104,
+          "message_id": "d0d451e5-4975-493d-be4b-a1bb12b029bf"
+        }
+      ],
+      "source_instructions": [
+        {
+          "sequence": 72,
+          "text": "Combinado. Teste 03 será uma repetição exata do Teste 02, sem alterar os parâmetros.\n\n☕ V60 — Teste 03\n\nCafé\n\n20 g\n\nÁgua\n\n320 g\n\nTemp.\n\n91 °C\n\nJX-Pro\n\n3.5.0\n\nBloom\n\n45 s\n\nRatio\n\n1:16\n\nTempo\n\n\t\n\nÁgua acumulada\n\n\t\n\nAção\n\n\n\n\n0:00\n\n\t\n\n60 g\n\n\t\n\nBloom suave\n\n\n\n\n0:45\n\n\t\n\n190 g\n\n\t\n\nDespejo circular suave\n\n\n\n\n1:30\n\n\t\n\n320 g\n\n\t\n\nDespejo circular suave\n\n\n\n\nFinal\n\n\t\n\n—\n\n\t\n\nDrenagem natural\n\nCuidados: bico baixo, fluxo suave, sem swirl e sem despejar no papel.\n\nReferência do Teste 02: 3:34. Objetivo: reproduzir o equilíbrio, o corpo e a acidez frutada agradável.",
+          "tables": [
+            [
+              [
+                "Tempo",
+                "Água acumulada",
+                "Ação"
+              ],
+              [
+                "0:00",
+                "60 g",
+                "Bloom suave"
+              ],
+              [
+                "0:45",
+                "190 g",
+                "Despejo circular suave"
+              ],
+              [
+                "1:30",
+                "320 g",
+                "Despejo circular suave"
+              ],
+              [
+                "Final",
+                "—",
+                "Drenagem natural"
+              ]
+            ]
+          ]
+        },
+        {
+          "sequence": 104,
+          "text": "Perfeito. Vamos manter duas linhas independentes de testes V60, com numeração própria e histórico sensorial separado.\n\n☕ Linha A — Café do Vô Zico\n\nTeste\n\n\t\n\nTécnica\n\n\t\n\nResultado / Status\n\n\n\n\nA01\n\n\t\n\nHedrick, JX 4.0.0\n\n\t\n\nÁcido, leve, amargor separado\n\n\n\n\nA02\n\n\t\n\n3 despejos, JX 3.5.0\n\n\t\n\nMelhor equilíbrio até agora\n\n\n\n\nA03\n\n\t\n\nRepetição do A02\n\n\t\n\nSem resultado registrado\n\n\n\n\nA04\n\n\t\n\n5 despejos, JX 3.8.0\n\n\t\n\nMais corpo, ligeiramente mais amargo\n\n\n\n\nA05\n\n\t\n\n5 etapas, JX 3.5.0\n\n\t\n\nPlanejado\n\n\n\n\nA06\n\n\t\n\nKasuya adaptado, JX 4.5.0\n\n\t\n\nPlanejado\n\n☕ Linha B — Stardust / Abigail\n\nComeçaremos com a receita que funcionou melhor na Linha A, para estabelecer uma referência sensorial do novo café.\n\nStardust — Teste B01\nPlanejado\n\nCafé\n\n20 g\n\nÁgua\n\n320 g\n\nTemperatura\n\n91 °C\n\nJX-Pro\n\n3.5.0\n\nProporção\n\n1:16\n\nBloom\n\n45 s\n\nTempo\n\n\t\n\nÁgua acumulada\n\n\t\n\nAção\n\n\n\n\n0:00\n\n\t\n\n60 g\n\n\t\n\nBloom\n\n\n\n\n0:45\n\n\t\n\n190 g\n\n\t\n\nCircular suave\n\n\n\n\n1:30\n\n\t\n\n320 g\n\n\t\n\nCircular suave\n\nCuidados: bico baixo, fluxo suave, sem swirl, evitar despejar no papel.\n\nO que vamos avaliar no Stardust\n\nPrincipalmente a doçura das frutas maduras, a acidez agradável, o corpo e a presença de amargor no final.\n\nO Stardust poderá precisar de moagem ou temperatura diferentes, mas vamos decidir isso após o B01, sem alterar várias variáveis antecipadamente.\n\nReferência atual do moedor: 3.8.0. Ajustar para 3.5.0 antes do A05 ou B01.\n\nAssim teremos duas linhas comparáveis, sem confundir os resultados de cafés diferentes.",
+          "tables": [
+            [
+              [
+                "Teste",
+                "Técnica",
+                "Resultado / Status"
+              ],
+              [
+                "A01",
+                "Hedrick, JX 4.0.0",
+                "Ácido, leve, amargor separado"
+              ],
+              [
+                "A02",
+                "3 despejos, JX 3.5.0",
+                "Melhor equilíbrio até agora"
+              ],
+              [
+                "A03",
+                "Repetição do A02",
+                "Sem resultado registrado"
+              ],
+              [
+                "A04",
+                "5 despejos, JX 3.8.0",
+                "Mais corpo, ligeiramente mais amargo"
+              ],
+              [
+                "A05",
+                "5 etapas, JX 3.5.0",
+                "Planejado"
+              ],
+              [
+                "A06",
+                "Kasuya adaptado, JX 4.5.0",
+                "Planejado"
+              ]
+            ],
+            [
+              [
+                "Tempo",
+                "Água acumulada",
+                "Ação"
+              ],
+              [
+                "0:00",
+                "60 g",
+                "Bloom"
+              ],
+              [
+                "0:45",
+                "190 g",
+                "Circular suave"
+              ],
+              [
+                "1:30",
+                "320 g",
+                "Circular suave"
+              ]
+            ]
+          ]
+        }
+      ],
+      "review_notes": [],
+      "external_source_links": []
+    },
+    {
+      "source_key": "a04-five-pour",
+      "name": "A04 — five pours, 25 g / 375 g",
+      "brewing_category": "Pour Over",
+      "brewer": "V60",
+      "source_state": "recipe_with_recorded_execution",
+      "app_status": null,
+      "base_recipe_key": null,
+      "coffee_key": "vo-zico",
+      "parameters": {
+        "dose_g": 25,
+        "brewing_water_g": 375,
+        "temperature_c": 91,
+        "grinder_setting": "3.8.0",
+        "finished_drink_g": null
+      },
+      "source_refs": [
+        {
+          "sequence": 74,
+          "message_id": "e7dba6a7-eefb-41d1-aa95-6d95f04f13d4"
+        },
+        {
+          "sequence": 76,
+          "message_id": "d593d9b4-1d8d-4190-83ea-15c25f02531c"
+        },
+        {
+          "sequence": 78,
+          "message_id": "1284327c-6fe6-4e01-ad12-e7de817298e8"
+        },
+        {
+          "sequence": 80,
+          "message_id": "263a3b99-4919-4446-b676-a0aa00b701b2"
+        },
+        {
+          "sequence": 82,
+          "message_id": "b47e5bb2-5988-4acb-8e66-1e7ab057c556"
+        }
+      ],
+      "source_instructions": [
+        {
+          "sequence": 74,
+          "text": "☕ V60 — Teste 04 | 16/11/2026\n\nVamos registrar essa nova receita e comparar com nosso melhor resultado, o Teste 02.\n\nCafé\n\n25 g\n\nÁgua\n\n375 g\n\nProporção\n\n1:15\n\nJX-Pro\n\n3.8.0\n\nDespejos\n\n5 × 75 g\n\nTemperatura\n\n?\n\nDespejo\n\n\t\n\nÁgua acumulada\n\n\n\n\n1º\n\n\t\n\n75 g\n\n\n\n\n2º\n\n\t\n\n150 g\n\n\n\n\n3º\n\n\t\n\n225 g\n\n\n\n\n4º\n\n\t\n\n300 g\n\n\n\n\n5º\n\n\t\n\n375 g\n\nMinha análise inicial\n\nEssa receita muda três fatores importantes:\n\nProporção 1:15: bebida potencialmente mais concentrada e encorpada que a anterior (1:16).\n\nMoagem 3.8.0: mais grossa que 3.5.0, podendo reduzir a extração.\n\nCinco despejos: mais oportunidades de agitação, podendo aumentar a extração e a migração de finos para o filtro.\n\nÉ uma combinação interessante porque a moagem mais grossa pode compensar parcialmente a maior agitação.\n\nDuas informações para completar o registro: qual temperatura você utilizou e quanto tempo levou a extração completa?\n\nE, principalmente, como ficou o sabor em comparação ao Teste 02 — mais doce, encorpado, ácido ou amargo?",
+          "tables": [
+            [
+              [
+                "Despejo",
+                "Água acumulada"
+              ],
+              [
+                "1º",
+                "75 g"
+              ],
+              [
+                "2º",
+                "150 g"
+              ],
+              [
+                "3º",
+                "225 g"
+              ],
+              [
+                "4º",
+                "300 g"
+              ],
+              [
+                "5º",
+                "375 g"
+              ]
+            ]
+          ]
+        },
+        {
+          "sequence": 76,
+          "text": "☕ V60 — Teste 04 | Resultado\n\nCafé\n\n25 g\n\nÁgua\n\n375,8 g\n\nProporção\n\n1:15\n\nJX-Pro\n\n3.8.0\n\nDespejos\n\n5 × 75 g\n\nTempo total\n\n4:43\nComparação com o Teste 02\n\nParâmetro\n\n\t\n\nTeste 02\n\n\t\n\nTeste 04\n\n\n\n\nDose\n\n\t\n\n20 g\n\n\t\n\n25 g\n\n\n\n\nMoagem\n\n\t\n\n3.5.0\n\n\t\n\n3.8.0\n\n\n\n\nProporção\n\n\t\n\n1:16\n\n\t\n\n1:15\n\n\n\n\nDespejos\n\n\t\n\n3\n\n\t\n\n5\n\n\n\n\nTempo\n\n\t\n\n3:34\n\n\t\n\n4:43\n\nO que observo na foto\n\nLeito relativamente plano, com uma pequena depressão central.\n\nPartículas aderidas às paredes do filtro.\n\nTempo de drenagem 69 segundos maior que no Teste 02, apesar da moagem mais grossa.\n\nIsso é compatível com maior resistência ao fluxo devido à dose maior, ao leito mais profundo e à agitação dos cinco despejos. Não podemos atribuir o tempo exclusivamente aos finos.\n\nMinha hipótese: essa receita pode produzir uma bebida mais intensa e encorpada, mas os cinco despejos também podem aumentar a extração e destacar o amargor que estamos tentando reduzir.\n\nAgora preciso de duas informações: qual temperatura utilizou e, principalmente, como ficou o sabor comparado ao Teste 02? O amargor aumentou, diminuiu ou ficou semelhante?",
+          "tables": [
+            [
+              [
+                "Parâmetro",
+                "Teste 02",
+                "Teste 04"
+              ],
+              [
+                "Dose",
+                "20 g",
+                "25 g"
+              ],
+              [
+                "Moagem",
+                "3.5.0",
+                "3.8.0"
+              ],
+              [
+                "Proporção",
+                "1:16",
+                "1:15"
+              ],
+              [
+                "Despejos",
+                "3",
+                "5"
+              ],
+              [
+                "Tempo",
+                "3:34",
+                "4:43"
+              ]
+            ]
+          ]
+        },
+        {
+          "sequence": 78,
+          "text": "Perfeito. Isso muda um pouco minha interpretação: os cinco despejos não significam necessariamente agitação excessiva, especialmente porque você os realizou lentamente e com bastante cuidado.\n\n☕ V60 — Teste 04 atualizado\n\nParâmetro\n\n\t\n\nResultado\n\n\n\n\nCafé\n\n\t\n\n25 g\n\n\n\n\nÁgua\n\n\t\n\n375,8 g\n\n\n\n\nTemperatura\n\n\t\n\n91 °C\n\n\n\n\nMoagem JX-Pro\n\n\t\n\n3.8.0\n\n\n\n\nProporção\n\n\t\n\n1:15\n\n\n\n\nDespejos\n\n\t\n\n5 × 75 g, lentos e suaves\n\n\n\n\nTempo total\n\n\t\n\n4:43\n\nMinha análise\n\nO tempo maior pode ser explicado pela combinação de três fatores:\n\nDose maior: 25 g formam um leito mais profundo, aumentando a resistência à passagem da água.\n\nCinco despejos: mesmo suaves, reintroduzem água e movimentam o leito repetidamente.\n\nPartículas finas: podem contribuir para a resistência do filtro, sem necessariamente causar entupimento.\n\nPortanto, 4:43 não significa automaticamente sobre-extração. Precisamos avaliar o sabor antes de decidir se o tempo foi excessivo.\n\nO Teste 04 também utiliza uma proporção mais concentrada (1:15), que pode favorecer a sensação de corpo e intensidade.\n\nAgora a pergunta decisiva: comparado ao Teste 02, esse café ficou mais encorpado, mais doce, mais ácido ou mais amargo? E qual dos dois vocês preferiram?",
+          "tables": [
+            [
+              [
+                "Parâmetro",
+                "Resultado"
+              ],
+              [
+                "Café",
+                "25 g"
+              ],
+              [
+                "Água",
+                "375,8 g"
+              ],
+              [
+                "Temperatura",
+                "91 °C"
+              ],
+              [
+                "Moagem JX-Pro",
+                "3.8.0"
+              ],
+              [
+                "Proporção",
+                "1:15"
+              ],
+              [
+                "Despejos",
+                "5 × 75 g, lentos e suaves"
+              ],
+              [
+                "Tempo total",
+                "4:43"
+              ]
+            ]
+          ]
+        },
+        {
+          "sequence": 80,
+          "text": "Ótimo. O Teste 04 trouxe mais corpo sem aumentar perceptivelmente o amargor. É um resultado interessante.\n\n☕ V60 — Comparação\n\nCaracterística\n\n\t\n\nTeste 02\n\n\t\n\nTeste 04\n\n\n\n\nCafé\n\n\t\n\n20 g\n\n\t\n\n25 g\n\n\n\n\nÁgua\n\n\t\n\n320 g\n\n\t\n\n375 g\n\n\n\n\nProporção\n\n\t\n\n1:16\n\n\t\n\n1:15\n\n\n\n\nJX-Pro\n\n\t\n\n3.5.0\n\n\t\n\n3.8.0\n\n\n\n\nTemperatura\n\n\t\n\n91 °C\n\n\t\n\n91 °C\n\n\n\n\nDespejos\n\n\t\n\n3\n\n\t\n\n5\n\n\n\n\nTempo\n\n\t\n\n3:34\n\n\t\n\n4:43\n\n\n\n\nCorpo\n\n\t\n\nMédio\n\n\t\n\nMaior\n\n\n\n\nAmargor\n\n\t\n\nDiscreto\n\n\t\n\nSemelhante\n\nO que aprendemos\n\nO tempo maior não prejudicou perceptivelmente o amargor. Isso reforça que tempo de drenagem não deve ser interpretado isoladamente.\n\nA proporção 1:15 provavelmente contribuiu para o corpo maior, embora a dose e a técnica também tenham mudado.\n\nOs cinco despejos suaves funcionaram, pelo menos sem aumentar o amargor percebido.\n\nMinha avaliação\n\nO Teste 04 parece uma boa alternativa quando você deseja uma bebida mais encorpada.\n\nMas ainda não sabemos se ele superou o Teste 02 em equilíbrio e agradabilidade.\n\nUma pergunta: no Teste 04, aquela acidez cítrica/frutada agradável do Teste 02 continuou perceptível ou ficou menos evidente?\n\nIsso nos ajudará a decidir qual receita merece ser nossa referência.",
+          "tables": [
+            [
+              [
+                "Característica",
+                "Teste 02",
+                "Teste 04"
+              ],
+              [
+                "Café",
+                "20 g",
+                "25 g"
+              ],
+              [
+                "Água",
+                "320 g",
+                "375 g"
+              ],
+              [
+                "Proporção",
+                "1:16",
+                "1:15"
+              ],
+              [
+                "JX-Pro",
+                "3.5.0",
+                "3.8.0"
+              ],
+              [
+                "Temperatura",
+                "91 °C",
+                "91 °C"
+              ],
+              [
+                "Despejos",
+                "3",
+                "5"
+              ],
+              [
+                "Tempo",
+                "3:34",
+                "4:43"
+              ],
+              [
+                "Corpo",
+                "Médio",
+                "Maior"
+              ],
+              [
+                "Amargor",
+                "Discreto",
+                "Semelhante"
+              ]
+            ]
+          ]
+        },
+        {
+          "sequence": 82,
+          "text": "Então ajustamos o registro: o Teste 04 ficou mais encorpado, porém possivelmente um pouco mais amargo que o Teste 02.\n\n☕ Comparação sensorial\n\nCaracterística\n\n\t\n\nTeste 02\n\n\t\n\nTeste 04\n\n\n\n\nCorpo\n\n\t\n\nMédio\n\n\t\n\nMais encorpado\n\n\n\n\nAmargor\n\n\t\n\nDiscreto\n\n\t\n\nLevemente maior\n\n\n\n\nAcidez\n\n\t\n\nCítrica agradável\n\n\t\n\nA confirmar\n\n\n\n\nEquilíbrio\n\n\t\n\nMuito bom\n\n\t\n\nA avaliar\n\n\n\n\nTempo\n\n\t\n\n3:34\n\n\t\n\n4:43\n\nMinha interpretação: a proporção 1:15 provavelmente contribuiu para a maior intensidade e corpo. O amargor ligeiramente maior pode estar relacionado à concentração, à extração ou ao próprio café.\n\nNão concluiria que os cinco despejos causaram o amargor.\n\nPor enquanto, o Teste 02 continua sendo nossa referência de equilíbrio, enquanto o Teste 04 demonstra que podemos ganhar corpo, talvez com um pequeno custo sensorial.\n\nUma pergunta: você preferiu a bebida mais encorpada do Teste 04 ou o equilíbrio do Teste 02?",
+          "tables": [
+            [
+              [
+                "Característica",
+                "Teste 02",
+                "Teste 04"
+              ],
+              [
+                "Corpo",
+                "Médio",
+                "Mais encorpado"
+              ],
+              [
+                "Amargor",
+                "Discreto",
+                "Levemente maior"
+              ],
+              [
+                "Acidez",
+                "Cítrica agradável",
+                "A confirmar"
+              ],
+              [
+                "Equilíbrio",
+                "Muito bom",
+                "A avaliar"
+              ],
+              [
+                "Tempo",
+                "3:34",
+                "4:43"
+              ]
+            ]
+          ]
+        }
+      ],
+      "review_notes": [
+        "Temperature is supplied by the later comparison at message 80."
+      ],
+      "external_source_links": []
+    },
+    {
+      "source_key": "a05-five-pour",
+      "name": "A05 — five gentle pours",
+      "brewing_category": "Pour Over",
+      "brewer": "V60",
+      "source_state": "planned_no_recorded_result",
+      "app_status": null,
+      "base_recipe_key": "a02-three-pour",
+      "coffee_key": "vo-zico",
+      "parameters": {
+        "dose_g": 20,
+        "brewing_water_g": 320,
+        "temperature_c": 91,
+        "grinder_setting": "3.5.0",
+        "finished_drink_g": null
+      },
+      "source_refs": [
+        {
+          "sequence": 84,
+          "message_id": "12b5273b-363f-4a70-84dd-882b130434cf"
+        },
+        {
+          "sequence": 96,
+          "message_id": "6ee10d9c-cc11-4191-9ed9-bbbd0859d161"
+        },
+        {
+          "sequence": 98,
+          "message_id": "99e352cf-eb0f-436e-8470-698aeb963067"
+        },
+        {
+          "sequence": 104,
+          "message_id": "d0d451e5-4975-493d-be4b-a1bb12b029bf"
+        }
+      ],
+      "source_instructions": [
+        {
+          "sequence": 84,
+          "text": "Sim. É um bom Teste 05: manter os parâmetros do Teste 02 e alterar somente o número de despejos, de 3 para 5. Assim isolamos melhor o efeito da técnica.\n\n☕ V60 — Teste 05\n\nCafé\n\n20 g\n\nÁgua\n\n320 g\n\nTemp.\n\n91 °C\n\nJX-Pro\n\n3.5.0\n\nBloom\n\n45 s\n\nProporção\n\n1:16\n\nTempo\n\n\t\n\nÁgua acumulada\n\n\t\n\nAção\n\n\n\n\n0:00\n\n\t\n\n60 g\n\n\t\n\nBloom suave\n\n\n\n\n0:45\n\n\t\n\n125 g\n\n\t\n\nDespejo lento\n\n\n\n\n1:15\n\n\t\n\n190 g\n\n\t\n\nDespejo lento\n\n\n\n\n1:45\n\n\t\n\n255 g\n\n\t\n\nDespejo lento\n\n\n\n\n2:15\n\n\t\n\n320 g\n\n\t\n\nDespejo lento\n\nCuidados: bico baixo, círculos suaves, sem swirl. Não despejar no papel.\n\nReferência Teste 02: 3:34. Registrar tempo real, sem tentar forçar a drenagem.\n\nO que queremos descobrir\n\nSe cinco despejos lentos conseguem aumentar a extração e talvez a doçura, sem aumentar o amargor nem perder a acidez frutada agradável do Teste 02.\n\nMinha expectativa é que o tempo de drenagem aumente um pouco, mas isso não significa necessariamente pior resultado.\n\nSe o Teste 05 ficar mais amargo ou menos equilibrado, teremos um bom argumento para voltar aos três despejos do Teste 02.\n\nO Teste 02 continua sendo nossa referência sensorial.",
+          "tables": [
+            [
+              [
+                "Tempo",
+                "Água acumulada",
+                "Ação"
+              ],
+              [
+                "0:00",
+                "60 g",
+                "Bloom suave"
+              ],
+              [
+                "0:45",
+                "125 g",
+                "Despejo lento"
+              ],
+              [
+                "1:15",
+                "190 g",
+                "Despejo lento"
+              ],
+              [
+                "1:45",
+                "255 g",
+                "Despejo lento"
+              ],
+              [
+                "2:15",
+                "320 g",
+                "Despejo lento"
+              ]
+            ]
+          ]
+        },
+        {
+          "sequence": 96,
+          "text": "☕ V60 — Teste 05 | Cinco despejos\n\nCafé\n\n20 g\n\nÁgua\n\n320 g\n\nTemperatura\n\n91 °C\n\nJX-Pro\n\n3.5.0\n\nProporção\n\n1:16\n\nBloom\n\n45 s\n\nTempo\n\n\t\n\nÁgua acumulada\n\n\t\n\nAção\n\n\n\n\n0:00\n\n\t\n\n60 g\n\n\t\n\nBloom suave\n\n\n\n\n0:45\n\n\t\n\n125 g\n\n\t\n\nDespejo lento\n\n\n\n\n1:15\n\n\t\n\n190 g\n\n\t\n\nDespejo lento\n\n\n\n\n1:45\n\n\t\n\n255 g\n\n\t\n\nDespejo lento\n\n\n\n\n2:15\n\n\t\n\n320 g\n\n\t\n\nDespejo lento\n\nCuidados: bico baixo, fluxo suave, sem swirl e sem despejar no papel. Deixar drenar naturalmente após o último despejo.\n\nObjetivo: comparar com o Teste 02, mantendo café, água, temperatura e moagem iguais, mas aumentando de 3 para 5 etapas de despejo.\n\nReferência: Teste 02 terminou em 3:34, com bom equilíbrio, acidez agradável e pouco amargor.\n\nO Teste 06 permanece como combinado: 20 g / 300 g / 96 °C / JX-Pro 4.5.0 / 10 despejos de 30 g a cada 15 segundos.\n\nLembrete: o moedor está atualmente em 3.8.0; para o Teste 05, ajustar para 3.5.0.",
+          "tables": [
+            [
+              [
+                "Tempo",
+                "Água acumulada",
+                "Ação"
+              ],
+              [
+                "0:00",
+                "60 g",
+                "Bloom suave"
+              ],
+              [
+                "0:45",
+                "125 g",
+                "Despejo lento"
+              ],
+              [
+                "1:15",
+                "190 g",
+                "Despejo lento"
+              ],
+              [
+                "1:45",
+                "255 g",
+                "Despejo lento"
+              ],
+              [
+                "2:15",
+                "320 g",
+                "Despejo lento"
+              ]
+            ]
+          ]
+        },
+        {
+          "sequence": 98,
+          "text": "Não exatamente. Eu faria uma pequena diferença entre os dois testes:\n\nTeste 05: despejos circulares suaves, em espirais pequenas, do centro para fora e retornando ao centro. Evitar atingir o papel. Isso preserva a técnica do Teste 02.\n\nTeste 06 (Kasuya adaptado): despejos predominantemente no centro, lentos e controlados, com pouca movimentação lateral.\n\nPor quê? No Teste 05 queremos avaliar o efeito de aumentar o número de despejos, sem mudar desnecessariamente a técnica. No Teste 06 queremos explorar o efeito dos dez despejos com moagem muito grossa.\n\nEm ambos, mantenha o bico próximo da superfície e evite jatos fortes.\n\nAssim ficam definidos os dois protocolos.",
+          "tables": []
+        },
+        {
+          "sequence": 104,
+          "text": "Perfeito. Vamos manter duas linhas independentes de testes V60, com numeração própria e histórico sensorial separado.\n\n☕ Linha A — Café do Vô Zico\n\nTeste\n\n\t\n\nTécnica\n\n\t\n\nResultado / Status\n\n\n\n\nA01\n\n\t\n\nHedrick, JX 4.0.0\n\n\t\n\nÁcido, leve, amargor separado\n\n\n\n\nA02\n\n\t\n\n3 despejos, JX 3.5.0\n\n\t\n\nMelhor equilíbrio até agora\n\n\n\n\nA03\n\n\t\n\nRepetição do A02\n\n\t\n\nSem resultado registrado\n\n\n\n\nA04\n\n\t\n\n5 despejos, JX 3.8.0\n\n\t\n\nMais corpo, ligeiramente mais amargo\n\n\n\n\nA05\n\n\t\n\n5 etapas, JX 3.5.0\n\n\t\n\nPlanejado\n\n\n\n\nA06\n\n\t\n\nKasuya adaptado, JX 4.5.0\n\n\t\n\nPlanejado\n\n☕ Linha B — Stardust / Abigail\n\nComeçaremos com a receita que funcionou melhor na Linha A, para estabelecer uma referência sensorial do novo café.\n\nStardust — Teste B01\nPlanejado\n\nCafé\n\n20 g\n\nÁgua\n\n320 g\n\nTemperatura\n\n91 °C\n\nJX-Pro\n\n3.5.0\n\nProporção\n\n1:16\n\nBloom\n\n45 s\n\nTempo\n\n\t\n\nÁgua acumulada\n\n\t\n\nAção\n\n\n\n\n0:00\n\n\t\n\n60 g\n\n\t\n\nBloom\n\n\n\n\n0:45\n\n\t\n\n190 g\n\n\t\n\nCircular suave\n\n\n\n\n1:30\n\n\t\n\n320 g\n\n\t\n\nCircular suave\n\nCuidados: bico baixo, fluxo suave, sem swirl, evitar despejar no papel.\n\nO que vamos avaliar no Stardust\n\nPrincipalmente a doçura das frutas maduras, a acidez agradável, o corpo e a presença de amargor no final.\n\nO Stardust poderá precisar de moagem ou temperatura diferentes, mas vamos decidir isso após o B01, sem alterar várias variáveis antecipadamente.\n\nReferência atual do moedor: 3.8.0. Ajustar para 3.5.0 antes do A05 ou B01.\n\nAssim teremos duas linhas comparáveis, sem confundir os resultados de cafés diferentes.",
+          "tables": [
+            [
+              [
+                "Teste",
+                "Técnica",
+                "Resultado / Status"
+              ],
+              [
+                "A01",
+                "Hedrick, JX 4.0.0",
+                "Ácido, leve, amargor separado"
+              ],
+              [
+                "A02",
+                "3 despejos, JX 3.5.0",
+                "Melhor equilíbrio até agora"
+              ],
+              [
+                "A03",
+                "Repetição do A02",
+                "Sem resultado registrado"
+              ],
+              [
+                "A04",
+                "5 despejos, JX 3.8.0",
+                "Mais corpo, ligeiramente mais amargo"
+              ],
+              [
+                "A05",
+                "5 etapas, JX 3.5.0",
+                "Planejado"
+              ],
+              [
+                "A06",
+                "Kasuya adaptado, JX 4.5.0",
+                "Planejado"
+              ]
+            ],
+            [
+              [
+                "Tempo",
+                "Água acumulada",
+                "Ação"
+              ],
+              [
+                "0:00",
+                "60 g",
+                "Bloom"
+              ],
+              [
+                "0:45",
+                "190 g",
+                "Circular suave"
+              ],
+              [
+                "1:30",
+                "320 g",
+                "Circular suave"
+              ]
+            ]
+          ]
+        }
+      ],
+      "review_notes": [],
+      "external_source_links": []
+    },
+    {
+      "source_key": "kasuya-30s",
+      "name": "Kasuya-inspired ten-pour — 30-second intervals",
+      "brewing_category": "Pour Over",
+      "brewer": "V60",
+      "source_state": "superseded_proposal",
+      "app_status": null,
+      "base_recipe_key": null,
+      "coffee_key": null,
+      "parameters": {
+        "dose_g": 20,
+        "brewing_water_g": 300,
+        "temperature_c": 96,
+        "grinder_setting": "4.5.0",
+        "finished_drink_g": null
+      },
+      "source_refs": [
+        {
+          "sequence": 92,
+          "message_id": "f7688362-223f-42a5-b226-354414f34d36"
+        }
+      ],
+      "source_instructions": [
+        {
+          "sequence": 92,
+          "text": "Combinado. Mantemos o Teste 05 e planejamos o Teste 06 inspirado no Kasuya, usando JX-Pro 4.5.0 (180 cliques) como ponto de partida.\n\n☕ Próximos testes V60\n\nParâmetro\n\n\t\n\nTeste 05\n\n\t\n\nTeste 06 — Kasuya\n\n\n\n\nCafé\n\n\t\n\n20 g\n\n\t\n\n20 g\n\n\n\n\nÁgua\n\n\t\n\n320 g\n\n\t\n\n300 g\n\n\n\n\nTemperatura\n\n\t\n\n91 °C\n\n\t\n\n96 °C\n\n\n\n\nJX-Pro\n\n\t\n\n3.5.0\n\n\t\n\n4.5.0\n\n\n\n\nProporção\n\n\t\n\n1:16\n\n\t\n\n1:15\n\n\n\n\nDespejos\n\n\t\n\n5 etapas\n\n\t\n\n10 × 30 g\n\n\n\n\nObjetivo\n\n\t\n\nIsolar efeito dos despejos\n\n\t\n\nExplorar corpo, doçura e clareza\n\nTeste 06 — Sequência inicial proposta\n\nTempo\n\n\t\n\nÁgua acumulada\n\n\n\n\n0:00\n\n\t\n\n30 g\n\n\n\n\n0:30\n\n\t\n\n60 g\n\n\n\n\n1:00\n\n\t\n\n90 g\n\n\n\n\n1:30\n\n\t\n\n120 g\n\n\n\n\n2:00\n\n\t\n\n150 g\n\n\n\n\n2:30\n\n\t\n\n180 g\n\n\n\n\n3:00\n\n\t\n\n210 g\n\n\n\n\n3:30\n\n\t\n\n240 g\n\n\n\n\n4:00\n\n\t\n\n270 g\n\n\n\n\n4:30\n\n\t\n\n300 g\n\nIntervalos de 30 segundos como proposta experimental; não necessariamente os tempos oficiais de Kasuya.\n\nObservação: 4.5.0 é uma escolha inicial razoável para experimentar uma moagem bem mais grossa, mas não estamos afirmando equivalência com os 45 cliques do Comandante.\n\nO objetivo será descobrir se conseguimos mais corpo e doçura sem aumentar o amargor, preservando a acidez agradável que encontramos no Teste 02.\n\nO ajuste atual do moedor permanece 3.8.0.",
+          "tables": [
+            [
+              [
+                "Parâmetro",
+                "Teste 05",
+                "Teste 06 — Kasuya"
+              ],
+              [
+                "Café",
+                "20 g",
+                "20 g"
+              ],
+              [
+                "Água",
+                "320 g",
+                "300 g"
+              ],
+              [
+                "Temperatura",
+                "91 °C",
+                "96 °C"
+              ],
+              [
+                "JX-Pro",
+                "3.5.0",
+                "4.5.0"
+              ],
+              [
+                "Proporção",
+                "1:16",
+                "1:15"
+              ],
+              [
+                "Despejos",
+                "5 etapas",
+                "10 × 30 g"
+              ],
+              [
+                "Objetivo",
+                "Isolar efeito dos despejos",
+                "Explorar corpo, doçura e clareza"
+              ]
+            ],
+            [
+              [
+                "Tempo",
+                "Água acumulada"
+              ],
+              [
+                "0:00",
+                "30 g"
+              ],
+              [
+                "0:30",
+                "60 g"
+              ],
+              [
+                "1:00",
+                "90 g"
+              ],
+              [
+                "1:30",
+                "120 g"
+              ],
+              [
+                "2:00",
+                "150 g"
+              ],
+              [
+                "2:30",
+                "180 g"
+              ],
+              [
+                "3:00",
+                "210 g"
+              ],
+              [
+                "3:30",
+                "240 g"
+              ],
+              [
+                "4:00",
+                "270 g"
+              ],
+              [
+                "4:30",
+                "300 g"
+              ]
+            ]
+          ]
+        }
+      ],
+      "review_notes": [
+        "A proposed adaptation, not a verified reproduction of Kasuya."
+      ],
+      "external_source_links": []
+    },
+    {
+      "source_key": "kasuya-15s",
+      "name": "Kasuya-inspired ten-pour — 15-second intervals",
+      "brewing_category": "Pour Over",
+      "brewer": "V60",
+      "source_state": "reserved_for_future",
+      "app_status": null,
+      "base_recipe_key": "kasuya-30s",
+      "coffee_key": "vo-zico",
+      "parameters": {
+        "dose_g": 20,
+        "brewing_water_g": 300,
+        "temperature_c": 96,
+        "grinder_setting": "4.5.0",
+        "finished_drink_g": null
+      },
+      "source_refs": [
+        {
+          "sequence": 94,
+          "message_id": "780d7e90-96d9-4cdf-8354-a9cc6d19f787"
+        },
+        {
+          "sequence": 98,
+          "message_id": "99e352cf-eb0f-436e-8470-698aeb963067"
+        },
+        {
+          "sequence": 112,
+          "message_id": "7c4dcf06-8489-46c7-9f24-415db403b3a9"
+        },
+        {
+          "sequence": 114,
+          "message_id": "e1411320-51c8-42c1-a29c-26c83a2c9e3b"
+        }
+      ],
+      "source_instructions": [
+        {
+          "sequence": 94,
+          "text": "Sim. Minha proposta anterior ficou longa demais: o último despejo começaria aos 4:30, e a extração poderia ultrapassar 5 minutos.\n\nPara o Teste 06, eu reduziria os intervalos para 15 segundos, como ponto de partida experimental.\n\n☕ V60 — Teste 06 (Kasuya adaptado)\n\nParâmetro\n\n\t\n\nValor\n\n\n\n\nCafé / Água\n\n\t\n\n20 g / 300 g\n\n\n\n\nTemperatura\n\n\t\n\n96 °C\n\n\n\n\nJX-Pro\n\n\t\n\n4.5.0\n\n\n\n\nDespejos\n\n\t\n\n10 × 30 g\n\nTempo\n\n\t\n\nÁgua acumulada\n\n\n\n\n0:00\n\n\t\n\n30 g\n\n\n\n\n0:15\n\n\t\n\n60 g\n\n\n\n\n0:30\n\n\t\n\n90 g\n\n\n\n\n0:45\n\n\t\n\n120 g\n\n\n\n\n1:00\n\n\t\n\n150 g\n\n\n\n\n1:15\n\n\t\n\n180 g\n\n\n\n\n1:30\n\n\t\n\n210 g\n\n\n\n\n1:45\n\n\t\n\n240 g\n\n\n\n\n2:00\n\n\t\n\n270 g\n\n\n\n\n2:15\n\n\t\n\n300 g\n\nTempo final estimado: aproximadamente 3:00–4:00, dependendo da drenagem.\n\nCuidados: despejos suaves, sem swirl; não é necessário esperar a água drenar completamente entre despejos.\n\nEssa é uma adaptação nossa, não uma reprodução verificada dos intervalos oficiais de Kasuya.\n\nMantemos o Teste 05 inalterado.",
+          "tables": [
+            [
+              [
+                "Parâmetro",
+                "Valor"
+              ],
+              [
+                "Café / Água",
+                "20 g / 300 g"
+              ],
+              [
+                "Temperatura",
+                "96 °C"
+              ],
+              [
+                "JX-Pro",
+                "4.5.0"
+              ],
+              [
+                "Despejos",
+                "10 × 30 g"
+              ]
+            ],
+            [
+              [
+                "Tempo",
+                "Água acumulada"
+              ],
+              [
+                "0:00",
+                "30 g"
+              ],
+              [
+                "0:15",
+                "60 g"
+              ],
+              [
+                "0:30",
+                "90 g"
+              ],
+              [
+                "0:45",
+                "120 g"
+              ],
+              [
+                "1:00",
+                "150 g"
+              ],
+              [
+                "1:15",
+                "180 g"
+              ],
+              [
+                "1:30",
+                "210 g"
+              ],
+              [
+                "1:45",
+                "240 g"
+              ],
+              [
+                "2:00",
+                "270 g"
+              ],
+              [
+                "2:15",
+                "300 g"
+              ]
+            ]
+          ]
+        },
+        {
+          "sequence": 98,
+          "text": "Não exatamente. Eu faria uma pequena diferença entre os dois testes:\n\nTeste 05: despejos circulares suaves, em espirais pequenas, do centro para fora e retornando ao centro. Evitar atingir o papel. Isso preserva a técnica do Teste 02.\n\nTeste 06 (Kasuya adaptado): despejos predominantemente no centro, lentos e controlados, com pouca movimentação lateral.\n\nPor quê? No Teste 05 queremos avaliar o efeito de aumentar o número de despejos, sem mudar desnecessariamente a técnica. No Teste 06 queremos explorar o efeito dos dez despejos com moagem muito grossa.\n\nEm ambos, mantenha o bico próximo da superfície e evite jatos fortes.\n\nAssim ficam definidos os dois protocolos.",
+          "tables": []
+        },
+        {
+          "sequence": 112,
+          "text": "☕ V60 — A06 | Café do Vô Zico\n\nMétodo Kasuya 2026 — adaptação experimental\n\nCafé\n\n20 g\n\nÁgua\n\n300 g\n\nTemperatura\n\n96 °C\n\nJX-Pro\n\n4.5.0\n\nProporção\n\n1:15\n\nDespejos\n\n10 × 30 g\n\nTempo\n\n\t\n\nÁgua acumulada\n\n\n\n\n0:00\n\n\t\n\n30 g\n\n\n\n\n0:15\n\n\t\n\n60 g\n\n\n\n\n0:30\n\n\t\n\n90 g\n\n\n\n\n0:45\n\n\t\n\n120 g\n\n\n\n\n1:00\n\n\t\n\n150 g\n\n\n\n\n1:15\n\n\t\n\n180 g\n\n\n\n\n1:30\n\n\t\n\n210 g\n\n\n\n\n1:45\n\n\t\n\n240 g\n\n\n\n\n2:00\n\n\t\n\n270 g\n\n\n\n\n2:15\n\n\t\n\n300 g\n\nCuidados: despejos lentos, predominantemente no centro, bico baixo, sem swirl. Não esperar drenagem completa entre despejos.\n\nTempo final estimado: 3:00–4:00, dependendo da drenagem.\n\nObjetivo: avaliar se a moagem extragrossa combinada com dez despejos produz mais corpo e doçura sem aumentar o amargor.\n\nAntes de começar: ajustar o JX-Pro de 3.8.0 para 4.5.0 (180 cliques).\n\nEsta é nossa adaptação experimental inspirada em Kasuya, não uma reprodução integral do método original.",
+          "tables": [
+            [
+              [
+                "Tempo",
+                "Água acumulada"
+              ],
+              [
+                "0:00",
+                "30 g"
+              ],
+              [
+                "0:15",
+                "60 g"
+              ],
+              [
+                "0:30",
+                "90 g"
+              ],
+              [
+                "0:45",
+                "120 g"
+              ],
+              [
+                "1:00",
+                "150 g"
+              ],
+              [
+                "1:15",
+                "180 g"
+              ],
+              [
+                "1:30",
+                "210 g"
+              ],
+              [
+                "1:45",
+                "240 g"
+              ],
+              [
+                "2:00",
+                "270 g"
+              ],
+              [
+                "2:15",
+                "300 g"
+              ]
+            ]
+          ]
+        },
+        {
+          "sequence": 114,
+          "text": "Sim. Vamos substituir o A06 pelo método de James Hoffmann. O Kasuya fica reservado para um teste futuro.\n\n☕ V60 — A06 | Café do Vô Zico\n\nJames Hoffmann — A Better 1 Cup V60 Technique\n\nCafé\n\n15 g\n\nÁgua\n\n250 g\n\nTemperatura\n\n100 °C\n\nJX-Pro\n\n3.5.0\n\nProporção\n\n1:16,7\n\nDespejos\n\n5 × 50 g\n\nTempo\n\n\t\n\nÁgua acumulada\n\n\t\n\nAção\n\n\n\n\n0:00\n\n\t\n\n50 g\n\n\t\n\nBloom + swirl leve\n\n\n\n\n0:45\n\n\t\n\n100 g\n\n\t\n\nCircular suave\n\n\n\n\n1:10\n\n\t\n\n150 g\n\n\t\n\nCircular suave\n\n\n\n\n1:30\n\n\t\n\n200 g\n\n\t\n\nCircular suave\n\n\n\n\n1:50\n\n\t\n\n250 g\n\n\t\n\nCircular + swirl leve\n\n\n\n\n~3:00\n\n\t\n\n—\n\n\t\n\nDrenagem\n\nCuidados: bico baixo, fluxo ~5 g/s, círculos suaves, filtro enxaguado e V60 pré-aquecido.\n\nMantemos a moagem 3.5.0, conforme você decidiu. A temperatura de 100 °C segue a receita original de Hoffmann para torras claras.\n\nA06 será uma experiência com a técnica completa de Hoffmann, mas com a moagem adaptada ao nosso JX-Pro.",
+          "tables": [
+            [
+              [
+                "Tempo",
+                "Água acumulada",
+                "Ação"
+              ],
+              [
+                "0:00",
+                "50 g",
+                "Bloom + swirl leve"
+              ],
+              [
+                "0:45",
+                "100 g",
+                "Circular suave"
+              ],
+              [
+                "1:10",
+                "150 g",
+                "Circular suave"
+              ],
+              [
+                "1:30",
+                "200 g",
+                "Circular suave"
+              ],
+              [
+                "1:50",
+                "250 g",
+                "Circular + swirl leve"
+              ],
+              [
+                "~3:00",
+                "—",
+                "Drenagem"
+              ]
+            ]
+          ]
+        }
+      ],
+      "review_notes": [
+        "Originally assigned A06; replaced by Hoffmann before the recorded A06. Do not import a Kasuya execution."
+      ],
+      "external_source_links": []
+    },
+    {
+      "source_key": "stardust-three-pour",
+      "name": "Stardust — initial B01 three-pour plan",
+      "brewing_category": "Pour Over",
+      "brewer": "V60",
+      "source_state": "superseded_assignment",
+      "app_status": null,
+      "base_recipe_key": "a02-three-pour",
+      "coffee_key": "stardust",
+      "parameters": {
+        "dose_g": 20,
+        "brewing_water_g": 320,
+        "temperature_c": 91,
+        "grinder_setting": "3.5.0",
+        "finished_drink_g": null
+      },
+      "source_refs": [
+        {
+          "sequence": 102,
+          "message_id": "298a5a4f-97cf-4fa0-9015-9ccf147f4015"
+        },
+        {
+          "sequence": 104,
+          "message_id": "d0d451e5-4975-493d-be4b-a1bb12b029bf"
+        },
+        {
+          "sequence": 138,
+          "message_id": "f8b9a2e4-84a1-419e-bdb3-dd8886d6a784"
+        }
+      ],
+      "source_instructions": [
+        {
+          "sequence": 102,
+          "text": "Esse Stardust, da Abigail Coffee Co., parece bastante interessante para os nossos testes de V60, especialmente pelo perfil frutado descrito na embalagem.\n\n☕ Stardust — Abigail Coffee Co.\n\nCaracterística\n\n\t\n\nInformação\n\n\n\n\nProdutor\n\n\t\n\nFazenda Daterra Coffee\n\n\n\n\nRegião\n\n\t\n\nCerrado Mineiro\n\n\n\n\nAltitude\n\n\t\n\n1.100 m\n\n\n\n\nProcessamento\n\n\t\n\nNatural\n\n\n\n\nPeso\n\n\t\n\n250 g\n\n\n\n\nTorra\n\n\t\n\nNão informada na embalagem fotografada\n\nNotas sensoriais declaradas:\n\nAmeixa amarela\n\nPêssego bem maduro\n\nDamasco\n\nToque de frutas vermelhas\n\nAcidez láctica lembrando iogurte\n\nMinha leitura do café\n\nComparado ao Café do Vô Zico que estávamos usando, esse Stardust promete uma experiência diferente: mais voltada a frutas maduras e acidez complexa, em vez de chocolate e caramelo.\n\nA acidez láctica é especialmente interessante: pode produzir uma sensação de acidez mais arredondada e cremosa, diferente daquela acidez cítrica que identificamos no Teste 02.\n\nNa fotografia, os grãos apresentam coloração heterogênea, entre castanho médio e mais escuro. Eu não classificaria a torra com segurança apenas pela imagem.\n\nComo eu começaria a extração\n\nPara conhecer o Stardust, usaria inicialmente a receita do Teste 02, que já sabemos produzir uma bebida equilibrada:\n\n20 g de café · 320 g de água · 91 °C · JX-Pro 3.5.0 · 3 etapas de despejo.\n\nIsso nos daria uma referência antes de experimentar o método Kasuya.\n\nUma pergunta importante: você pretende usar o Stardust já no Teste 05 ou continuar os Testes 05 e 06 com o Café do Vô Zico?\n\nSe trocarmos o café, também mudaremos uma variável importante, dificultando a comparação das técnicas.",
+          "tables": [
+            [
+              [
+                "Característica",
+                "Informação"
+              ],
+              [
+                "Produtor",
+                "Fazenda Daterra Coffee"
+              ],
+              [
+                "Região",
+                "Cerrado Mineiro"
+              ],
+              [
+                "Altitude",
+                "1.100 m"
+              ],
+              [
+                "Processamento",
+                "Natural"
+              ],
+              [
+                "Peso",
+                "250 g"
+              ],
+              [
+                "Torra",
+                "Não informada na embalagem fotografada"
+              ]
+            ]
+          ]
+        },
+        {
+          "sequence": 104,
+          "text": "Perfeito. Vamos manter duas linhas independentes de testes V60, com numeração própria e histórico sensorial separado.\n\n☕ Linha A — Café do Vô Zico\n\nTeste\n\n\t\n\nTécnica\n\n\t\n\nResultado / Status\n\n\n\n\nA01\n\n\t\n\nHedrick, JX 4.0.0\n\n\t\n\nÁcido, leve, amargor separado\n\n\n\n\nA02\n\n\t\n\n3 despejos, JX 3.5.0\n\n\t\n\nMelhor equilíbrio até agora\n\n\n\n\nA03\n\n\t\n\nRepetição do A02\n\n\t\n\nSem resultado registrado\n\n\n\n\nA04\n\n\t\n\n5 despejos, JX 3.8.0\n\n\t\n\nMais corpo, ligeiramente mais amargo\n\n\n\n\nA05\n\n\t\n\n5 etapas, JX 3.5.0\n\n\t\n\nPlanejado\n\n\n\n\nA06\n\n\t\n\nKasuya adaptado, JX 4.5.0\n\n\t\n\nPlanejado\n\n☕ Linha B — Stardust / Abigail\n\nComeçaremos com a receita que funcionou melhor na Linha A, para estabelecer uma referência sensorial do novo café.\n\nStardust — Teste B01\nPlanejado\n\nCafé\n\n20 g\n\nÁgua\n\n320 g\n\nTemperatura\n\n91 °C\n\nJX-Pro\n\n3.5.0\n\nProporção\n\n1:16\n\nBloom\n\n45 s\n\nTempo\n\n\t\n\nÁgua acumulada\n\n\t\n\nAção\n\n\n\n\n0:00\n\n\t\n\n60 g\n\n\t\n\nBloom\n\n\n\n\n0:45\n\n\t\n\n190 g\n\n\t\n\nCircular suave\n\n\n\n\n1:30\n\n\t\n\n320 g\n\n\t\n\nCircular suave\n\nCuidados: bico baixo, fluxo suave, sem swirl, evitar despejar no papel.\n\nO que vamos avaliar no Stardust\n\nPrincipalmente a doçura das frutas maduras, a acidez agradável, o corpo e a presença de amargor no final.\n\nO Stardust poderá precisar de moagem ou temperatura diferentes, mas vamos decidir isso após o B01, sem alterar várias variáveis antecipadamente.\n\nReferência atual do moedor: 3.8.0. Ajustar para 3.5.0 antes do A05 ou B01.\n\nAssim teremos duas linhas comparáveis, sem confundir os resultados de cafés diferentes.",
+          "tables": [
+            [
+              [
+                "Teste",
+                "Técnica",
+                "Resultado / Status"
+              ],
+              [
+                "A01",
+                "Hedrick, JX 4.0.0",
+                "Ácido, leve, amargor separado"
+              ],
+              [
+                "A02",
+                "3 despejos, JX 3.5.0",
+                "Melhor equilíbrio até agora"
+              ],
+              [
+                "A03",
+                "Repetição do A02",
+                "Sem resultado registrado"
+              ],
+              [
+                "A04",
+                "5 despejos, JX 3.8.0",
+                "Mais corpo, ligeiramente mais amargo"
+              ],
+              [
+                "A05",
+                "5 etapas, JX 3.5.0",
+                "Planejado"
+              ],
+              [
+                "A06",
+                "Kasuya adaptado, JX 4.5.0",
+                "Planejado"
+              ]
+            ],
+            [
+              [
+                "Tempo",
+                "Água acumulada",
+                "Ação"
+              ],
+              [
+                "0:00",
+                "60 g",
+                "Bloom"
+              ],
+              [
+                "0:45",
+                "190 g",
+                "Circular suave"
+              ],
+              [
+                "1:30",
+                "320 g",
+                "Circular suave"
+              ]
+            ]
+          ]
+        },
+        {
+          "sequence": 138,
+          "text": "Combinado. A receita de Hoffmann com o Stardust passa a ser o Teste B01, substituindo a identificação anterior B02.\n\nA06 — Café do Vô Zico: Hoffmann, 3:23, sem amargor.\n\nB01 — Stardust: Hoffmann, 3:38, sem amargor, mais aberto e suculento.\n\nAmbos com 15 g de café, 250 g de água, 96 °C e JX-Pro 3.5.0.\n\nMantemos as duas linhas de testes independentes.",
+          "tables": []
+        }
+      ],
+      "review_notes": [
+        "Final B01 refers to the Hoffmann execution, not proof this earlier plan was brewed."
+      ],
+      "external_source_links": []
+    },
+    {
+      "source_key": "hoffmann-original",
+      "name": "James Hoffmann — A Better 1 Cup V60 Technique",
+      "brewing_category": "Pour Over",
+      "brewer": "V60",
+      "source_state": "source_reference",
+      "app_status": null,
+      "base_recipe_key": null,
+      "coffee_key": null,
+      "parameters": {
+        "dose_g": 15,
+        "brewing_water_g": 250,
+        "temperature_c": 100,
+        "grinder_setting": null,
+        "finished_drink_g": null
+      },
+      "source_refs": [
+        {
+          "sequence": 106,
+          "message_id": "537877f2-3b83-4d5f-831a-767dbdbf6237"
+        },
+        {
+          "sequence": 108,
+          "message_id": "d84ed533-05d7-47e1-928a-e315406a3634"
+        }
+      ],
+      "source_instructions": [
+        {
+          "sequence": 106,
+          "text": "Salvei como referência no projeto Coffee 2026 a técnica de James Hoffmann, A Better 1 Cup V60 Technique, usando a transcrição completa que você forneceu.\n\n☕ James Hoffmann — V60 1 Cup\n\nCafé\n\n15 g\n\nÁgua\n\n250 g\n\nProporção\n\n1:16,7\n\nTemperatura\n\n100 °C*\n\nMoagem\n\nMédia-fina\n\nTempo final\n\n~3:00\n\nTempo\n\n\t\n\nÁgua acumulada\n\n\t\n\nAção\n\n\n\n\n0:00\n\n\t\n\n50 g\n\n\t\n\nBloom + swirl leve\n\n\n\n\n0:45\n\n\t\n\n100 g\n\n\t\n\nDespejo circular\n\n\n\n\n1:10\n\n\t\n\n150 g\n\n\t\n\nDespejo circular\n\n\n\n\n1:30\n\n\t\n\n200 g\n\n\t\n\nDespejo circular\n\n\n\n\n1:50\n\n\t\n\n250 g\n\n\t\n\nDespejo + swirl leve\n\n\n\n\n~3:00\n\n\t\n\n—\n\n\t\n\nDrenagem completa\n\n*100 °C para torras claras. Médias: 90–95 °C; escuras: 80–90 °C, conforme o vídeo.\n\nPrincípios importantes: despejos circulares, bico baixo, fluxo próximo de 5 g/s, pré-aquecimento do V60 e moagem relativamente fina. Ajustar principalmente pelo sabor, não apenas pelo tempo.\n\nUm ponto interessante para nossos experimentos: Hoffmann prefere despejos circulares aos despejos exclusivamente centrais, por favorecerem distribuição mais uniforme da água e da agitação.\n\nA receita fica disponível como referência para futuras comparações. Não alterei os Testes A05, A06 nem B01 que já planejamos.\n\nFonte: James Hoffmann — A Better 1 Cup V60 Technique ",
+          "tables": [
+            [
+              [
+                "Tempo",
+                "Água acumulada",
+                "Ação"
+              ],
+              [
+                "0:00",
+                "50 g",
+                "Bloom + swirl leve"
+              ],
+              [
+                "0:45",
+                "100 g",
+                "Despejo circular"
+              ],
+              [
+                "1:10",
+                "150 g",
+                "Despejo circular"
+              ],
+              [
+                "1:30",
+                "200 g",
+                "Despejo circular"
+              ],
+              [
+                "1:50",
+                "250 g",
+                "Despejo + swirl leve"
+              ],
+              [
+                "~3:00",
+                "—",
+                "Drenagem completa"
+              ]
+            ]
+          ]
+        },
+        {
+          "sequence": 108,
+          "text": "As quantidades são as originais de James Hoffmann, conforme a transcrição que você enviou. Não adaptei a receita.\n\n15 g de café\n\n250 g de água\n\n5 despejos de 50 g\n\nProporção 1:16,7\n\nOs horários também seguem o vídeo, com pequenas aproximações:\n\nInício\n\n\t\n\nÁgua acumulada\n\n\n\n\n0:00\n\n\t\n\n50 g\n\n\n\n\n0:45\n\n\t\n\n100 g\n\n\n\n\n1:10\n\n\t\n\n150 g\n\n\n\n\n1:30\n\n\t\n\n200 g\n\n\n\n\n1:50\n\n\t\n\n250 g\n\n\n\n\n~3:00\n\n\t\n\nDrenagem completa\n\nUma precisão importante: Hoffmann recomenda terminar o último despejo por volta de 2:00. Os horários indicados são de início dos despejos, não necessariamente de conclusão.\n\nA única simplificação minha foi chamar a moagem de média-fina. Hoffmann não especifica uma granulometria exata; diz apenas que é mais fina do que muitos costumam utilizar no V60.\n\nPortanto, a receita está registrada como referência original, sem adaptação ao JX-Pro.",
+          "tables": [
+            [
+              [
+                "Início",
+                "Água acumulada"
+              ],
+              [
+                "0:00",
+                "50 g"
+              ],
+              [
+                "0:45",
+                "100 g"
+              ],
+              [
+                "1:10",
+                "150 g"
+              ],
+              [
+                "1:30",
+                "200 g"
+              ],
+              [
+                "1:50",
+                "250 g"
+              ],
+              [
+                "~3:00",
+                "Drenagem completa"
+              ]
+            ]
+          ]
+        }
+      ],
+      "review_notes": [
+        "Original transcription is discussed but its complete user message is unavailable. Temperature guidance depends on roast."
+      ],
+      "external_source_links": [
+        {
+          "text": "James Hoffmann — A Better 1 Cup V60 Technique ",
+          "url": "https://www.youtube.com/watch?v=1oB1oDrDkHM&utm_source=chatgpt.com"
+        }
+      ]
+    },
+    {
+      "source_key": "hoffmann-96",
+      "name": "Hoffmann — 96 °C / JX-Pro 3.5.0",
+      "brewing_category": "Pour Over",
+      "brewer": "V60",
+      "source_state": "adopted_reference",
+      "app_status": null,
+      "base_recipe_key": "hoffmann-original",
+      "coffee_key": null,
+      "parameters": {
+        "dose_g": 15,
+        "brewing_water_g": 250,
+        "temperature_c": 96,
+        "grinder_setting": "3.5.0",
+        "finished_drink_g": null
+      },
+      "source_refs": [
+        {
+          "sequence": 114,
+          "message_id": "e1411320-51c8-42c1-a29c-26c83a2c9e3b"
+        },
+        {
+          "sequence": 116,
+          "message_id": "00aa16d4-cf95-4e06-b482-2e912e93b458"
+        },
+        {
+          "sequence": 118,
+          "message_id": "db6c95a1-7edb-4d7d-877f-7f72a5450d13"
+        },
+        {
+          "sequence": 120,
+          "message_id": "5989cdf2-9ea9-4a8b-b24c-203bacc6f7a7"
+        },
+        {
+          "sequence": 122,
+          "message_id": "3a7c1806-5a15-4586-83ee-1b478d67bdbb"
+        },
+        {
+          "sequence": 140,
+          "message_id": "5f0c881a-211b-448d-81d3-6b13c71eed3a"
+        }
+      ],
+      "source_instructions": [
+        {
+          "sequence": 114,
+          "text": "Sim. Vamos substituir o A06 pelo método de James Hoffmann. O Kasuya fica reservado para um teste futuro.\n\n☕ V60 — A06 | Café do Vô Zico\n\nJames Hoffmann — A Better 1 Cup V60 Technique\n\nCafé\n\n15 g\n\nÁgua\n\n250 g\n\nTemperatura\n\n100 °C\n\nJX-Pro\n\n3.5.0\n\nProporção\n\n1:16,7\n\nDespejos\n\n5 × 50 g\n\nTempo\n\n\t\n\nÁgua acumulada\n\n\t\n\nAção\n\n\n\n\n0:00\n\n\t\n\n50 g\n\n\t\n\nBloom + swirl leve\n\n\n\n\n0:45\n\n\t\n\n100 g\n\n\t\n\nCircular suave\n\n\n\n\n1:10\n\n\t\n\n150 g\n\n\t\n\nCircular suave\n\n\n\n\n1:30\n\n\t\n\n200 g\n\n\t\n\nCircular suave\n\n\n\n\n1:50\n\n\t\n\n250 g\n\n\t\n\nCircular + swirl leve\n\n\n\n\n~3:00\n\n\t\n\n—\n\n\t\n\nDrenagem\n\nCuidados: bico baixo, fluxo ~5 g/s, círculos suaves, filtro enxaguado e V60 pré-aquecido.\n\nMantemos a moagem 3.5.0, conforme você decidiu. A temperatura de 100 °C segue a receita original de Hoffmann para torras claras.\n\nA06 será uma experiência com a técnica completa de Hoffmann, mas com a moagem adaptada ao nosso JX-Pro.",
+          "tables": [
+            [
+              [
+                "Tempo",
+                "Água acumulada",
+                "Ação"
+              ],
+              [
+                "0:00",
+                "50 g",
+                "Bloom + swirl leve"
+              ],
+              [
+                "0:45",
+                "100 g",
+                "Circular suave"
+              ],
+              [
+                "1:10",
+                "150 g",
+                "Circular suave"
+              ],
+              [
+                "1:30",
+                "200 g",
+                "Circular suave"
+              ],
+              [
+                "1:50",
+                "250 g",
+                "Circular + swirl leve"
+              ],
+              [
+                "~3:00",
+                "—",
+                "Drenagem"
+              ]
+            ]
+          ]
+        },
+        {
+          "sequence": 116,
+          "text": "Perfeito. A06 atualizado para 96 °C, utilizando água recém-fervida na sua altitude, conforme a proposta original de Hoffmann.\n\n☕ V60 — A06 | Hoffmann\n\nParâmetro\n\n\t\n\nValor\n\n\n\n\nCafé\n\n\t\n\n15 g — Café do Vô Zico\n\n\n\n\nÁgua\n\n\t\n\n250 g\n\n\n\n\nTemperatura\n\n\t\n\n96 °C\n\n\n\n\nJX-Pro\n\n\t\n\n3.5.0\n\n\n\n\nProporção\n\n\t\n\n1:16,7\n\nTempo\n\n\t\n\nÁgua acumulada\n\n\n\n\n0:00\n\n\t\n\n50 g + swirl leve\n\n\n\n\n0:45\n\n\t\n\n100 g\n\n\n\n\n1:10\n\n\t\n\n150 g\n\n\n\n\n1:30\n\n\t\n\n200 g\n\n\n\n\n1:50\n\n\t\n\n250 g + swirl leve\n\n\n\n\n~3:00\n\n\t\n\nDrenagem completa\n\nCuidados: despejos circulares, bico baixo, fluxo ~5 g/s e V60 pré-aquecido.\n\nReceita A06 definida e registrada.",
+          "tables": [
+            [
+              [
+                "Parâmetro",
+                "Valor"
+              ],
+              [
+                "Café",
+                "15 g — Café do Vô Zico"
+              ],
+              [
+                "Água",
+                "250 g"
+              ],
+              [
+                "Temperatura",
+                "96 °C"
+              ],
+              [
+                "JX-Pro",
+                "3.5.0"
+              ],
+              [
+                "Proporção",
+                "1:16,7"
+              ]
+            ],
+            [
+              [
+                "Tempo",
+                "Água acumulada"
+              ],
+              [
+                "0:00",
+                "50 g + swirl leve"
+              ],
+              [
+                "0:45",
+                "100 g"
+              ],
+              [
+                "1:10",
+                "150 g"
+              ],
+              [
+                "1:30",
+                "200 g"
+              ],
+              [
+                "1:50",
+                "250 g + swirl leve"
+              ],
+              [
+                "~3:00",
+                "Drenagem completa"
+              ]
+            ]
+          ]
+        },
+        {
+          "sequence": 118,
+          "text": "Sim. James Hoffmann faz um swirl suave imediatamente após terminar o último despejo, por volta de 2:00.\n\nNa receita original, ele faz dois swirls:\n\nApós o bloom (50 g): para garantir que todo o café fique molhado.\n\nApós o último despejo (250 g): para ajudar a uniformizar o leito antes da drenagem final.\n\nO segundo swirl deve ser bem suave, apenas uma pequena movimentação circular do V60, sem agitação vigorosa.\n\nPortanto, mantemos os dois swirls no Teste A06, exatamente como Hoffmann demonstra.",
+          "tables": []
+        },
+        {
+          "sequence": 120,
+          "text": "☕ V60 — A06\n\nJames Hoffmann · Café do Vô Zico\n\nCAFÉ\n\n15 g\n\nÁGUA\n\n250 g\n\nTEMP.\n\n96 °C\n\nJX-PRO\n\n3.5.0\n\nPROPORÇÃO\n\n1:16,7\n\nFINAL\n\n~3:00\n\nTempo\n\n\t\n\nÁgua total\n\n\t\n\nAção\n\n\n\n\n0:00\n\n\t\n\n50 g\n\n\tBloom + swirl suave\n\n\n0:45\n\n\t\n\n100 g\n\n\tCircular\n\n\n1:10\n\n\t\n\n150 g\n\n\tCircular\n\n\n1:30\n\n\t\n\n200 g\n\n\tCircular\n\n\n1:50\n\n\t\n\n250 g\n\n\tCircular + swirl final\n\n\n~3:00\n\n\t\n\n—\n\n\tFim da drenagem\n\nAntes: enxaguar filtro e pré-aquecer V60.\n\nDurante: bico baixo · ~5 g/s · círculos suaves · evitar o papel.\n\nFinal: terminar último despejo ~2:00, swirl suave e deixar drenar.",
+          "tables": [
+            [
+              [
+                "Tempo",
+                "Água total",
+                "Ação"
+              ],
+              [
+                "0:00",
+                "50 g",
+                "Bloom + swirl suave"
+              ],
+              [
+                "0:45",
+                "100 g",
+                "Circular"
+              ],
+              [
+                "1:10",
+                "150 g",
+                "Circular"
+              ],
+              [
+                "1:30",
+                "200 g",
+                "Circular"
+              ],
+              [
+                "1:50",
+                "250 g",
+                "Circular + swirl final"
+              ],
+              [
+                "~3:00",
+                "—",
+                "Fim da drenagem"
+              ]
+            ]
+          ]
+        },
+        {
+          "sequence": 122,
+          "text": "Ótimo. Vamos usar a mesma receita Hoffmann A06 nos dois cafés, criando um teste comparativo:\n\nParâmetro\n\n\t\n\nCafé do Vô\n\n\t\n\nStardust\n\n\n\n\nIdentificação\n\n\t\n\nA06\n\n\t\n\nB02\n\n\n\n\nCafé\n\n\t\n\n15 g\n\n\t\n\n15 g\n\n\n\n\nÁgua\n\n\t\n\n250 g\n\n\t\n\n250 g\n\n\n\n\nTemperatura\n\n\t\n\n96 °C\n\n\t\n\n96 °C\n\n\n\n\nJX-Pro\n\n\t\n\n3.5.0\n\n\t\n\n3.5.0\n\n\n\n\nTécnica\n\n\t\n\nHoffmann\n\n\t\n\nHoffmann\n\nAssim poderemos comparar doçura, acidez, corpo e amargor mantendo os parâmetros iguais.\n\nNão recebi uma nova foto do Stardust nesta mensagem. Pode enviá-la novamente para eu avaliar a aparência dos grãos?\n\nDepois registramos os resultados de cada café separadamente.",
+          "tables": [
+            [
+              [
+                "Parâmetro",
+                "Café do Vô",
+                "Stardust"
+              ],
+              [
+                "Identificação",
+                "A06",
+                "B02"
+              ],
+              [
+                "Café",
+                "15 g",
+                "15 g"
+              ],
+              [
+                "Água",
+                "250 g",
+                "250 g"
+              ],
+              [
+                "Temperatura",
+                "96 °C",
+                "96 °C"
+              ],
+              [
+                "JX-Pro",
+                "3.5.0",
+                "3.5.0"
+              ],
+              [
+                "Técnica",
+                "Hoffmann",
+                "Hoffmann"
+              ]
+            ]
+          ]
+        },
+        {
+          "sequence": 140,
+          "text": "Ótimo. Então temos uma nova receita de referência para o nosso paladar: James Hoffmann 1 Cup, adaptada para 96 °C e JX-Pro 3.5.0.\n\nOs dois resultados foram bastante positivos:\n\nA06 — Vô Zico: equilibrado, agradável e sem amargor perceptível.\n\nB01 — Stardust: mais aberto e suculento, também sem amargor perceptível.\n\nEu manteria a receita exatamente como está por enquanto. Ela conseguiu algo que procurávamos desde os primeiros testes: uma xícara agradável, com acidez interessante e sem amargor indesejado.\n\nNos próximos preparos, podemos verificar a repetibilidade antes de experimentar novos ajustes.",
+          "tables": []
+        }
+      ],
+      "review_notes": [
+        "100 °C at message 114 is superseded by 96 °C at 116. No app Keeper status inferred."
+      ],
+      "external_source_links": []
+    },
+    {
+      "source_key": "hoffmann-vo-zico",
+      "name": "Hoffmann — Café do Vô Zico",
+      "brewing_category": "Pour Over",
+      "brewer": "V60",
+      "source_state": "recipe_with_recorded_execution",
+      "app_status": null,
+      "base_recipe_key": "hoffmann-96",
+      "coffee_key": "vo-zico",
+      "parameters": {
+        "dose_g": 15,
+        "brewing_water_g": 250,
+        "temperature_c": 96,
+        "grinder_setting": "3.5.0",
+        "finished_drink_g": null
+      },
+      "source_refs": [
+        {
+          "sequence": 116,
+          "message_id": "00aa16d4-cf95-4e06-b482-2e912e93b458"
+        },
+        {
+          "sequence": 120,
+          "message_id": "5989cdf2-9ea9-4a8b-b24c-203bacc6f7a7"
+        },
+        {
+          "sequence": 128,
+          "message_id": "bcee78cc-7379-4185-8540-7e1a21fa02ee"
+        },
+        {
+          "sequence": 130,
+          "message_id": "a66b967a-5f61-408c-93a8-9b1159e11662"
+        },
+        {
+          "sequence": 138,
+          "message_id": "f8b9a2e4-84a1-419e-bdb3-dd8886d6a784"
+        },
+        {
+          "sequence": 140,
+          "message_id": "5f0c881a-211b-448d-81d3-6b13c71eed3a"
+        }
+      ],
+      "source_instructions": [
+        {
+          "sequence": 116,
+          "text": "Perfeito. A06 atualizado para 96 °C, utilizando água recém-fervida na sua altitude, conforme a proposta original de Hoffmann.\n\n☕ V60 — A06 | Hoffmann\n\nParâmetro\n\n\t\n\nValor\n\n\n\n\nCafé\n\n\t\n\n15 g — Café do Vô Zico\n\n\n\n\nÁgua\n\n\t\n\n250 g\n\n\n\n\nTemperatura\n\n\t\n\n96 °C\n\n\n\n\nJX-Pro\n\n\t\n\n3.5.0\n\n\n\n\nProporção\n\n\t\n\n1:16,7\n\nTempo\n\n\t\n\nÁgua acumulada\n\n\n\n\n0:00\n\n\t\n\n50 g + swirl leve\n\n\n\n\n0:45\n\n\t\n\n100 g\n\n\n\n\n1:10\n\n\t\n\n150 g\n\n\n\n\n1:30\n\n\t\n\n200 g\n\n\n\n\n1:50\n\n\t\n\n250 g + swirl leve\n\n\n\n\n~3:00\n\n\t\n\nDrenagem completa\n\nCuidados: despejos circulares, bico baixo, fluxo ~5 g/s e V60 pré-aquecido.\n\nReceita A06 definida e registrada.",
+          "tables": [
+            [
+              [
+                "Parâmetro",
+                "Valor"
+              ],
+              [
+                "Café",
+                "15 g — Café do Vô Zico"
+              ],
+              [
+                "Água",
+                "250 g"
+              ],
+              [
+                "Temperatura",
+                "96 °C"
+              ],
+              [
+                "JX-Pro",
+                "3.5.0"
+              ],
+              [
+                "Proporção",
+                "1:16,7"
+              ]
+            ],
+            [
+              [
+                "Tempo",
+                "Água acumulada"
+              ],
+              [
+                "0:00",
+                "50 g + swirl leve"
+              ],
+              [
+                "0:45",
+                "100 g"
+              ],
+              [
+                "1:10",
+                "150 g"
+              ],
+              [
+                "1:30",
+                "200 g"
+              ],
+              [
+                "1:50",
+                "250 g + swirl leve"
+              ],
+              [
+                "~3:00",
+                "Drenagem completa"
+              ]
+            ]
+          ]
+        },
+        {
+          "sequence": 120,
+          "text": "☕ V60 — A06\n\nJames Hoffmann · Café do Vô Zico\n\nCAFÉ\n\n15 g\n\nÁGUA\n\n250 g\n\nTEMP.\n\n96 °C\n\nJX-PRO\n\n3.5.0\n\nPROPORÇÃO\n\n1:16,7\n\nFINAL\n\n~3:00\n\nTempo\n\n\t\n\nÁgua total\n\n\t\n\nAção\n\n\n\n\n0:00\n\n\t\n\n50 g\n\n\tBloom + swirl suave\n\n\n0:45\n\n\t\n\n100 g\n\n\tCircular\n\n\n1:10\n\n\t\n\n150 g\n\n\tCircular\n\n\n1:30\n\n\t\n\n200 g\n\n\tCircular\n\n\n1:50\n\n\t\n\n250 g\n\n\tCircular + swirl final\n\n\n~3:00\n\n\t\n\n—\n\n\tFim da drenagem\n\nAntes: enxaguar filtro e pré-aquecer V60.\n\nDurante: bico baixo · ~5 g/s · círculos suaves · evitar o papel.\n\nFinal: terminar último despejo ~2:00, swirl suave e deixar drenar.",
+          "tables": [
+            [
+              [
+                "Tempo",
+                "Água total",
+                "Ação"
+              ],
+              [
+                "0:00",
+                "50 g",
+                "Bloom + swirl suave"
+              ],
+              [
+                "0:45",
+                "100 g",
+                "Circular"
+              ],
+              [
+                "1:10",
+                "150 g",
+                "Circular"
+              ],
+              [
+                "1:30",
+                "200 g",
+                "Circular"
+              ],
+              [
+                "1:50",
+                "250 g",
+                "Circular + swirl final"
+              ],
+              [
+                "~3:00",
+                "—",
+                "Fim da drenagem"
+              ]
+            ]
+          ]
+        },
+        {
+          "sequence": 128,
+          "text": "☕ V60 — Comparação A06 × B02\n\nMétodo James Hoffmann · JX-Pro 3.5.0 · 96 °C\n\nA06 — Café do Vô Zico\n\n3:23\n\n249,0 g de água\n\nB02 — Stardust\n\n3:38\n\n252,3 g de água\n\nDiferença: 15 segundos. O Stardust drenou aproximadamente 7% mais lentamente.\n\nAnálise visual\n\nCaracterística\n\n\t\n\nVô Zico\n\n\t\n\nStardust\n\n\n\n\nLeito\n\n\t\n\nRelativamente plano\n\n\t\n\nRelativamente plano\n\n\n\n\nPartículas visíveis\n\n\t\n\nMais granulação aparente\n\n\t\n\nAspecto mais fino e compacto\n\n\n\n\nResíduos no filtro\n\n\t\n\nModerados\n\n\t\n\nMais concentrados\n\n\n\n\nDrenagem\n\n\t\n\nMais rápida\n\n\t\n\nMais lenta\n\nA aparência é compatível com diferenças na distribuição de partículas e na resistência do leito, mesmo utilizando a mesma regulagem do moedor. Mas não é possível confirmar isso apenas pelas fotografias.\n\nMinha avaliação: ambos apresentaram tempos razoáveis para a técnica de Hoffmann. Não vejo sinais visuais evidentes de problemas graves de extração.\n\nAgora temos uma comparação interessante porque utilizamos a mesma receita nos dois cafés.\n\nA pergunta principal: como ficaram os sabores? O Stardust apresentou aquelas notas frutadas e acidez láctica anunciadas? E o Café do Vô ficou mais ou menos amargo do que no Teste A02, que foi nosso melhor resultado até agora?",
+          "tables": [
+            [
+              [
+                "Característica",
+                "Vô Zico",
+                "Stardust"
+              ],
+              [
+                "Leito",
+                "Relativamente plano",
+                "Relativamente plano"
+              ],
+              [
+                "Partículas visíveis",
+                "Mais granulação aparente",
+                "Aspecto mais fino e compacto"
+              ],
+              [
+                "Resíduos no filtro",
+                "Moderados",
+                "Mais concentrados"
+              ],
+              [
+                "Drenagem",
+                "Mais rápida",
+                "Mais lenta"
+              ]
+            ]
+          ]
+        },
+        {
+          "sequence": 130,
+          "text": "Excelente resultado! A técnica de Hoffmann funcionou muito bem nos dois cafés, especialmente porque eliminou o amargor perceptível que aparecia nos testes anteriores.\n\n☕ Resultado — A06 × B02\n\nCaracterística\n\n\t\n\nStardust (esq.)\n\n\t\n\nVô Zico (dir.)\n\n\n\n\nMétodo\n\n\t\n\nHoffmann\n\n\t\n\nHoffmann\n\n\n\n\nJX-Pro\n\n\t\n\n3.5.0\n\n\t\n\n3.5.0\n\n\n\n\nTemperatura\n\n\t\n\n96 °C\n\n\t\n\n96 °C\n\n\n\n\nTempo\n\n\t\n\n3:38\n\n\t\n\n3:23\n\n\n\n\nAmargor\n\n\t\n\nNão perceptível\n\n\t\n\nNão perceptível\n\n\n\n\nPerfil\n\n\t\n\nMais aberto, lembra suco\n\n\t\n\nAgradável, comparativamente menos aberto\n\n\n\n\nAvaliação\n\n\t\n\nMuito agradável\n\n\t\n\nMuito agradável\n\nO que aprendemos\n\n1. A receita de Hoffmann é nossa nova referência promissora. Cinco despejos circulares, moagem 3.5.0 e água a 96 °C produziram bons resultados nos dois cafés.\n\n2. O Stardust mostrou uma diferença sensorial interessante. A descrição de uma bebida mais aberta, lembrando suco, é compatível com maior percepção de acidez frutada e leveza, embora ainda não tenhamos identificado notas específicas.\n\n3. O tempo de extração não foi um problema. Mesmo com 15 segundos de diferença entre os cafés, ambos ficaram agradáveis e sem amargor.\n\nUm cuidado: também mudamos a dose, a proporção e a temperatura em relação ao Teste A02. Portanto, ainda não podemos atribuir a melhora exclusivamente aos cinco despejos.\n\nRegistrei os dois resultados como referências positivas nas respectivas linhas de testes.\n\nUma pergunta para completar a avaliação: entre os dois, você teve alguma preferência ou gostou igualmente, cada um com suas características?",
+          "tables": [
+            [
+              [
+                "Característica",
+                "Stardust (esq.)",
+                "Vô Zico (dir.)"
+              ],
+              [
+                "Método",
+                "Hoffmann",
+                "Hoffmann"
+              ],
+              [
+                "JX-Pro",
+                "3.5.0",
+                "3.5.0"
+              ],
+              [
+                "Temperatura",
+                "96 °C",
+                "96 °C"
+              ],
+              [
+                "Tempo",
+                "3:38",
+                "3:23"
+              ],
+              [
+                "Amargor",
+                "Não perceptível",
+                "Não perceptível"
+              ],
+              [
+                "Perfil",
+                "Mais aberto, lembra suco",
+                "Agradável, comparativamente menos aberto"
+              ],
+              [
+                "Avaliação",
+                "Muito agradável",
+                "Muito agradável"
+              ]
+            ]
+          ]
+        },
+        {
+          "sequence": 138,
+          "text": "Combinado. A receita de Hoffmann com o Stardust passa a ser o Teste B01, substituindo a identificação anterior B02.\n\nA06 — Café do Vô Zico: Hoffmann, 3:23, sem amargor.\n\nB01 — Stardust: Hoffmann, 3:38, sem amargor, mais aberto e suculento.\n\nAmbos com 15 g de café, 250 g de água, 96 °C e JX-Pro 3.5.0.\n\nMantemos as duas linhas de testes independentes.",
+          "tables": []
+        },
+        {
+          "sequence": 140,
+          "text": "Ótimo. Então temos uma nova receita de referência para o nosso paladar: James Hoffmann 1 Cup, adaptada para 96 °C e JX-Pro 3.5.0.\n\nOs dois resultados foram bastante positivos:\n\nA06 — Vô Zico: equilibrado, agradável e sem amargor perceptível.\n\nB01 — Stardust: mais aberto e suculento, também sem amargor perceptível.\n\nEu manteria a receita exatamente como está por enquanto. Ela conseguiu algo que procurávamos desde os primeiros testes: uma xícara agradável, com acidez interessante e sem amargor indesejado.\n\nNos próximos preparos, podemos verificar a repetibilidade antes de experimentar novos ajustes.",
+          "tables": []
+        }
+      ],
+      "review_notes": [],
+      "external_source_links": []
+    },
+    {
+      "source_key": "hoffmann-stardust",
+      "name": "Hoffmann — Stardust",
+      "brewing_category": "Pour Over",
+      "brewer": "V60",
+      "source_state": "recipe_with_recorded_execution",
+      "app_status": null,
+      "base_recipe_key": "hoffmann-96",
+      "coffee_key": "stardust",
+      "parameters": {
+        "dose_g": 15,
+        "brewing_water_g": 250,
+        "temperature_c": 96,
+        "grinder_setting": "3.5.0",
+        "finished_drink_g": null
+      },
+      "source_refs": [
+        {
+          "sequence": 122,
+          "message_id": "3a7c1806-5a15-4586-83ee-1b478d67bdbb"
+        },
+        {
+          "sequence": 124,
+          "message_id": "ec0cc1ea-bf84-464c-a6f0-db98e69fbd1c"
+        },
+        {
+          "sequence": 128,
+          "message_id": "bcee78cc-7379-4185-8540-7e1a21fa02ee"
+        },
+        {
+          "sequence": 130,
+          "message_id": "a66b967a-5f61-408c-93a8-9b1159e11662"
+        },
+        {
+          "sequence": 138,
+          "message_id": "f8b9a2e4-84a1-419e-bdb3-dd8886d6a784"
+        },
+        {
+          "sequence": 140,
+          "message_id": "5f0c881a-211b-448d-81d3-6b13c71eed3a"
+        }
+      ],
+      "source_instructions": [
+        {
+          "sequence": 122,
+          "text": "Ótimo. Vamos usar a mesma receita Hoffmann A06 nos dois cafés, criando um teste comparativo:\n\nParâmetro\n\n\t\n\nCafé do Vô\n\n\t\n\nStardust\n\n\n\n\nIdentificação\n\n\t\n\nA06\n\n\t\n\nB02\n\n\n\n\nCafé\n\n\t\n\n15 g\n\n\t\n\n15 g\n\n\n\n\nÁgua\n\n\t\n\n250 g\n\n\t\n\n250 g\n\n\n\n\nTemperatura\n\n\t\n\n96 °C\n\n\t\n\n96 °C\n\n\n\n\nJX-Pro\n\n\t\n\n3.5.0\n\n\t\n\n3.5.0\n\n\n\n\nTécnica\n\n\t\n\nHoffmann\n\n\t\n\nHoffmann\n\nAssim poderemos comparar doçura, acidez, corpo e amargor mantendo os parâmetros iguais.\n\nNão recebi uma nova foto do Stardust nesta mensagem. Pode enviá-la novamente para eu avaliar a aparência dos grãos?\n\nDepois registramos os resultados de cada café separadamente.",
+          "tables": [
+            [
+              [
+                "Parâmetro",
+                "Café do Vô",
+                "Stardust"
+              ],
+              [
+                "Identificação",
+                "A06",
+                "B02"
+              ],
+              [
+                "Café",
+                "15 g",
+                "15 g"
+              ],
+              [
+                "Água",
+                "250 g",
+                "250 g"
+              ],
+              [
+                "Temperatura",
+                "96 °C",
+                "96 °C"
+              ],
+              [
+                "JX-Pro",
+                "3.5.0",
+                "3.5.0"
+              ],
+              [
+                "Técnica",
+                "Hoffmann",
+                "Hoffmann"
+              ]
+            ]
+          ]
+        },
+        {
+          "sequence": 124,
+          "text": "☕ Stardust — Teste B02 | Hoffmann\n\nTempo total\n\n3:38\n\nÁgua utilizada\n\n252,3 g\nAnálise visual\n\nLeito: relativamente plano, com pequena depressão central. Bom sinal de distribuição.\n\nParedes do filtro: bastante material aderido, principalmente partículas finas.\n\nDrenagem: 38 segundos acima dos aproximadamente 3 minutos citados por Hoffmann.\n\nPossível explicação: partículas finas produzidas pelo JX-Pro e a agitação dos despejos e swirls podem ter aumentado a resistência do filtro.\n\nMinha avaliação: visualmente, a extração parece razoavelmente uniforme. Não vejo evidência clara de canalização, embora a fotografia sozinha não permita confirmar isso.\n\nO tempo de 3:38 não é necessariamente problemático. O sabor será decisivo.\n\nComo ficou o Stardust? Principalmente em relação à doçura, acidez frutada e amargor no final da xícara.",
+          "tables": []
+        },
+        {
+          "sequence": 128,
+          "text": "☕ V60 — Comparação A06 × B02\n\nMétodo James Hoffmann · JX-Pro 3.5.0 · 96 °C\n\nA06 — Café do Vô Zico\n\n3:23\n\n249,0 g de água\n\nB02 — Stardust\n\n3:38\n\n252,3 g de água\n\nDiferença: 15 segundos. O Stardust drenou aproximadamente 7% mais lentamente.\n\nAnálise visual\n\nCaracterística\n\n\t\n\nVô Zico\n\n\t\n\nStardust\n\n\n\n\nLeito\n\n\t\n\nRelativamente plano\n\n\t\n\nRelativamente plano\n\n\n\n\nPartículas visíveis\n\n\t\n\nMais granulação aparente\n\n\t\n\nAspecto mais fino e compacto\n\n\n\n\nResíduos no filtro\n\n\t\n\nModerados\n\n\t\n\nMais concentrados\n\n\n\n\nDrenagem\n\n\t\n\nMais rápida\n\n\t\n\nMais lenta\n\nA aparência é compatível com diferenças na distribuição de partículas e na resistência do leito, mesmo utilizando a mesma regulagem do moedor. Mas não é possível confirmar isso apenas pelas fotografias.\n\nMinha avaliação: ambos apresentaram tempos razoáveis para a técnica de Hoffmann. Não vejo sinais visuais evidentes de problemas graves de extração.\n\nAgora temos uma comparação interessante porque utilizamos a mesma receita nos dois cafés.\n\nA pergunta principal: como ficaram os sabores? O Stardust apresentou aquelas notas frutadas e acidez láctica anunciadas? E o Café do Vô ficou mais ou menos amargo do que no Teste A02, que foi nosso melhor resultado até agora?",
+          "tables": [
+            [
+              [
+                "Característica",
+                "Vô Zico",
+                "Stardust"
+              ],
+              [
+                "Leito",
+                "Relativamente plano",
+                "Relativamente plano"
+              ],
+              [
+                "Partículas visíveis",
+                "Mais granulação aparente",
+                "Aspecto mais fino e compacto"
+              ],
+              [
+                "Resíduos no filtro",
+                "Moderados",
+                "Mais concentrados"
+              ],
+              [
+                "Drenagem",
+                "Mais rápida",
+                "Mais lenta"
+              ]
+            ]
+          ]
+        },
+        {
+          "sequence": 130,
+          "text": "Excelente resultado! A técnica de Hoffmann funcionou muito bem nos dois cafés, especialmente porque eliminou o amargor perceptível que aparecia nos testes anteriores.\n\n☕ Resultado — A06 × B02\n\nCaracterística\n\n\t\n\nStardust (esq.)\n\n\t\n\nVô Zico (dir.)\n\n\n\n\nMétodo\n\n\t\n\nHoffmann\n\n\t\n\nHoffmann\n\n\n\n\nJX-Pro\n\n\t\n\n3.5.0\n\n\t\n\n3.5.0\n\n\n\n\nTemperatura\n\n\t\n\n96 °C\n\n\t\n\n96 °C\n\n\n\n\nTempo\n\n\t\n\n3:38\n\n\t\n\n3:23\n\n\n\n\nAmargor\n\n\t\n\nNão perceptível\n\n\t\n\nNão perceptível\n\n\n\n\nPerfil\n\n\t\n\nMais aberto, lembra suco\n\n\t\n\nAgradável, comparativamente menos aberto\n\n\n\n\nAvaliação\n\n\t\n\nMuito agradável\n\n\t\n\nMuito agradável\n\nO que aprendemos\n\n1. A receita de Hoffmann é nossa nova referência promissora. Cinco despejos circulares, moagem 3.5.0 e água a 96 °C produziram bons resultados nos dois cafés.\n\n2. O Stardust mostrou uma diferença sensorial interessante. A descrição de uma bebida mais aberta, lembrando suco, é compatível com maior percepção de acidez frutada e leveza, embora ainda não tenhamos identificado notas específicas.\n\n3. O tempo de extração não foi um problema. Mesmo com 15 segundos de diferença entre os cafés, ambos ficaram agradáveis e sem amargor.\n\nUm cuidado: também mudamos a dose, a proporção e a temperatura em relação ao Teste A02. Portanto, ainda não podemos atribuir a melhora exclusivamente aos cinco despejos.\n\nRegistrei os dois resultados como referências positivas nas respectivas linhas de testes.\n\nUma pergunta para completar a avaliação: entre os dois, você teve alguma preferência ou gostou igualmente, cada um com suas características?",
+          "tables": [
+            [
+              [
+                "Característica",
+                "Stardust (esq.)",
+                "Vô Zico (dir.)"
+              ],
+              [
+                "Método",
+                "Hoffmann",
+                "Hoffmann"
+              ],
+              [
+                "JX-Pro",
+                "3.5.0",
+                "3.5.0"
+              ],
+              [
+                "Temperatura",
+                "96 °C",
+                "96 °C"
+              ],
+              [
+                "Tempo",
+                "3:38",
+                "3:23"
+              ],
+              [
+                "Amargor",
+                "Não perceptível",
+                "Não perceptível"
+              ],
+              [
+                "Perfil",
+                "Mais aberto, lembra suco",
+                "Agradável, comparativamente menos aberto"
+              ],
+              [
+                "Avaliação",
+                "Muito agradável",
+                "Muito agradável"
+              ]
+            ]
+          ]
+        },
+        {
+          "sequence": 138,
+          "text": "Combinado. A receita de Hoffmann com o Stardust passa a ser o Teste B01, substituindo a identificação anterior B02.\n\nA06 — Café do Vô Zico: Hoffmann, 3:23, sem amargor.\n\nB01 — Stardust: Hoffmann, 3:38, sem amargor, mais aberto e suculento.\n\nAmbos com 15 g de café, 250 g de água, 96 °C e JX-Pro 3.5.0.\n\nMantemos as duas linhas de testes independentes.",
+          "tables": []
+        },
+        {
+          "sequence": 140,
+          "text": "Ótimo. Então temos uma nova receita de referência para o nosso paladar: James Hoffmann 1 Cup, adaptada para 96 °C e JX-Pro 3.5.0.\n\nOs dois resultados foram bastante positivos:\n\nA06 — Vô Zico: equilibrado, agradável e sem amargor perceptível.\n\nB01 — Stardust: mais aberto e suculento, também sem amargor perceptível.\n\nEu manteria a receita exatamente como está por enquanto. Ela conseguiu algo que procurávamos desde os primeiros testes: uma xícara agradável, com acidez interessante e sem amargor indesejado.\n\nNos próximos preparos, podemos verificar a repetibilidade antes de experimentar novos ajustes.",
+          "tables": []
+        }
+      ],
+      "review_notes": [],
+      "external_source_links": []
+    }
+  ],
+  "executions": [
+    {
+      "source_key": "A01",
+      "source_aliases": [],
+      "coffee_key": "vo-zico",
+      "bag_key": "vo-zico-historical-bag-context",
+      "recipe_key": "hedrick-two-pour",
+      "date": null,
+      "brewing_category": "Pour Over",
+      "brewer": "V60",
+      "source_state": "reported_execution",
+      "verification": "source_assistant_summary",
+      "quantities": {
+        "dose_g": null,
+        "brewing_water_g": 338,
+        "elapsed_seconds": 270,
+        "bloom_seconds": 90,
+        "temperature_c": null,
+        "grinder_setting": "4.0.0",
+        "finished_drink_g": null
+      },
+      "tasting_description": null,
+      "sensory_scores": null,
+      "quick_rating": null,
+      "source_refs": [
+        {
+          "sequence": 8,
+          "message_id": "36a77e5e-8368-48ee-b982-13cb37d65a8e"
+        },
+        {
+          "sequence": 12,
+          "message_id": "b1ce533b-916b-46cf-ae8b-9d6cb712caea"
+        },
+        {
+          "sequence": 20,
+          "message_id": "446974e0-b48b-44f8-8ce3-2194c8b7d85a"
+        },
+        {
+          "sequence": 44,
+          "message_id": "1e2437b5-06ea-43e6-93c8-3c43f6114eba"
+        },
+        {
+          "sequence": 104,
+          "message_id": "d0d451e5-4975-493d-be4b-a1bb12b029bf"
+        }
+      ],
+      "review_notes": [
+        "Dose 20 g is explicitly marked unconfirmed in messages 8 and 44; retain as an unresolved candidate.",
+        "Water 338 g is labeled added water in the later source; the initial photo interpretation questioned its basis.",
+        "Source summaries describe acidity, light body and residual bitterness. Original corresponding user text is unavailable.",
+        "Temperature 94–95 °C appears approximately in a later comparison; leave actual temperature unresolved."
+      ]
+    },
+    {
+      "source_key": "A02",
+      "source_aliases": [],
+      "coffee_key": "vo-zico",
+      "bag_key": "vo-zico-historical-bag-context",
+      "recipe_key": "a02-three-pour",
+      "date": null,
+      "brewing_category": "Pour Over",
+      "brewer": "V60",
+      "source_state": "reported_execution",
+      "verification": "source_assistant_summary",
+      "quantities": {
+        "dose_g": 20,
+        "brewing_water_g": 323.9,
+        "elapsed_seconds": 214,
+        "bloom_seconds": 45,
+        "temperature_c": 91,
+        "grinder_setting": "3.5.0",
+        "finished_drink_g": null
+      },
+      "tasting_description": null,
+      "sensory_scores": null,
+      "quick_rating": null,
+      "source_refs": [
+        {
+          "sequence": 60,
+          "message_id": "4369aea7-6c6c-42fe-86e2-1ef2edf7e873"
+        },
+        {
+          "sequence": 62,
+          "message_id": "be2d095b-76ae-4339-a01c-4c1220d74bc5"
+        },
+        {
+          "sequence": 66,
+          "message_id": "64acb4b7-80b6-4209-8558-5c5ac95de850"
+        },
+        {
+          "sequence": 68,
+          "message_id": "364ac812-c16d-4935-ab87-3edeb9b47193"
+        },
+        {
+          "sequence": 70,
+          "message_id": "662cbc9d-d8be-4133-84d8-ebc4427d3e44"
+        },
+        {
+          "sequence": 104,
+          "message_id": "d0d451e5-4975-493d-be4b-a1bb12b029bf"
+        }
+      ],
+      "review_notes": [
+        "Source summaries describe better balance, more body, pleasant citrus/fruity acidity, and reduced/integrated bitterness.",
+        "The 2026-11-13 date is shown in an earlier recipe plan; actual execution date remains unverified.",
+        "Do not import 3/5 slider defaults from message 48 as user ratings."
+      ]
+    },
+    {
+      "source_key": "A04",
+      "source_aliases": [],
+      "coffee_key": "vo-zico",
+      "bag_key": "vo-zico-historical-bag-context",
+      "recipe_key": "a04-five-pour",
+      "date": "2026-11-16",
+      "brewing_category": "Pour Over",
+      "brewer": "V60",
+      "source_state": "reported_execution",
+      "verification": "source_assistant_summary",
+      "quantities": {
+        "dose_g": 25,
+        "brewing_water_g": 375.8,
+        "elapsed_seconds": 283,
+        "temperature_c": 91,
+        "grinder_setting": "3.8.0",
+        "finished_drink_g": null
+      },
+      "tasting_description": null,
+      "sensory_scores": null,
+      "quick_rating": null,
+      "source_refs": [
+        {
+          "sequence": 74,
+          "message_id": "e7dba6a7-eefb-41d1-aa95-6d95f04f13d4"
+        },
+        {
+          "sequence": 76,
+          "message_id": "d593d9b4-1d8d-4190-83ea-15c25f02531c"
+        },
+        {
+          "sequence": 78,
+          "message_id": "1284327c-6fe6-4e01-ad12-e7de817298e8"
+        },
+        {
+          "sequence": 80,
+          "message_id": "263a3b99-4919-4446-b676-a0aa00b701b2"
+        },
+        {
+          "sequence": 82,
+          "message_id": "b47e5bb2-5988-4acb-8e66-1e7ab057c556"
+        },
+        {
+          "sequence": 104,
+          "message_id": "d0d451e5-4975-493d-be4b-a1bb12b029bf"
+        }
+      ],
+      "review_notes": [
+        "Message 82 revises the earlier bitterness summary: more body but possibly slightly more bitter than A02.",
+        "Date 2026-11-16 comes from the source heading at message 74."
+      ]
+    },
+    {
+      "source_key": "A06",
+      "source_aliases": [],
+      "coffee_key": "vo-zico",
+      "bag_key": "vo-zico-historical-bag-context",
+      "recipe_key": "hoffmann-vo-zico",
+      "date": null,
+      "brewing_category": "Pour Over",
+      "brewer": "V60",
+      "source_state": "reported_execution",
+      "verification": "source_assistant_summary",
+      "quantities": {
+        "dose_g": 15,
+        "brewing_water_g": 249.0,
+        "elapsed_seconds": 203,
+        "temperature_c": 96,
+        "grinder_setting": "3.5.0",
+        "finished_drink_g": null
+      },
+      "tasting_description": "A esquerda Stardust a direita Vó Zico. Ambos semnl amargor. Stardust um pouco mais aberto parecido com suco mas ambos muito agradáveis ",
+      "sensory_scores": null,
+      "quick_rating": null,
+      "source_refs": [
+        {
+          "sequence": 116,
+          "message_id": "00aa16d4-cf95-4e06-b482-2e912e93b458"
+        },
+        {
+          "sequence": 120,
+          "message_id": "5989cdf2-9ea9-4a8b-b24c-203bacc6f7a7"
+        },
+        {
+          "sequence": 122,
+          "message_id": "3a7c1806-5a15-4586-83ee-1b478d67bdbb"
+        },
+        {
+          "sequence": 128,
+          "message_id": "bcee78cc-7379-4185-8540-7e1a21fa02ee"
+        },
+        {
+          "sequence": 129,
+          "message_id": "bbb21664-e7ad-4a48-8ef1-8178a1ac4282"
+        },
+        {
+          "sequence": 130,
+          "message_id": "a66b967a-5f61-408c-93a8-9b1159e11662"
+        },
+        {
+          "sequence": 138,
+          "message_id": "f8b9a2e4-84a1-419e-bdb3-dd8886d6a784"
+        },
+        {
+          "sequence": 140,
+          "message_id": "5f0c881a-211b-448d-81d3-6b13c71eed3a"
+        }
+      ],
+      "review_notes": [
+        "Recipe dose, temperature and grinder are reported in the comparison. Water is the execution's 249.0 g, not the 250 g recipe target.",
+        "Preserve the direct user comparative tasting statement at message 129."
+      ],
+      "tasting_description_scope": "shared comparison of Stardust on the left and Vo Zico on the right",
+      "tasting_source": [
+        {
+          "sequence": 129,
+          "message_id": "bbb21664-e7ad-4a48-8ef1-8178a1ac4282"
+        }
+      ]
+    },
+    {
+      "source_key": "B01",
+      "source_aliases": [
+        "B02"
+      ],
+      "coffee_key": "stardust",
+      "bag_key": "stardust-historical-bag-context",
+      "recipe_key": "hoffmann-stardust",
+      "date": null,
+      "brewing_category": "Pour Over",
+      "brewer": "V60",
+      "source_state": "reported_execution",
+      "verification": "source_assistant_summary",
+      "quantities": {
+        "dose_g": 15,
+        "brewing_water_g": 252.3,
+        "elapsed_seconds": 218,
+        "temperature_c": 96,
+        "grinder_setting": "3.5.0",
+        "finished_drink_g": null
+      },
+      "tasting_description": "A esquerda Stardust a direita Vó Zico. Ambos semnl amargor. Stardust um pouco mais aberto parecido com suco mas ambos muito agradáveis ",
+      "sensory_scores": null,
+      "quick_rating": null,
+      "source_refs": [
+        {
+          "sequence": 122,
+          "message_id": "3a7c1806-5a15-4586-83ee-1b478d67bdbb"
+        },
+        {
+          "sequence": 124,
+          "message_id": "ec0cc1ea-bf84-464c-a6f0-db98e69fbd1c"
+        },
+        {
+          "sequence": 128,
+          "message_id": "bcee78cc-7379-4185-8540-7e1a21fa02ee"
+        },
+        {
+          "sequence": 129,
+          "message_id": "bbb21664-e7ad-4a48-8ef1-8178a1ac4282"
+        },
+        {
+          "sequence": 130,
+          "message_id": "a66b967a-5f61-408c-93a8-9b1159e11662"
+        },
+        {
+          "sequence": 138,
+          "message_id": "f8b9a2e4-84a1-419e-bdb3-dd8886d6a784"
+        },
+        {
+          "sequence": 140,
+          "message_id": "5f0c881a-211b-448d-81d3-6b13c71eed3a"
+        }
+      ],
+      "review_notes": [
+        "B02 is explicitly renamed B01 at message 138. Import once under B01 with B02 as an alias.",
+        "Water 252.3 g is execution input, not a measured final drink yield.",
+        "Preserve the direct user comparative tasting statement at message 129."
+      ],
+      "tasting_description_scope": "shared comparison of Stardust on the left and Vo Zico on the right",
+      "tasting_source": [
+        {
+          "sequence": 129,
+          "message_id": "bbb21664-e7ad-4a48-8ef1-8178a1ac4282"
+        }
+      ]
+    }
+  ],
+  "unexecuted_or_unconfirmed": [
+    {
+      "code": "A03",
+      "state": "repeat planned; no recorded result",
+      "source_refs": [
+        {
+          "sequence": 72,
+          "message_id": "63e3f733-365b-4a28-a32d-aa6fe97ad54d"
+        },
+        {
+          "sequence": 104,
+          "message_id": "d0d451e5-4975-493d-be4b-a1bb12b029bf"
+        }
+      ]
+    },
+    {
+      "code": "A05",
+      "state": "planned; no recorded result",
+      "source_refs": [
+        {
+          "sequence": 96,
+          "message_id": "6ee10d9c-cc11-4191-9ed9-bbbd0859d161"
+        },
+        {
+          "sequence": 104,
+          "message_id": "d0d451e5-4975-493d-be4b-a1bb12b029bf"
+        }
+      ]
+    },
+    {
+      "code": "A06 (Kasuya)",
+      "state": "superseded/reserved; no execution evidence",
+      "source_refs": [
+        {
+          "sequence": 112,
+          "message_id": "7c4dcf06-8489-46c7-9f24-415db403b3a9"
+        },
+        {
+          "sequence": 114,
+          "message_id": "e1411320-51c8-42c1-a29c-26c83a2c9e3b"
+        }
+      ]
+    },
+    {
+      "code": "B01 (initial three-pour plan)",
+      "state": "superseded assignment; no execution evidence",
+      "source_refs": [
+        {
+          "sequence": 104,
+          "message_id": "d0d451e5-4975-493d-be4b-a1bb12b029bf"
+        },
+        {
+          "sequence": 138,
+          "message_id": "f8b9a2e4-84a1-419e-bdb3-dd8886d6a784"
+        }
+      ]
+    }
+  ],
+  "missing_image_references": [
+    {
+      "message_sequence": 5,
+      "message_id": "bbb218b5-38b9-4ae3-aebb-5714422cf775",
+      "count": 1,
+      "status": "original_bytes_unavailable",
+      "context_after": [
+        6
+      ]
+    },
+    {
+      "message_sequence": 19,
+      "message_id": "bbb21d48-36b1-40a7-82e9-4cf81f508e70",
+      "count": 3,
+      "status": "original_bytes_unavailable",
+      "context_after": [
+        20
+      ]
+    },
+    {
+      "message_sequence": 21,
+      "message_id": "bbb212a2-6f2f-4348-91fd-a0470cb37b90",
+      "count": 1,
+      "status": "original_bytes_unavailable",
+      "context_after": [
+        22
+      ]
+    },
+    {
+      "message_sequence": 65,
+      "message_id": "bbb21c0b-db65-44d8-a0cf-07fdf1ad80f4",
+      "count": 1,
+      "status": "original_bytes_unavailable",
+      "context_after": [
+        66
+      ]
+    },
+    {
+      "message_sequence": 75,
+      "message_id": "bbb211b4-837a-40cc-9558-2749fb67eb82",
+      "count": 1,
+      "status": "original_bytes_unavailable",
+      "context_after": [
+        76
+      ]
+    },
+    {
+      "message_sequence": 101,
+      "message_id": "bbb21e75-e674-4a6a-9129-df2c60f4a6ac",
+      "count": 4,
+      "status": "original_bytes_unavailable",
+      "context_after": [
+        102
+      ]
+    },
+    {
+      "message_sequence": 123,
+      "message_id": "bbb21da0-216b-4434-a29d-853d3aaef370",
+      "count": 1,
+      "status": "original_bytes_unavailable",
+      "context_after": [
+        124
+      ]
+    },
+    {
+      "message_sequence": 127,
+      "message_id": "bbb21654-6b34-4039-b4f7-0c10dcff28a5",
+      "count": 1,
+      "status": "original_bytes_unavailable",
+      "context_after": [
+        128
+      ]
+    },
+    {
+      "message_sequence": 129,
+      "message_id": "bbb21664-e7ad-4a48-8ef1-8178a1ac4282",
+      "count": 1,
+      "status": "original_bytes_unavailable",
+      "context_after": [
+        130
+      ]
+    },
+    {
+      "message_sequence": 170,
+      "message_id": "29381554-7d03-41e0-a2ce-8503a50b5b59",
+      "count": 1,
+      "status": "original_bytes_unavailable",
+      "context_after": [
+        171
+      ]
+    },
+    {
+      "message_sequence": 172,
+      "message_id": "137f613d-3928-49c0-9c27-984d32ec91e1",
+      "count": 1,
+      "status": "original_bytes_unavailable",
+      "context_after": [
+        173
+      ]
+    },
+    {
+      "message_sequence": 176,
+      "message_id": "e6f83ad8-3fff-49d5-a032-adb65fa90939",
+      "count": 1,
+      "status": "original_bytes_unavailable",
+      "context_after": [
+        177
+      ]
+    }
+  ],
+  "field_audit_candidates": [
+    {
+      "field": "manufacture_date",
+      "reason": "The Vo Zico label supplies manufacture and expiry dates, explicitly not a confirmed roast date.",
+      "source_refs": [
+        {
+          "sequence": 22,
+          "message_id": "fac41b2e-7649-438a-b7dd-c06c2c85ff93"
+        }
+      ]
+    },
+    {
+      "field": "best_before_date",
+      "reason": "Keep the package's expiry information independently of roast date.",
+      "source_refs": [
+        {
+          "sequence": 22,
+          "message_id": "fac41b2e-7649-438a-b7dd-c06c2c85ff93"
+        }
+      ]
+    },
+    {
+      "field": "bag_weight_g",
+      "reason": "Stardust packaging indicates 250 g. Distinct from remaining-bag inventory tracking.",
+      "source_refs": [
+        {
+          "sequence": 102,
+          "message_id": "298a5a4f-97cf-4fa0-9015-9ccf147f4015"
+        }
+      ]
+    },
+    {
+      "field": "altitude_m",
+      "reason": "Stardust origin information includes 1100 m.",
+      "source_refs": [
+        {
+          "sequence": 102,
+          "message_id": "298a5a4f-97cf-4fa0-9015-9ccf147f4015"
+        }
+      ]
+    },
+    {
+      "field": "storage_notes",
+      "reason": "Source discusses mason jars, cupboard storage and reserve packaging.",
+      "source_refs": [
+        {
+          "sequence": 24,
+          "message_id": "d6823350-b314-4d8d-82ba-77075b2846e4"
+        }
+      ]
+    },
+    {
+      "field": "source_aliases",
+      "reason": "B02 was corrected to B01; planned A06 protocol was replaced.",
+      "source_refs": [
+        {
+          "sequence": 114,
+          "message_id": "e1411320-51c8-42c1-a29c-26c83a2c9e3b"
+        },
+        {
+          "sequence": 138,
+          "message_id": "f8b9a2e4-84a1-419e-bdb3-dd8886d6a784"
+        }
+      ]
+    }
+  ]
+}

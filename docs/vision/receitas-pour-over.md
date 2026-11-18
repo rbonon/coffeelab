@@ -2,6 +2,8 @@
 
 This ChatGPT discussion is an input for Coffee Lab product planning. It records candidate workflows, scope, and architecture. Product decisions belong in the approved specification and decision log.
 
+This file contains the five planning exchanges originally accessible through chat history. The later [shared-source capture and import candidates](README.md#historical-pour-over-source) preserve the accessible earlier recipe and execution material, with coverage gaps documented there.
+
 [Source conversation](https://chatgpt.com/c/6af6149f-51d4-83ea-a9f4-51e9c90ac67f) · [Eight-screen mockup](../../mockups/Painel%20Coffee%202026_%20receitas%20e%20extra%C3%A7%C3%B5es.png)
 
 ## Workflow described

@@ -530,3 +530,17 @@ This file and `AGENTS.md` are the shared memory of this project across sessions 
 **Decision:** A coffee-specific variant requires a name, base recipe, and coffee identity, with its category inherited from the base recipe. Minimum fields define the threshold for saving partial records. AI-assisted entry should include all available relevant information, preserving unavailable details as missing.
 
 **Rationale:** The user accepted the minimum-field approach and expects AI-assisted entry to usually supply comprehensive details.
+
+### Discard entry-time target
+
+**Decision:** Discard the earlier 30-second logging suggestion. Evaluation and entry have no completion time limit or fixed entry-time benchmark.
+
+**Rationale:** The user considers the suggestion irrelevant to the intended workflow.
+
+### Shared pour-over conversation as historical source
+
+**Decision:** Preserve the accessible shared Receitas Pour Over conversation as the historical input for Coffee Lab and prepare source-linked import candidates covering recipes, coffees, equipment, and recorded executions.
+
+**Rationale:** The user explicitly instructed the agent to recover the material from the shared link as the data source for Coffee Lab.
+
+**Implications:** Preserve message IDs, tables, corrections, and missing-content references. Normalize B02 to its corrected B01 identity and retain plans separately from executions. The shared rendering omits some user text and original uploads, so the import remains staged with documented coverage limits.

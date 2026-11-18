@@ -322,11 +322,11 @@ Acceptance criteria
 - The release checklist contains evidence of a successful restore test covering records and photos.
 - Backup frequency, retention, recovery objectives, and staging/production procedures are specified during operations design.
 
-## Proposed field matrix for review
+## Agreed field matrix
 
 This matrix organizes agreed fields and minimum save requirements. AI-assisted entry should populate all available relevant details; the minimums allow partial records when information is unavailable. Account ownership and generated record identifiers are system-managed.
 
-| Record | Proposed minimum to save | Optional or conditional information |
+| Record | Minimum to save | Optional or conditional information |
 | --- | --- | --- |
 | Coffee identity | Name | Roaster, origin, producer/farm, variety, processing, roast level, packaging descriptors |
 | Individual bag | Name | Associated coffee identity, roast date, purchase date, price/currency, retailer, multiple packaging photos. Resolve or create the coffee identity when linking a variant across bags. |

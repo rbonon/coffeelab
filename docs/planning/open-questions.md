@@ -10,11 +10,9 @@ The consolidated [requirements](../spec/requirements.md), [user stories](../spec
 4. Resolved: recipe-result comparisons and overall ratings take priority. Brew count, coffee brewed, grounds used, brews over time, methods, and equipment summaries describe recorded executions only. Untracked brews use expected recipe quantities as actuals without estimate labels. Keep water input distinct from finished coffee in recipe fields.
 5. The assembled first-release scope and acceptance criteria are approved. Keep explicitly open choices visible as they are resolved.
 
-The earlier 30-second logging suggestion is unapproved. Decide whether a measurable entry-time target is needed while refining the forms.
+## Historical source verification
 
-## Recipe field review from available source chats
-
-Proposed additions for review, based on the accessible Receita AeroPress exchanges:
+The current specification covers brewing and bypass water, finished yield, exact values and ranges, step timing, and flexible method-specific instructions. Verify their coverage against the full source export. The accessible Receita AeroPress exchanges include:
 
 - Distinct brewing-water input, bypass water, and expected finished yield, including yield ranges. The source discusses 200 g of water and an expected 175–180 g drink, separately from an attempted 250 g finished-drink adaptation.
 - Step start times and durations, including immersion, settling, and pressing. The source distinguishes a swirl at 2:00, settling until 2:30, and roughly 30 seconds of pressing.
@@ -22,7 +20,7 @@ Proposed additions for review, based on the accessible Receita AeroPress exchang
 - Brewer model and capacity constraints. The source questions whether the larger adapted water quantity fits an AeroPress Original.
 - Preserve the distinction between the source method, proposed adaptations, and the user's selected version when importing recipes.
 
-The available Receitas Pour Over history exposes five recent product-planning exchanges, with no older-page cursor. It references A01–A06 and B01 but does not expose their recipe tables or full brew records. A complete historical field audit remains pending retrieval of that content. These access limits do not establish that the original chat lacks the records.
+The shared Receitas Pour Over link now supplies accessible earlier recipe and execution content. See the [capture, coverage report, and import candidates](../vision/README.md#historical-pour-over-source). The capture preserves all 177 message positions and 63 tables; 75 user bodies and original bytes for 17 uploaded-image references remain unavailable. Review manufacture date versus roast date, best-before date, original bag weight, altitude, storage notes, and corrected historical identifiers as additional source fields. Resolve historical source gaps before final application import.
 
 ## Architecture and later-stage questions
 
