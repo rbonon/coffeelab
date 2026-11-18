@@ -10,17 +10,23 @@
 <body>
   <main>
     <section id="setup" aria-labelledby="setup-title">
-      <a href="../planning/screens.html">Coffee Lab planning</a>
-      <p class="eyebrow" id="demo">Illustrative design prototype · no records saved</p>
-      <h1 id="setup-title">A recipe, clearly.</h1>
-      <p id="intro">Choose an example. Use your scale for timing.</p>
+      <header class="home-header"><span class="brand">Coffee Lab</span><button id="open-settings" class="icon-button" aria-label="Settings" aria-controls="configuration">
+        <svg viewBox="0 0 24 24" width="23" height="23" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m9.5 3-.7 2.4-2 .9L4.5 6l-2 3.5 1.6 1.8v2l-1.6 1.8 2 3.5 2.3-.3 2 .9.7 2.3h4.1l.7-2.3 2-.9 2.3.3 2-3.5-1.6-1.8v-2l1.6-1.8-2-3.5-2.3.3-2-.9L13.7 3Z"/><circle cx="11.6" cy="12.2" r="3.3"/></svg>
+      </button></header>
+      <p class="eyebrow" id="demo">Illustrative recipes</p>
+      <h1 id="setup-title">What shall we brew?</h1>
+      <p id="intro">Choose a recipe to begin.</p>
+      <div class="recipe-choice"><label><span id="method-label">Recipe</span><select id="method"><option value="pour">Pour Over</option><option value="aero">AeroPress</option><option value="french">French Press</option><option value="lever">Manual Espresso</option><option value="espresso">Espresso</option><option value="partial">Partial recipe</option><option value="long">Long instructions</option></select></label></div>
+      <button id="start" class="primary">Read recipe</button>
+    </section>
+    <section id="configuration" hidden aria-labelledby="settings-title">
+      <header><button id="close-settings">← <span id="settings-back">Back</span></button></header>
+      <h1 id="settings-title">Settings</h1>
       <div class="settings">
         <label><span id="language-label">Language</span><select id="language"><option value="en">English</option><option value="pt-BR">Português (Brasil)</option></select></label>
-        <label><span id="method-label">Example</span><select id="method"><option value="pour">Pour Over</option><option value="aero">AeroPress</option><option value="french">French Press</option><option value="lever">Manual Espresso</option><option value="espresso">Espresso</option><option value="partial">Partial recipe</option><option value="long">Long instructions</option></select></label>
         <label><span id="weight-label">Weight</span><select id="weight"><option value="g">g</option><option value="oz">oz</option></select></label>
         <label><span id="temperature-label">Temperature</span><select id="temperature"><option value="C">°C</option><option value="F">°F</option></select></label>
       </div>
-      <button id="start" class="primary">Read recipe</button>
     </section>
     <section id="reader" hidden aria-labelledby="recipe-title">
       <header><button id="exit">← <span id="exit-label">Recipes</span></button><span class="eyebrow" id="reading-label">READING ONLY</span></header>

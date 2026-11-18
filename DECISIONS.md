@@ -558,3 +558,9 @@ This file and `AGENTS.md` are the shared memory of this project across sessions 
 **Decision:** The user authorized proposals, apply, commits, pushes, archives, and merges for Coffee Lab's remaining UI/UX work without intermediate approval. Pause for material product decisions or human visual checks. Continue announcing every skill used.
 
 **Implications:** This project-scoped authorization overrides routine approval gates in the applicable skills for issues #23–#25. It does not count as a passed device or visual check, and does not extend to later technical or implementation stages. The user approved #23's screen plan before granting this authorization.
+
+## 2026-11-18 — Minimal opening screen and separate settings
+
+**Decision:** The user requests a refined, minimalist, elegant design. A simple gear icon opens a separate, simple configuration screen for language and units. These fields must not be primary home-screen elements.
+
+**Implications:** Recipe selection remains the opening focus. The #24 prototype now follows this arrangement; broader visual refinement remains iterative and human validation is pending.

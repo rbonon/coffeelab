@@ -66,7 +66,7 @@ export class ReadingWakeLock {
 
 if (typeof document !== 'undefined') {
   const $ = id => document.getElementById(id);
-  let page = 0, reading = false, wakeState = 'off';
+  let page = 0, reading = false, configuring = false, wakeState = 'off';
   const pt = () => $('language').value === 'pt-BR';
   const t = pair => pair[pt() ? 1 : 0];
   const num = n => new Intl.NumberFormat($('language').value, {maximumFractionDigits: 2}).format(n);
@@ -81,10 +81,11 @@ if (typeof document !== 'undefined') {
   };
   const wake = new ReadingWakeLock(globalThis.isSecureContext ? navigator.wakeLock : null, state => { wakeState = state; $('wake-status').textContent = t(wakeLabels[state]); });
   const labels = {
-    'demo': ['Illustrative design prototype · no records saved', 'Protótipo ilustrativo · nenhum registro salvo'],
-    'setup-title': ['A recipe, clearly.', 'A receita, com clareza.'],
-    'intro': ['Choose an example. Use your scale for timing.', 'Escolha um exemplo. Use o cronômetro da balança.'],
-    'language-label': ['Language', 'Idioma'], 'method-label': ['Example', 'Exemplo'],
+    'demo': ['Illustrative recipes', 'Receitas ilustrativas'],
+    'setup-title': ['What shall we brew?', 'Qual café vamos preparar?'],
+    'intro': ['Choose a recipe to begin.', 'Escolha uma receita para começar.'],
+    'settings-title': ['Settings', 'Configurações'], 'settings-back': ['Back', 'Voltar'],
+    'language-label': ['Language', 'Idioma'], 'method-label': ['Recipe', 'Receita'],
     'weight-label': ['Weight', 'Peso'], 'temperature-label': ['Temperature', 'Temperatura'],
     'start': ['Read recipe', 'Ler receita'], 'exit-label': ['Recipes', 'Receitas'],
     'reading-label': ['READING ONLY', 'SOMENTE LEITURA'], 'previous': ['Previous', 'Anterior'], 'next': ['Next', 'Próximo'],
@@ -96,7 +97,8 @@ if (typeof document !== 'undefined') {
     Object.entries(labels).forEach(([id,pair]) => $(id).textContent = t(pair));
     Array.from($('method').options).forEach(option => option.textContent = t(examples[option.value].title));
     $('wake-status').textContent = t(wakeLabels[wakeState]);
-    $('setup').hidden = reading; $('reader').hidden = !reading;
+    $('setup').hidden = reading || configuring; $('configuration').hidden = !configuring; $('reader').hidden = !reading;
+    $('open-settings').setAttribute('aria-label',t(['Settings','Configurações']));
     const recipe = examples[$('method').value];
     $('recipe-title').textContent = t(recipe.title);
     $('quantities').replaceChildren();
@@ -121,6 +123,8 @@ if (typeof document !== 'undefined') {
     document.querySelector('.paging').setAttribute('aria-label',t(['Instruction pages','Páginas de instruções']));
   }
   document.querySelectorAll('select').forEach(el => el.addEventListener('change', () => { page = 0; render(); }));
+  $('open-settings').addEventListener('click', () => { configuring = true; render(); $('close-settings').focus(); });
+  $('close-settings').addEventListener('click', () => { configuring = false; render(); $('open-settings').focus(); });
   $('start').addEventListener('click', () => { reading = true; page = 0; render(); $('instruction').focus({preventScroll:true}); void wake.start(); });
   $('exit').addEventListener('click', () => { reading = false; void wake.stop(); render(); $('start').focus(); });
   for (const [id,delta] of [['previous',-1],['next',1]]) $(id).addEventListener('click', () => { page += delta; render(); $('instruction').focus({preventScroll:true}); });
