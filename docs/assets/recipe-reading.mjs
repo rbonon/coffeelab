@@ -66,20 +66,12 @@ export class ReadingWakeLock {
 
 if (typeof document !== 'undefined') {
   const $ = id => document.getElementById(id);
-  let page = 0, reading = false, configuring = false, wakeState = 'off';
+  let page = 0, reading = false, configuring = false;
   const pt = () => $('language').value === 'pt-BR';
   const t = pair => pair[pt() ? 1 : 0];
   const num = n => new Intl.NumberFormat($('language').value, {maximumFractionDigits: 2}).format(n);
   const mass = g => `${num(weightValue(g, $('weight').value))} ${$('weight').value}`;
-  const wakeLabels = {
-    off: ['Screen-awake support off.', 'Manter tela acesa desativado.'],
-    requesting: ['Requesting screen-awake support…', 'Solicitando tela acesa…'],
-    active: ['Screen-awake support is active.', 'A tela está sendo mantida acesa.'],
-    unavailable: ['Screen-awake support unavailable here. Check your device’s screen timeout.', 'Não é possível manter a tela acesa aqui. Confira o tempo limite de tela do aparelho.'],
-    failed: ['Could not keep the screen awake. Retry or check screen timeout.', 'Não foi possível manter a tela acesa. Tente novamente ou confira o tempo limite de tela.'],
-    released: ['Screen-awake support was interrupted. Retry or check screen timeout.', 'O suporte à tela acesa foi interrompido. Tente novamente ou confira o tempo limite de tela.']
-  };
-  const wake = new ReadingWakeLock(globalThis.isSecureContext ? navigator.wakeLock : null, state => { wakeState = state; $('wake-status').textContent = t(wakeLabels[state]); });
+  const wake = new ReadingWakeLock(globalThis.isSecureContext ? navigator.wakeLock : null, () => {});
   const labels = {
     'demo': ['Illustrative recipes', 'Receitas ilustrativas'],
     'setup-title': ['Coffee Lab', 'Coffee Lab'],
@@ -89,14 +81,24 @@ if (typeof document !== 'undefined') {
     'weight-label': ['Weight', 'Peso'], 'temperature-label': ['Temperature', 'Temperatura'],
     'start': ['Read recipe', 'Ler receita'], 'exit-label': ['Recipes', 'Receitas'],
     'reading-label': ['READING ONLY', 'SOMENTE LEITURA'], 'previous': ['Previous', 'Anterior'], 'next': ['Next', 'Próximo'],
-    'wake': ['Keep screen awake / Retry', 'Manter tela acesa / Tentar'],
+    'wake-label': ['Keep screen awake while reading', 'Manter a tela acesa durante a leitura'],
     'scale-note': ['Use the timer on your scale. Nothing is recorded.', 'Use o cronômetro da balança. Nada é registrado.']
   };
   function render() {
     document.documentElement.lang = $('language').value;
     Object.entries(labels).forEach(([id,pair]) => $(id).textContent = t(pair));
-    Array.from($('method').options).forEach(option => option.textContent = t(examples[option.value].title));
-    $('wake-status').textContent = t(wakeLabels[wakeState]);
+    $('selected-recipe').textContent = t(examples[$('method').value].title);
+    $('recipe-options').replaceChildren();
+    for (const [key, recipe] of Object.entries(examples)) {
+      const option = document.createElement('button');
+      option.type = 'button'; option.textContent = t(recipe.title);
+      option.setAttribute('aria-pressed', String(key === $('method').value));
+      option.addEventListener('click', () => {
+        $('method').value = key; page = 0; $('recipe-picker').open = false; render();
+        document.querySelector('#recipe-picker summary').focus();
+      });
+      $('recipe-options').append(option);
+    }
     $('setup').hidden = reading || configuring; $('configuration').hidden = !configuring; $('reader').hidden = !reading;
     $('open-settings').setAttribute('aria-label',t(['Settings','Configurações']));
     const recipe = examples[$('method').value];
@@ -123,13 +125,14 @@ if (typeof document !== 'undefined') {
     document.querySelector('.paging').setAttribute('aria-label',t(['Instruction pages','Páginas de instruções']));
   }
   document.querySelectorAll('select').forEach(el => el.addEventListener('change', () => { page = 0; render(); }));
+  $('wake-enabled').addEventListener('change', () => { if (!$('wake-enabled').checked) void wake.stop(); });
+  $('recipe-picker').addEventListener('keydown', event => { if (event.key === 'Escape') { $('recipe-picker').open = false; document.querySelector('#recipe-picker summary').focus(); } });
   $('open-settings').addEventListener('click', () => { configuring = true; render(); $('close-settings').focus(); });
   $('close-settings').addEventListener('click', () => { configuring = false; render(); $('open-settings').focus(); });
-  $('start').addEventListener('click', () => { reading = true; page = 0; render(); $('instruction').focus({preventScroll:true}); void wake.start(); });
+  $('start').addEventListener('click', () => { reading = true; page = 0; render(); $('instruction').focus({preventScroll:true}); if ($('wake-enabled').checked) void wake.start(); });
   $('exit').addEventListener('click', () => { reading = false; void wake.stop(); render(); $('start').focus(); });
   for (const [id,delta] of [['previous',-1],['next',1]]) $(id).addEventListener('click', () => { page += delta; render(); $('instruction').focus({preventScroll:true}); });
-  $('wake').addEventListener('click', () => void wake.acquire());
-  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && reading) void wake.acquire(); });
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && reading && $('wake-enabled').checked) void wake.acquire(); });
   window.addEventListener('pagehide', () => void wake.stop());
   render();
 }

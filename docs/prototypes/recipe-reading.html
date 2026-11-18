@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Recipe reading · Coffee Lab design</title>
-  <link rel="stylesheet" href="../assets/recipe-reading.css?v=filter-brand-1">
-  <script type="module" src="../assets/recipe-reading.mjs?v=filter-brand-1"></script>
+  <link rel="stylesheet" href="../assets/recipe-reading.css?v=quiet-picker-1">
+  <script type="module" src="../assets/recipe-reading.mjs?v=quiet-picker-1"></script>
 </head>
 <body>
   <main>
@@ -19,7 +19,14 @@
       </div>
       <p class="eyebrow" id="demo">Illustrative recipes</p>
       <p id="intro">Choose a recipe to begin.</p>
-      <div class="recipe-choice"><label><span id="method-label">Recipe</span><select id="method"><option value="pour">Pour Over</option><option value="aero">AeroPress</option><option value="french">French Press</option><option value="lever">Manual Espresso</option><option value="espresso">Espresso</option><option value="partial">Partial recipe</option><option value="long">Long instructions</option></select></label></div>
+      <div class="recipe-choice">
+        <span id="method-label" class="field-label">Recipe</span>
+        <input type="hidden" id="method" value="pour">
+        <details id="recipe-picker">
+          <summary aria-labelledby="method-label selected-recipe"><span id="selected-recipe">Pour Over</span><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="m5 8 5 5 5-5"/></svg></summary>
+          <div id="recipe-options" class="recipe-options" aria-labelledby="method-label"></div>
+        </details>
+      </div>
       <button id="start" class="primary">Read recipe</button>
     </section>
     <section id="configuration" hidden aria-labelledby="settings-title">
@@ -29,6 +36,7 @@
         <label><span id="language-label">Language</span><select id="language"><option value="en">English</option><option value="pt-BR">Português (Brasil)</option></select></label>
         <label><span id="weight-label">Weight</span><select id="weight"><option value="g">g</option><option value="oz">oz</option></select></label>
         <label><span id="temperature-label">Temperature</span><select id="temperature"><option value="C">°C</option><option value="F">°F</option></select></label>
+        <label class="toggle-setting"><span id="wake-label">Keep screen awake while reading</span><input id="wake-enabled" type="checkbox" role="switch" checked></label>
       </div>
     </section>
     <section id="reader" hidden aria-labelledby="recipe-title">
@@ -42,7 +50,7 @@
         <strong id="step-target"></strong>
       </article>
       <nav class="paging" aria-label="Instruction pages"><button id="previous">Previous</button><button id="next" class="primary">Next</button></nav>
-      <footer><button id="wake" aria-describedby="wake-status">Keep screen awake</button><p id="wake-status" role="status"></p><small id="scale-note">Use the timer on your scale. Nothing is recorded.</small></footer>
+      <footer><small id="scale-note">Use the timer on your scale. Nothing is recorded.</small></footer>
     </section>
     <noscript>This design prototype needs JavaScript to show instruction cards.</noscript>
   </main>

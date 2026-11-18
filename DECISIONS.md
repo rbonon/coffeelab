@@ -576,3 +576,9 @@ This file and `AGENTS.md` are the shared memory of this project across sessions 
 **Decision:** The user selected the third logo concept, a pour-over filter and drop, for the Home preview.
 
 **Implications:** Replace the bean-and-drop trial with the filter symbol, keeping centered Home-only branding and compact navigation on other screens.
+
+## 2026-11-18 — Quiet recipe picker and settings-only screen-awake control
+
+**Decision:** The user moved keep-screen-awake control into Settings and explicitly removed its status markers from every page. Home recipe selection should feel light and elegant rather than using the native browser dropdown.
+
+**Implications:** The prototype uses a custom disclosure/button picker with keyboard focus and Escape support. The settings switch governs wake-lock requests during reading; lifecycle remains tested internally without visible status. This supersedes the earlier visible-status prototype design. Actual-device timeout validation remains pending.
