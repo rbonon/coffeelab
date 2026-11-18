@@ -570,3 +570,9 @@ This file and `AGENTS.md` are the shared memory of this project across sessions 
 **Decision:** Try a centered vertical logo treatment on mobile Home only. Other screens reserve space for their own title, navigation and content, especially brewing instructions.
 
 **Implications:** The prototype trials the bean-and-drop concept with a live Coffee Lab wordmark and a top-right settings gear. This is a visual trial, not final logo approval.
+
+## 2026-11-18 — Filter logo direction
+
+**Decision:** The user selected the third logo concept, a pour-over filter and drop, for the Home preview.
+
+**Implications:** Replace the bean-and-drop trial with the filter symbol, keeping centered Home-only branding and compact navigation on other screens.
