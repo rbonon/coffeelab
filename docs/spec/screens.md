@@ -8,6 +8,8 @@ Show experiments and Keepers for reuse, with coffee-specific variants as startin
 
 The user delegates detailed layout and interaction choices to the agent, using the existing mockup as a visual reference. Detailed screen design and human visual validation follow during the UI/UX stage. See the [stage map](../planning/phases.md).
 
+The [user journeys](user-journeys.md) map recipe reading, optional execution capture, variants across bags, ChatGPT entry, and app correction. They provide the flow reference for the screen designs below.
+
 ## Target phone
 
 The user intends to use a Samsung S25 Ultra with Brave or Dia. Validate recipe readability and screen-awake behavior on the actual available browser setup during UI/UX.

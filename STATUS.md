@@ -12,8 +12,8 @@ The shared pour-over source is captured locally with a readable transcript and s
 
 The source-field review added optional manufacture and best-before dates, original bag weight, altitude, storage notes, and historical identifier aliases. Source gaps remain an import-reconciliation follow-up.
 
-The four approved UI/UX tasks are #22–#25, linked from [screens](docs/spec/screens.md#approved-uiux-tasks). They are Todo on the board and assigned to v0.
+The four approved UI/UX tasks are #22–#25, linked from [screens](docs/spec/screens.md#approved-uiux-tasks). They are assigned to v0. #22 is In Progress; #23–#25 remain Todo.
 
-Next step: Start #22 — Map recipe selection, brewing, and result-entry journeys through rbo-create-change and its proposal review. See [later-stage follow-ups](docs/planning/open-questions.md).
+The six [user journeys](docs/spec/user-journeys.md) for #22 are implemented on `feat/map-recipe-brewing-result-journeys` and await human review. Next step: Review the journeys; archive and merge require explicit authorization. See [later-stage follow-ups](docs/planning/open-questions.md).
 
 [GitHub Project](https://github.com/users/rbonon/projects/8)

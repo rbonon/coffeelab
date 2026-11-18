@@ -14,4 +14,4 @@ Follow `docs/planning/workflow.md`. Refresh the roadmap with `scripts/refresh-ro
 
 ## Milestone
 
-Foundation and Specification are complete. UI/UX is current with approved tasks #22–#25 in `docs/spec/screens.md`. The spec centers on recipe learning, variants across bags, and selective execution logging. Railway hosting is selected. English/pt-BR and independent measurement preferences are required. Historical source gaps are tracked for import reconciliation. Track the next action in `STATUS.md`.
+Foundation and Specification are complete. UI/UX is current with approved tasks #22–#25 in `docs/spec/screens.md`. The six journeys for #22 are documented in `docs/spec/user-journeys.md` on its feature branch and await human validation. The spec centers on recipe learning, variants across bags, and selective execution logging. Railway hosting is selected. English/pt-BR and independent measurement preferences are required. Historical source gaps are tracked for import reconciliation. Track the next action in `STATUS.md`.
