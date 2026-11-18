@@ -1,4 +1,4 @@
-# <project-name> — AI agent context
+# Coffee Lab — AI agent context
 
 <!-- 
   INSTRUCTIONS FOR AI AGENTS:
@@ -57,3 +57,13 @@
 - Never overwrite or remove existing entries in `DECISIONS.md` — it is append-only
 - Update the sections in this file as you learn more about the repo — keep it accurate
 - This file and `DECISIONS.md` are the shared memory across sessions and across tools (Claude Code, Cursor, etc.)
+
+## Product rules
+
+- Treat `docs/vision/` as input. Record approved choices in `DECISIONS.md` and the specification, architecture, and plan.
+- Start application implementation after the v0 definition milestone is complete and approved.
+- Use one GitHub issue, one `feat/<change-name>` branch, and one OpenSpec change per leaf. Epics group issues.
+- Ask one design question at a time. Refer to issues by number and title.
+- Use the `coffeelab` GitHub Project. Regenerate `ROADMAP.md` and `docs/planning/board-hierarchy.md` using the REST refresh script. Use bounded Project writes and stop on API errors.
+- Use English for repository planning, portal copy, and Stage values. English is the bootstrap default for the app UI, subject to the product specification.
+- Create GitHub Releases after explicit user confirmation.

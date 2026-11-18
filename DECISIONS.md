@@ -32,3 +32,15 @@ This file and `AGENTS.md` are the shared memory of this project across sessions 
   - If a decision reverses or supersedes an older one, note that in the new entry — do not edit the old one
   - Remove this instruction comment block once the first real entry has been added
 -->
+
+## 2026-11-18 — Greenfield Foundation
+
+### One-time Foundation commit to main
+
+**Decision:** The user approved committing and pushing the initial Foundation scaffold directly to `main`.
+
+**Rationale:** The Greenfield bootstrap establishes the project board, planning documents, and workflow before definition work starts.
+
+**Implications:**
+- This approval applies to the initial Foundation batch.
+- From Specification onward, each leaf uses its own GitHub issue, OpenSpec change, and feature branch.

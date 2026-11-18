@@ -4,10 +4,14 @@
 @AGENTS.md
 
 ## Why
-<!-- fill in: what problem does this project solve and for whom -->
+Coffee Lab helps home brewers record extractions and compare results across brews.
 
 ## What
-<!-- fill in: tech stack, repo structure, key directories -->
+The source discussion is in `docs/vision/`, the visual reference is in `mockups/`, and OpenSpec changes live in `openspec/`. The stack will be selected during product definition.
 
 ## How
-<!-- fill in: how to build, run, and verify changes -->
+Follow `docs/planning/workflow.md`. Refresh the roadmap with `scripts/refresh-roadmap.sh`.
+
+## Milestone
+
+Foundation is in progress. Track the current stage in `STATUS.md`.

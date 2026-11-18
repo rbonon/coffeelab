@@ -1,0 +1,44 @@
+:root {
+  color-scheme: light;
+  --surface: #faf6f0;
+  --card: #fffdf9;
+  --ink: #2b211a;
+  --accent: #723710;
+  --border: #d9c8bb;
+}
+
+body {
+  background: var(--surface);
+  color: var(--ink);
+  font: 1rem/1.6 "Instrument Sans", system-ui, sans-serif;
+  margin: 0;
+}
+
+main, footer {
+  max-width: 68rem;
+  margin-inline: auto;
+  padding: 2rem clamp(1rem, 5vw, 4rem);
+}
+
+h1 { font-size: clamp(2rem, 6vw, 3.5rem); line-height: 1.05; }
+a { color: var(--accent); text-underline-offset: .2em; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.cards, .phase-track {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+  gap: .75rem;
+  padding: 0;
+  list-style: none;
+}
+
+.cards a, .phase-node {
+  display: block;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: .5rem;
+  padding: 1rem;
+}
+
+.phase-node[aria-current] { border-color: var(--accent); font-weight: bold; }
+footer { font-size: .875rem; }
