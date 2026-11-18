@@ -41,6 +41,9 @@
 
 ## Important rules
 
+- Use `~/bin/gh` for GitHub CLI commands and `"$HOME/bin/gh"` in shell scripts.
+  Run the wrapper from this repo or its account directory so it selects the correct GitHub account.
+
 <!-- fill in: things an AI agent must never do or must always do in this repo -->
 <!-- example entries: -->
 <!-- - Never hardcode credentials — always read from config -->
