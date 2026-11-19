@@ -82,7 +82,7 @@ if (typeof document !== 'undefined') {
     'language-label': ['Language', 'Idioma'], 'method-label': ['Recipe', 'Receita'],
     'weight-label': ['Weight', 'Peso'], 'temperature-label': ['Temperature', 'Temperatura'],
     'start': ['Read recipe', 'Ler receita'], 'exit-label': ['Recipes', 'Receitas'],
-    'time-label': ['Time', 'Tempo'], 'action-label': ['Action', 'Etapa'], 'water-label': ['Water', 'Água'],
+    'preparation-title': ['Preparation', 'Preparação'], 'time-label': ['Time', 'Tempo'], 'action-label': ['Action', 'Etapa'], 'water-label': ['Water', 'Água'],
     'wake-label': ['Keep screen awake while reading', 'Manter a tela acesa durante a leitura'],
   };
   function render() {
@@ -119,8 +119,13 @@ if (typeof document !== 'undefined') {
     const basis = recipe.water ?? recipe.yield;
     if (ratioValue(recipe.dose, basis) != null) tile(recipe.water != null ? ['Dose : brewing water', 'Dose : água de infusão'] : ['Dose : drink', 'Dose : bebida'], `1:${num(ratioValue(recipe.dose, basis))}`);
     if (recipe.water != null && recipe.yield != null) tile(['Dose : final drink', 'Dose : bebida final'], `1:${num(ratioValue(recipe.dose, recipe.yield))}`);
+    $('preparation-notes').replaceChildren();
+    for (const note of recipe.preparation ?? []) {
+      const item = document.createElement('li'); item.textContent = note; $('preparation-notes').append(item);
+    }
+    $('preparation').hidden = !recipe.preparation?.length;
     $('schedule').replaceChildren();
-    for (const step of recipe.steps) {
+    for (const step of recipe.steps.filter(step => step.phase !== 'preparation')) {
       const row = document.createElement('tr');
       const when = document.createElement('td'); when.textContent = step.time ?? t(['Before', 'Antes']);
       const action = document.createElement('td'); action.textContent = step.readingText ?? t(step.text);

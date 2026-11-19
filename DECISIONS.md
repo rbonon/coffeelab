@@ -594,3 +594,9 @@ This file and `AGENTS.md` are the shared memory of this project across sessions 
 **Decision:** The user rejected swiping or operating the phone during brewing and requested removal of “Reading only” and the scale-timer reminder.
 
 **Implications:** Replace the paged-card trial with all source-based brewing steps visible simultaneously, including time, concise action, pour addition and cumulative target. Preserve source descriptions separately. Verify readable fit without scrolling; do not claim the broader long-recipe problem is solved by shrinking or omitting instructions. Actual-phone validation remains pending.
+
+## 2026-11-18 — Preparation section before brewing schedule
+
+**Decision:** The user requested a preparation section before the brewing steps. For Hoffmann/Stardust, warm the V60 with hot tap water, rinse the paper and discard the rinse water before brewing.
+
+**Implications:** Keep preparation and the full brewing schedule visible together. Label the new Stardust preparation note as a user refinement in prototype provenance, without rewriting the historical capture.

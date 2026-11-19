@@ -24,7 +24,7 @@ button:disabled { opacity: .45; cursor: default; }
 label, select { display: block; width: 100%; }
 label span { display: block; font-weight: 650; }
 .eyebrow { font-size: .8rem; letter-spacing: .06em; color: var(--reading-muted); }
-#reader { display: flex; flex-direction: column; gap: .65rem; min-height: calc(100svh - 2rem); }
+#reader { display: flex; flex-direction: column; gap: .4rem; min-height: calc(100svh - 2rem); }
 header { display: flex; justify-content: space-between; align-items: center; gap: .5rem; }
 .quantities { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; }
 .quantity { border: 1px solid var(--reading-border); border-radius: .75rem; padding: .5rem .7rem; background: var(--reading-surface); }
@@ -71,9 +71,16 @@ small { color: var(--reading-muted); }
 #instruction { flex: 0 0 auto; margin-top: .4rem; }
 .brew-schedule { width: 100%; border-collapse: collapse; font-size: 1rem; line-height: 1.3; }
 .brew-schedule th { font-size: .75rem; font-weight: 500; color: var(--reading-muted); text-align: left; padding: .35rem .35rem .6rem; border-bottom: 1px solid var(--reading-border); }
-.brew-schedule td { padding: .6rem .35rem; border-bottom: 1px solid var(--reading-border); vertical-align: middle; }
+.brew-schedule td { padding: .4rem .35rem; border-bottom: 1px solid var(--reading-border); vertical-align: middle; }
 .brew-schedule td:first-child { white-space: nowrap; font-variant-numeric: tabular-nums; width: 3.6rem; color: var(--reading-accent); }
 .brew-schedule td:last-child, .brew-schedule th:last-child { text-align: right; white-space: nowrap; }
 .brew-schedule td strong { display: block; font-weight: 600; }
 .brew-schedule td small { display: block; font-size: .75rem; }
 .technique-note { margin: .8rem .35rem 0; font-size: .85rem; color: var(--reading-muted); }
+
+#preparation { padding: .5rem .35rem; }
+#preparation h2 { font-size: .85rem; font-weight: 600; margin: 0 0 .35rem; color: var(--reading-accent); }
+#preparation-notes { font-size: .9rem; line-height: 1.4; margin: 0; padding-left: 1rem; }
+#preparation-notes li + li { margin-top: .2rem; }
+
+#reader > h1 { margin: .35rem 0; }

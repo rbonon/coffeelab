@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Recipe reading · Coffee Lab design</title>
-  <link rel="stylesheet" href="../assets/recipe-reading.css?v=full-schedule-1">
-  <script type="module" src="../assets/recipe-reading.mjs?v=full-schedule-1"></script>
+  <link rel="stylesheet" href="../assets/recipe-reading.css?v=preparation-1">
+  <script type="module" src="../assets/recipe-reading.mjs?v=preparation-1"></script>
 </head>
 <body>
   <main>
@@ -44,6 +44,7 @@
       <h1 id="recipe-title"></h1>
       <p id="recipe-context" class="recipe-context"></p>
       <div id="quantities" class="quantities"></div>
+      <section id="preparation" aria-labelledby="preparation-title"><h2 id="preparation-title">Preparation</h2><ul id="preparation-notes"></ul></section>
       <section id="instruction" tabindex="-1" aria-label="Brewing schedule">
         <table class="brew-schedule"><thead><tr><th id="time-label" scope="col">Time</th><th id="action-label" scope="col">Action</th><th id="water-label" scope="col">Water</th></tr></thead><tbody id="schedule"></tbody></table>
         <p id="technique-note" class="technique-note"></p>

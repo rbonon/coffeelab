@@ -52,7 +52,8 @@ export const sourceRecipes = {
           "Antes: enxaguar filtro e pré-aquecer V60.",
           "Antes: enxaguar filtro e pré-aquecer V60."
         ],
-        "readingText": "Enxaguar filtro · pré-aquecer V60"
+        "readingText": "Enxaguar filtro · pré-aquecer V60",
+        "phase": "preparation"
       },
       {
         "title": [
@@ -137,7 +138,12 @@ export const sourceRecipes = {
         "readingText": "Drenagem completa"
       }
     ],
-    "technique": "Bico baixo · círculos suaves · fluxo ~5 g/s"
+    "technique": "Bico baixo · círculos suaves · fluxo ~5 g/s",
+    "preparation": [
+      "Aquecer o porta-filtro V60 em água quente da torneira.",
+      "Enxaguar o papel e descartar a água do enxágue antes de coar."
+    ],
+    "preparationNoteSource": "User refinement during Coffee Lab UI review, 2026-11-18; not part of the historical source capture."
   },
   "hoffmann-vo-zico": {
     "title": [
@@ -190,7 +196,8 @@ export const sourceRecipes = {
           "Antes: enxaguar filtro e pré-aquecer V60.",
           "Antes: enxaguar filtro e pré-aquecer V60."
         ],
-        "readingText": "Enxaguar filtro · pré-aquecer V60"
+        "readingText": "Enxaguar filtro · pré-aquecer V60",
+        "phase": "preparation"
       },
       {
         "title": [
@@ -275,7 +282,10 @@ export const sourceRecipes = {
         "readingText": "Drenagem completa"
       }
     ],
-    "technique": "Bico baixo · círculos suaves · fluxo ~5 g/s"
+    "technique": "Bico baixo · círculos suaves · fluxo ~5 g/s",
+    "preparation": [
+      "Antes: enxaguar filtro e pré-aquecer V60."
+    ]
   },
   "a02-three-pour": {
     "title": [
@@ -311,7 +321,8 @@ export const sourceRecipes = {
           "Enxaguar o filtro com água quente. Descartar a água do enxágue. Colocar café, nivelar e zerar a balança.",
           "Enxaguar o filtro com água quente. Descartar a água do enxágue. Colocar café, nivelar e zerar a balança."
         ],
-        "readingText": "Enxaguar filtro · nivelar café · zerar balança"
+        "readingText": "Enxaguar filtro · nivelar café · zerar balança",
+        "phase": "preparation"
       },
       {
         "title": [
@@ -368,6 +379,9 @@ export const sourceRecipes = {
         "readingText": "Drenagem natural · sem agitar"
       }
     ],
-    "technique": "Bico baixo · fluxo suave · sem swirl"
+    "technique": "Bico baixo · fluxo suave · sem swirl",
+    "preparation": [
+      "Enxaguar o filtro com água quente. Descartar a água do enxágue. Colocar café, nivelar e zerar a balança."
+    ]
   }
 };
