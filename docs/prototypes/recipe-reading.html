@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Recipe reading · Coffee Lab design</title>
-  <link rel="stylesheet" href="../assets/recipe-reading.css?v=portuguese-default-1">
-  <script type="module" src="../assets/recipe-reading.mjs?v=portuguese-default-1"></script>
+  <link rel="stylesheet" href="../assets/recipe-reading.css?v=navigation-1">
+  <script type="module" src="../assets/recipe-reading.mjs?v=navigation-1"></script>
 </head>
 <body>
   <main>
@@ -50,6 +50,10 @@
         <p id="technique-note" class="technique-note"></p>
       </section>
     </section>
+    <section id="browse" hidden aria-labelledby="browse-title"></section>
+    <nav id="main-navigation" class="main-navigation" aria-label="Navegação principal">
+      <button data-screen="home">Início</button><button data-screen="recipes">Receitas</button><button data-screen="journal">Diário</button><button data-screen="library">Biblioteca</button>
+    </nav>
     <noscript>This design prototype needs JavaScript to show instruction cards.</noscript>
   </main>
 </body>

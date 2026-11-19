@@ -247,3 +247,9 @@ Retain warm coffee-brown accents for principal actions, off-white/light surfaces
 The proposed choices for review are the four phone destinations, recipe-first home, a separate reading action, and comparison grouped by parameter on phones versus columns on desktop. They are delegated design proposals pending the user's review of this artifact.
 
 #24 owns focused reading for all five categories, long instructions without scrolling during execution, and actual Samsung S25 Ultra browser/screen-awake validation. #25 owns reusable components, tokens, detailed entry and empty/partial/error states, and human visual validation. No Next.js, Tailwind, authentication provider, or database is selected by these diagrams.
+
+## Browsing prototype — #25 in progress
+
+The [prototype](../prototypes/recipe-reading.html) now has Home/Recipes/Journal/Library navigation (Início/Receitas/Diário/Biblioteca in pt-BR). Navigation is hidden during focused reading and Settings. Recipes open the full schedule and return to their list. Journal uses five source executions, with actual water/time and original observations where known. Library provides coffee/equipment details and explicitly provisional historical bag context; missing roast dates remain missing. B02 is an alias of B01, not another execution.
+
+Implementation patterns currently shared are bottom navigation, light list rows, label/value detail fields, source-safe text rendering, recipe preparation and schedule. Existing CSS custom properties supply the warm palette. Entry forms, optional ratings, comparison and empty/error state designs are still pending, along with human review of browsing surfaces. #25 depends on the unmerged #24 prototype; this is not a completed UI/UX stage or a live application.

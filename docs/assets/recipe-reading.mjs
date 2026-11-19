@@ -1,3 +1,4 @@
+import { renderBrowse } from './browse-pages.mjs';
 import { sourceRecipes } from './source-recipes.mjs';
 // Illustrative layout fixtures. These are not imported recipes or historical records.
 const illustrativeExamples = {
@@ -68,7 +69,7 @@ export class ReadingWakeLock {
 
 if (typeof document !== 'undefined') {
   const $ = id => document.getElementById(id);
-  let reading = false, configuring = false;
+  let reading = false, configuring = false, screen = 'home', detail = null;
   const pt = () => $('language').value === 'pt-BR';
   const t = pair => pair[pt() ? 1 : 0];
   const num = n => new Intl.NumberFormat($('language').value, {maximumFractionDigits: 2}).format(n);
@@ -100,7 +101,18 @@ if (typeof document !== 'undefined') {
       });
       $('recipe-options').append(option);
     }
-    $('setup').hidden = reading || configuring; $('configuration').hidden = !configuring; $('reader').hidden = !reading;
+    $('setup').hidden = reading || configuring || screen !== 'home'; $('configuration').hidden = !configuring; $('reader').hidden = !reading;
+    $('browse').hidden = reading || configuring || screen === 'home';
+    $('main-navigation').hidden = reading || configuring;
+    document.body.classList.toggle('browsing', !reading && !configuring);
+    const destinations = {home:['Home','Início'],recipes:['Recipes','Receitas'],journal:['Journal','Diário'],library:['Library','Biblioteca']};
+    document.querySelectorAll('[data-screen]').forEach(button => {
+      button.textContent=t(destinations[button.dataset.screen]);
+      const current = screen === 'detail' ? detail.origin : screen;
+      if(button.dataset.screen === current)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');
+    });
+    $('main-navigation').setAttribute('aria-label',t(['Main navigation','Navegação principal']));
+    if (!$('browse').hidden) renderBrowse($('browse'),{screen,detail,go,read,t,mass});
     $('open-settings').setAttribute('aria-label',t(['Settings','Configurações']));
     const recipe = examples[$('method').value];
     $('recipe-title').textContent = t(recipe.title);
@@ -142,13 +154,16 @@ if (typeof document !== 'undefined') {
     $('technique-note').textContent = recipe.technique ?? '';
     $('instruction').setAttribute('aria-label',t(['Complete brewing schedule', 'Sequência completa de preparo']));
   }
+  function go(next, selected=null) { screen=next;detail=selected;render();window.scrollTo(0,0);if(screen!=='home')$('browse-title').setAttribute('tabindex','-1'); }
+  function read(key) { $('method').value=key;reading=true;render();window.scrollTo(0,0);$('instruction').focus({preventScroll:true});if($('wake-enabled').checked)void wake.start(); }
+  document.querySelectorAll('[data-screen]').forEach(button=>button.addEventListener('click',()=>go(button.dataset.screen)));
   document.querySelectorAll('select').forEach(el => el.addEventListener('change', () => { render(); }));
   $('wake-enabled').addEventListener('change', () => { if (!$('wake-enabled').checked) void wake.stop(); });
   $('recipe-picker').addEventListener('keydown', event => { if (event.key === 'Escape') { $('recipe-picker').open = false; document.querySelector('#recipe-picker summary').focus(); } });
   $('open-settings').addEventListener('click', () => { configuring = true; render(); $('close-settings').focus(); });
   $('close-settings').addEventListener('click', () => { configuring = false; render(); $('open-settings').focus(); });
   $('start').addEventListener('click', () => { reading = true; render(); $('instruction').focus({preventScroll:true}); if ($('wake-enabled').checked) void wake.start(); });
-  $('exit').addEventListener('click', () => { reading = false; void wake.stop(); render(); $('start').focus(); });
+  $('exit').addEventListener('click', () => { reading = false; void wake.stop(); render(); if(screen==='home')$('start').focus(); });
   document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && reading && $('wake-enabled').checked) void wake.acquire(); });
   window.addEventListener('pagehide', () => void wake.stop());
   render();
