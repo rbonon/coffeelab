@@ -62,7 +62,7 @@ The user supplied the [official Stardust product link](https://abigailcoffee.com
 
 Five user-supplied originals are retained unchanged under `docs/assets/photos/vo-zico/`: four packaging/label photos on the bag and one beans photo on the coffee. Label fields include 500 g, 100% Arabica, Catuaí Vermelho, natural process, light roast, Cabo Verde–MG, volcanic soil and label descriptors/profile. The 82-point SCA Cupping sticker is retained as a packaging claim, separate from the user’s enjoyment rating and sensory observations.
 
-The bag's manufacture date is 15/09/2026 and best-before date 15/09/2027. Roast date, purchase date, retailer, price and opening date remain unknown. The stated 30-day consumption recommendation after opening is stored as packaging conservation guidance, not as a fabricated opening/expiry date. The originals preserve distributor/manufacturer details and other label text.
+The bag's manufacture date is 15/09/2026 and best-before date 15/09/2027. Purchase date was subsequently confirmed by the user as 19/09/2026. Roast date, retailer, price and opening date remain unknown. The user supplied https://linktr.ee/cafe_do_vo_zico as a reference link; automated retrieval was unavailable, so linked contents were not used to invent further fields. The stated 30-day consumption recommendation after opening is stored as packaging conservation guidance, not as a fabricated opening/expiry date. The originals preserve distributor/manufacturer details and other label text.
 
 ## Field audit
 

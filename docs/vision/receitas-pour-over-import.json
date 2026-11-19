@@ -69,6 +69,12 @@
           "docs/assets/photos/vo-zico/vo-zico-01.jpg",
           "docs/assets/photos/vo-zico/vo-zico-02.jpg"
         ]
+      },
+      "official_profile_url": "https://linktr.ee/cafe_do_vo_zico",
+      "official_profile_url_source": {
+        "kind": "user_provided_link",
+        "received_on": "2026-11-18",
+        "retrieval_status": "automated_retrieval_unavailable; linked content not verified"
       }
     },
     {
@@ -131,7 +137,7 @@
       "roast_date": null,
       "manufacture_date": "2026-09-15",
       "best_before_date": "2027-09-15",
-      "purchase_date": null,
+      "purchase_date": "2026-09-19",
       "retailer": null,
       "price": null,
       "source_refs": [
@@ -146,7 +152,7 @@
       ],
       "review_notes": [
         "The supplied packaging confirms net weight, manufacture and best-before dates. Manufacture is not a roast date.",
-        "Purchase date, retailer, price and opening date remain unknown. Earlier historical reserve packaging/jar counts have not been reconstructed."
+        "Purchase date confirmed by the user as 19/09/2026. Retailer, price and opening date remain unknown. Earlier historical reserve packaging/jar counts have not been reconstructed."
       ],
       "name": "Café do Vô Zico — 500 g",
       "identity_status": "confirmed",
@@ -198,6 +204,11 @@
         "kind": "user_attachments",
         "received_on": "2026-11-18",
         "date_photo": "docs/assets/photos/vo-zico/vo-zico-03.jpg"
+      },
+      "purchase_source": {
+        "kind": "explicit_user_confirmation",
+        "confirmed_on": "2026-11-18",
+        "note": "User supplied 19/9; year interpreted as 2026 from current bag dates and conversation."
       }
     },
     {

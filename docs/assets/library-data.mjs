@@ -52,7 +52,13 @@ export const libraryData = {
       "review_notes": [
         "Roast level and profile are packaging declarations, not inferred from bean appearance.",
         "82 points is the packaging score, distinct from user enjoyment and optional sensory intensity ratings."
-      ]
+      ],
+      "official_profile_url": "https://linktr.ee/cafe_do_vo_zico",
+      "official_profile_url_source": {
+        "kind": "user_provided_link",
+        "received_on": "2026-11-18",
+        "retrieval_status": "automated_retrieval_unavailable; linked content not verified"
+      }
     },
     {
       "source_key": "stardust",
@@ -112,7 +118,7 @@ export const libraryData = {
       "name": "Café do Vô Zico — 500 g",
       "identity_status": "confirmed",
       "bag_weight_g": 500,
-      "purchase_date": null,
+      "purchase_date": "2026-09-19",
       "price": null,
       "storage_notes": "Manter em local seco e fresco. Após aberto, manter a embalagem bem fechada, longe de odores fortes e consumir preferencialmente em 30 dias.",
       "photos": [
@@ -164,8 +170,13 @@ export const libraryData = {
       },
       "review_notes": [
         "The supplied packaging confirms net weight, manufacture and best-before dates. Manufacture is not a roast date.",
-        "Purchase date, retailer, price and opening date remain unknown. Earlier historical reserve packaging/jar counts have not been reconstructed."
-      ]
+        "Purchase date confirmed by the user as 19/09/2026. Retailer, price and opening date remain unknown. Earlier historical reserve packaging/jar counts have not been reconstructed."
+      ],
+      "purchase_source": {
+        "kind": "explicit_user_confirmation",
+        "confirmed_on": "2026-11-18",
+        "note": "User supplied 19/9; year interpreted as 2026 from current bag dates and conversation."
+      }
     },
     {
       "source_key": "stardust-historical-bag-context",

@@ -1,5 +1,5 @@
-import { sourceRecipes } from './source-recipes.mjs?v=vo-zico-library-1';
-import { libraryData } from './library-data.mjs?v=vo-zico-library-1';
+import { sourceRecipes } from './source-recipes.mjs?v=vo-zico-purchase-1';
+import { libraryData } from './library-data.mjs?v=vo-zico-purchase-1';
 export function renderBrowse(root, {screen, detail, go, read, openPhoto, t, mass}) {
   root.replaceChildren();
   function el(tag, text, cls) { const node=document.createElement(tag); if(text) node.textContent=text; if(cls)node.className=cls; return node; }
@@ -72,9 +72,10 @@ export function renderBrowse(root, {screen, detail, go, read, openPhoto, t, mass
       if(sourceRecipes[record.recipe_key])row(t(['Open recipe','Abrir receita']),null,()=>read(record.recipe_key));
     } else if(detail.kind==='coffee') {
       field(t(['Brand','Marca']),record.brand_or_roaster_label);
-      if (record.official_product_url) {
-        const link=el('a',t(['View product on Abigail’s website','Ver produto no site da Abigail']));
-        link.href=record.official_product_url;root.append(link);
+      const officialUrl=record.official_product_url ?? record.official_profile_url;
+      if (officialUrl) {
+        const link=el('a',record.official_product_url?t(['View product on the brand’s website','Ver produto no site da marca']):t(['Official links','Links do Café do Vô']));
+        link.href=officialUrl;root.append(link);
       }
       field(t(['Species','Espécie']),record.arabica_percentage===100?'100% Arábica':record.species);
       field(t(['Label roast level','Torra indicada']),record.roast_level_label);
