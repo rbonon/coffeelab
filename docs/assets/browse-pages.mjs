@@ -4,8 +4,18 @@ export function renderBrowse(root, {screen, detail, go, read, t, mass}) {
   root.replaceChildren();
   function el(tag, text, cls) { const node=document.createElement(tag); if(text) node.textContent=text; if(cls)node.className=cls; return node; }
   function heading(text) { const title=el('h1',text);title.id='browse-title';root.append(title); }
-  function row(title, subtitle, action) {
+  function row(title, subtitle, action, rating=null) {
     const button=el('button',null,'browse-row');button.append(el('span',title,'row-title'));if(subtitle)button.append(el('span',subtitle,'row-subtitle'));
+    if (ratingLabel(rating)) {
+      button.classList.add('rated-row');
+      const badge=el('span',null,'rating-icon');badge.setAttribute('role','img');badge.setAttribute('aria-label',ratingLabel(rating));badge.title=ratingLabel(rating);
+      const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');
+      for(const [key,value] of Object.entries({viewBox:'0 0 24 24',width:'22',height:'22',fill:'none',stroke:'currentColor','stroke-width':'1.5','stroke-linecap':'round','stroke-linejoin':'round','aria-hidden':'true'}))svg.setAttribute(key,value);
+      const path=document.createElementNS('http://www.w3.org/2000/svg','path');
+      path.setAttribute('d',rating==='okay'?'M6 12h12':'M7 10H4a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h3V10l4-7c.7-1 2-.4 2 1l-1 6h6a2 2 0 0 1 2 2.4l-1.4 6A2 2 0 0 1 16.6 20H7');
+      if(rating==='did_not_enjoy')path.setAttribute('transform','rotate(180 12 12)');
+      svg.append(path);badge.append(svg);button.append(badge);
+    }
     button.addEventListener('click',action);root.append(button);
   }
   function field(label, value) { if(value==null || value==='')return;const line=el('dl',null,'detail-field');line.append(el('dt',label),el('dd',String(value)));root.append(line); }
@@ -45,7 +55,7 @@ export function renderBrowse(root, {screen, detail, go, read, t, mass}) {
     for(const [key,r] of Object.entries(sourceRecipes))row(t(r.title),`${mass(r.dose)} · ${mass(r.water)} · V60`,()=>read(key));
   } else if(screen==='journal') {
     heading(t(['Journal','Diário']));root.append(el('p',t(['Selected recorded brews.','Extrações registradas para lembrar e comparar.']),'page-intro'));
-    for(const r of [...libraryData.executions].reverse())row(`${r.source_key} · ${coffeeName(r.coffee_key)}`,`${duration(r.quantities.elapsed_seconds)} · ${mass(r.quantities.brewing_water_g)} ${t(['brewing water','de água'])}${ratingLabel(r.quick_rating) ? ` · ${ratingLabel(r.quick_rating)}` : ''}`,()=>go('detail',{kind:'execution',record:r,origin:'journal'}));
+    for(const r of [...libraryData.executions].reverse())row(`${r.source_key} · ${coffeeName(r.coffee_key)}`,`${duration(r.quantities.elapsed_seconds)} · ${mass(r.quantities.brewing_water_g)} ${t(['brewing water','de água'])}`,()=>go('detail',{kind:'execution',record:r,origin:'journal'}),r.quick_rating);
   } else if(screen==='library') {
     heading(t(['Library','Biblioteca']));root.append(el('h2',t(['Coffees','Cafés'])));
     for(const r of libraryData.coffees)row(r.name,[r.origin,r.processing].filter(Boolean).join(' · '),()=>go('detail',{kind:'coffee',record:r,origin:'library'}));
