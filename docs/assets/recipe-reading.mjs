@@ -68,7 +68,7 @@ export class ReadingWakeLock {
 
 if (typeof document !== 'undefined') {
   const $ = id => document.getElementById(id);
-  let page = 0, reading = false, configuring = false;
+  let reading = false, configuring = false;
   const pt = () => $('language').value === 'pt-BR';
   const t = pair => pair[pt() ? 1 : 0];
   const num = n => new Intl.NumberFormat($('language').value, {maximumFractionDigits: 2}).format(n);
@@ -82,9 +82,8 @@ if (typeof document !== 'undefined') {
     'language-label': ['Language', 'Idioma'], 'method-label': ['Recipe', 'Receita'],
     'weight-label': ['Weight', 'Peso'], 'temperature-label': ['Temperature', 'Temperatura'],
     'start': ['Read recipe', 'Ler receita'], 'exit-label': ['Recipes', 'Receitas'],
-    'reading-label': ['READING ONLY', 'SOMENTE LEITURA'], 'previous': ['Previous', 'Anterior'], 'next': ['Next', 'Próximo'],
+    'time-label': ['Time', 'Tempo'], 'action-label': ['Action', 'Etapa'], 'water-label': ['Water', 'Água'],
     'wake-label': ['Keep screen awake while reading', 'Manter a tela acesa durante a leitura'],
-    'scale-note': ['Use the timer on your scale. Nothing is recorded.', 'Use o cronômetro da balança. Nada é registrado.']
   };
   function render() {
     document.documentElement.lang = $('language').value;
@@ -96,7 +95,7 @@ if (typeof document !== 'undefined') {
       option.type = 'button'; option.textContent = t(recipe.title);
       option.setAttribute('aria-pressed', String(key === $('method').value));
       option.addEventListener('click', () => {
-        $('method').value = key; page = 0; $('recipe-picker').open = false; render();
+        $('method').value = key; $('recipe-picker').open = false; render();
         document.querySelector('#recipe-picker summary').focus();
       });
       $('recipe-options').append(option);
@@ -120,21 +119,29 @@ if (typeof document !== 'undefined') {
     const basis = recipe.water ?? recipe.yield;
     if (ratioValue(recipe.dose, basis) != null) tile(recipe.water != null ? ['Dose : brewing water', 'Dose : água de infusão'] : ['Dose : drink', 'Dose : bebida'], `1:${num(ratioValue(recipe.dose, basis))}`);
     if (recipe.water != null && recipe.yield != null) tile(['Dose : final drink', 'Dose : bebida final'], `1:${num(ratioValue(recipe.dose, recipe.yield))}`);
-    const step = recipe.steps[page];
-    $('progress').textContent = t([`Instruction ${page+1} of ${recipe.steps.length}`, `Instrução ${page+1} de ${recipe.steps.length}`]) + (step.time ? ` · ${step.time}` : '');
-    $('step-title').textContent = t(step.title); $('step-text').textContent = t(step.text);
-    $('step-target').textContent = step.add != null ? t([`Add ${mass(step.add)} → reach ${mass(step.cumulative)}`, `Adicione ${mass(step.add)} → atinja ${mass(step.cumulative)}`]) : step.final != null ? t([`Final drink: ${mass(step.final)}`, `Bebida final: ${mass(step.final)}`]) : '';
-    $('previous').disabled = page === 0; $('next').disabled = page === recipe.steps.length - 1;
-    document.querySelector('.paging').setAttribute('aria-label',t(['Instruction pages','Páginas de instruções']));
+    $('schedule').replaceChildren();
+    for (const step of recipe.steps) {
+      const row = document.createElement('tr');
+      const when = document.createElement('td'); when.textContent = step.time ?? t(['Before', 'Antes']);
+      const action = document.createElement('td'); action.textContent = step.readingText ?? t(step.text);
+      const target = document.createElement('td');
+      if (step.cumulative != null) {
+        const total = document.createElement('strong'); total.textContent = mass(step.cumulative);
+        const addition = document.createElement('small'); addition.textContent = `+${mass(step.add)}`;
+        target.append(total, addition);
+      } else if (step.final != null) target.textContent = mass(step.final);
+      row.append(when, action, target); $('schedule').append(row);
+    }
+    $('technique-note').textContent = recipe.technique ?? '';
+    $('instruction').setAttribute('aria-label',t(['Complete brewing schedule', 'Sequência completa de preparo']));
   }
-  document.querySelectorAll('select').forEach(el => el.addEventListener('change', () => { page = 0; render(); }));
+  document.querySelectorAll('select').forEach(el => el.addEventListener('change', () => { render(); }));
   $('wake-enabled').addEventListener('change', () => { if (!$('wake-enabled').checked) void wake.stop(); });
   $('recipe-picker').addEventListener('keydown', event => { if (event.key === 'Escape') { $('recipe-picker').open = false; document.querySelector('#recipe-picker summary').focus(); } });
   $('open-settings').addEventListener('click', () => { configuring = true; render(); $('close-settings').focus(); });
   $('close-settings').addEventListener('click', () => { configuring = false; render(); $('open-settings').focus(); });
-  $('start').addEventListener('click', () => { reading = true; page = 0; render(); $('instruction').focus({preventScroll:true}); if ($('wake-enabled').checked) void wake.start(); });
+  $('start').addEventListener('click', () => { reading = true; render(); $('instruction').focus({preventScroll:true}); if ($('wake-enabled').checked) void wake.start(); });
   $('exit').addEventListener('click', () => { reading = false; void wake.stop(); render(); $('start').focus(); });
-  for (const [id,delta] of [['previous',-1],['next',1]]) $(id).addEventListener('click', () => { page += delta; render(); $('instruction').focus({preventScroll:true}); });
   document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && reading && $('wake-enabled').checked) void wake.acquire(); });
   window.addEventListener('pagehide', () => void wake.stop());
   render();

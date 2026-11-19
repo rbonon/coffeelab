@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Recipe reading · Coffee Lab design</title>
-  <link rel="stylesheet" href="../assets/recipe-reading.css?v=source-recipes-1">
-  <script type="module" src="../assets/recipe-reading.mjs?v=source-recipes-1"></script>
+  <link rel="stylesheet" href="../assets/recipe-reading.css?v=full-schedule-1">
+  <script type="module" src="../assets/recipe-reading.mjs?v=full-schedule-1"></script>
 </head>
 <body>
   <main>
@@ -40,18 +40,14 @@
       </div>
     </section>
     <section id="reader" hidden aria-labelledby="recipe-title">
-      <header><button id="exit">← <span id="exit-label">Recipes</span></button><span class="eyebrow" id="reading-label">READING ONLY</span></header>
+      <header><button id="exit">← <span id="exit-label">Recipes</span></button></header>
       <h1 id="recipe-title"></h1>
       <p id="recipe-context" class="recipe-context"></p>
       <div id="quantities" class="quantities"></div>
-      <article id="instruction" tabindex="-1" aria-labelledby="step-title">
-        <p id="progress" class="eyebrow"></p>
-        <h2 id="step-title"></h2>
-        <p id="step-text"></p>
-        <strong id="step-target"></strong>
-      </article>
-      <nav class="paging" aria-label="Instruction pages"><button id="previous">Previous</button><button id="next" class="primary">Next</button></nav>
-      <footer><small id="scale-note">Use the timer on your scale. Nothing is recorded.</small></footer>
+      <section id="instruction" tabindex="-1" aria-label="Brewing schedule">
+        <table class="brew-schedule"><thead><tr><th id="time-label" scope="col">Time</th><th id="action-label" scope="col">Action</th><th id="water-label" scope="col">Water</th></tr></thead><tbody id="schedule"></tbody></table>
+        <p id="technique-note" class="technique-note"></p>
+      </section>
     </section>
     <noscript>This design prototype needs JavaScript to show instruction cards.</noscript>
   </main>

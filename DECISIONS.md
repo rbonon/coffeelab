@@ -588,3 +588,9 @@ This file and `AGENTS.md` are the shared memory of this project across sessions 
 **Decision:** The user requested a smaller, quieter button and actual recipes from the captured source for the prototype.
 
 **Implications:** Home uses a compact text-style reading action and three source-derived pour-over recipes: Hoffmann/Stardust, Hoffmann/Café do Vô Zico, and revised A02. Preserve planned versus measured quantities, source references, Portuguese instruction language and unknown values. Synthetic category fixtures remain test-only, outside Home selection.
+
+## 2026-11-18 — Complete brewing schedule without interaction
+
+**Decision:** The user rejected swiping or operating the phone during brewing and requested removal of “Reading only” and the scale-timer reminder.
+
+**Implications:** Replace the paged-card trial with all source-based brewing steps visible simultaneously, including time, concise action, pour addition and cumulative target. Preserve source descriptions separately. Verify readable fit without scrolling; do not claim the broader long-recipe problem is solved by shrinking or omitting instructions. Actual-phone validation remains pending.

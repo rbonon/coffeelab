@@ -51,7 +51,8 @@ export const sourceRecipes = {
         "text": [
           "Antes: enxaguar filtro e pré-aquecer V60.",
           "Antes: enxaguar filtro e pré-aquecer V60."
-        ]
+        ],
+        "readingText": "Enxaguar filtro · pré-aquecer V60"
       },
       {
         "title": [
@@ -64,7 +65,8 @@ export const sourceRecipes = {
         ],
         "time": "0:00",
         "add": 50,
-        "cumulative": 50
+        "cumulative": 50,
+        "readingText": "Bloom · swirl suave"
       },
       {
         "title": [
@@ -77,7 +79,8 @@ export const sourceRecipes = {
         ],
         "time": "0:45",
         "add": 50,
-        "cumulative": 100
+        "cumulative": 100,
+        "readingText": "Circular suave"
       },
       {
         "title": [
@@ -90,7 +93,8 @@ export const sourceRecipes = {
         ],
         "time": "1:10",
         "add": 50,
-        "cumulative": 150
+        "cumulative": 150,
+        "readingText": "Circular suave"
       },
       {
         "title": [
@@ -103,7 +107,8 @@ export const sourceRecipes = {
         ],
         "time": "1:30",
         "add": 50,
-        "cumulative": 200
+        "cumulative": 200,
+        "readingText": "Circular suave"
       },
       {
         "title": [
@@ -116,7 +121,8 @@ export const sourceRecipes = {
         ],
         "time": "1:50",
         "add": 50,
-        "cumulative": 250
+        "cumulative": 250,
+        "readingText": "Circular · swirl suave ~2:00"
       },
       {
         "title": [
@@ -127,9 +133,11 @@ export const sourceRecipes = {
           "Deixar drenar.",
           "Deixar drenar."
         ],
-        "time": "~3:00"
+        "time": "~3:00",
+        "readingText": "Drenagem completa"
       }
-    ]
+    ],
+    "technique": "Bico baixo · círculos suaves · fluxo ~5 g/s"
   },
   "hoffmann-vo-zico": {
     "title": [
@@ -181,7 +189,8 @@ export const sourceRecipes = {
         "text": [
           "Antes: enxaguar filtro e pré-aquecer V60.",
           "Antes: enxaguar filtro e pré-aquecer V60."
-        ]
+        ],
+        "readingText": "Enxaguar filtro · pré-aquecer V60"
       },
       {
         "title": [
@@ -194,7 +203,8 @@ export const sourceRecipes = {
         ],
         "time": "0:00",
         "add": 50,
-        "cumulative": 50
+        "cumulative": 50,
+        "readingText": "Bloom · swirl suave"
       },
       {
         "title": [
@@ -207,7 +217,8 @@ export const sourceRecipes = {
         ],
         "time": "0:45",
         "add": 50,
-        "cumulative": 100
+        "cumulative": 100,
+        "readingText": "Circular suave"
       },
       {
         "title": [
@@ -220,7 +231,8 @@ export const sourceRecipes = {
         ],
         "time": "1:10",
         "add": 50,
-        "cumulative": 150
+        "cumulative": 150,
+        "readingText": "Circular suave"
       },
       {
         "title": [
@@ -233,7 +245,8 @@ export const sourceRecipes = {
         ],
         "time": "1:30",
         "add": 50,
-        "cumulative": 200
+        "cumulative": 200,
+        "readingText": "Circular suave"
       },
       {
         "title": [
@@ -246,7 +259,8 @@ export const sourceRecipes = {
         ],
         "time": "1:50",
         "add": 50,
-        "cumulative": 250
+        "cumulative": 250,
+        "readingText": "Circular · swirl suave ~2:00"
       },
       {
         "title": [
@@ -257,9 +271,11 @@ export const sourceRecipes = {
           "Deixar drenar.",
           "Deixar drenar."
         ],
-        "time": "~3:00"
+        "time": "~3:00",
+        "readingText": "Drenagem completa"
       }
-    ]
+    ],
+    "technique": "Bico baixo · círculos suaves · fluxo ~5 g/s"
   },
   "a02-three-pour": {
     "title": [
@@ -294,7 +310,8 @@ export const sourceRecipes = {
         "text": [
           "Enxaguar o filtro com água quente. Descartar a água do enxágue. Colocar café, nivelar e zerar a balança.",
           "Enxaguar o filtro com água quente. Descartar a água do enxágue. Colocar café, nivelar e zerar a balança."
-        ]
+        ],
+        "readingText": "Enxaguar filtro · nivelar café · zerar balança"
       },
       {
         "title": [
@@ -307,7 +324,8 @@ export const sourceRecipes = {
         ],
         "time": "0:00",
         "add": 60,
-        "cumulative": 60
+        "cumulative": 60,
+        "readingText": "Bloom suave · aguardar até 0:45"
       },
       {
         "title": [
@@ -320,7 +338,8 @@ export const sourceRecipes = {
         ],
         "time": "0:45",
         "add": 130,
-        "cumulative": 190
+        "cumulative": 190,
+        "readingText": "Circular suave · fluxo contínuo"
       },
       {
         "title": [
@@ -333,7 +352,8 @@ export const sourceRecipes = {
         ],
         "time": "1:30",
         "add": 130,
-        "cumulative": 320
+        "cumulative": 320,
+        "readingText": "Circular suave · evitar o papel"
       },
       {
         "title": [
@@ -344,8 +364,10 @@ export const sourceRecipes = {
           "Deixar escoar naturalmente, sem agitar. Tempo apenas de referência. Registrar o tempo real e avaliar o amargor residual.",
           "Deixar escoar naturalmente, sem agitar. Tempo apenas de referência. Registrar o tempo real e avaliar o amargor residual."
         ],
-        "time": "3–4 min"
+        "time": "3–4 min",
+        "readingText": "Drenagem natural · sem agitar"
       }
-    ]
+    ],
+    "technique": "Bico baixo · fluxo suave · sem swirl"
   }
 };
