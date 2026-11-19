@@ -1,5 +1,5 @@
-import { renderBrowse } from './browse-pages.mjs?v=no-a02-1';
-import { sourceRecipes } from './source-recipes.mjs?v=no-a02-1';
+import { renderBrowse } from './browse-pages.mjs?v=preparation-final-1';
+import { sourceRecipes } from './source-recipes.mjs?v=preparation-final-1';
 // Illustrative layout fixtures. These are not imported recipes or historical records.
 const illustrativeExamples = {
   pour: { title: ['Pour Over · five pours', 'Coado · cinco despejos'], dose: 15, water: 250, temp: 96, steps: Array.from({length: 5}, (_, i) => ({ title: [`Pour ${i + 1}`, `Despejo ${i + 1}`], text: ['Add water gently, then allow it to drain. Follow the timing of your recipe on the scale.', 'Adicione a água suavemente e deixe escoar. Siga os tempos da sua receita no cronômetro da balança.'], add: 50, cumulative: (i + 1) * 50 })) },
@@ -133,7 +133,6 @@ if (typeof document !== 'undefined') {
     if (recipe.water != null && recipe.yield != null) tile(['Dose : final drink', 'Dose : bebida final'], `1:${num(ratioValue(recipe.dose, recipe.yield))}`);
     $('preparation-notes').replaceChildren();
     const preparation = [...(recipe.preparation ?? [])];
-    if (recipe.grinderName && recipe.grinder) preparation.push(t([`Grind with ${recipe.grinderName}, setting ${recipe.grinder}.`, `Moer no ${recipe.grinderName}, regulagem ${recipe.grinder}.`]));
     for (const note of preparation) {
       const item = document.createElement('li'); item.textContent = note; $('preparation-notes').append(item);
     }

@@ -45,18 +45,6 @@ export const sourceRecipes = {
     "steps": [
       {
         "title": [
-          "Preparação",
-          "Preparação"
-        ],
-        "text": [
-          "Antes: enxaguar filtro e pré-aquecer V60.",
-          "Antes: enxaguar filtro e pré-aquecer V60."
-        ],
-        "readingText": "Enxaguar filtro · pré-aquecer V60",
-        "phase": "preparation"
-      },
-      {
-        "title": [
           "Bloom",
           "Bloom"
         ],
@@ -140,10 +128,11 @@ export const sourceRecipes = {
     ],
     "technique": "Bico baixo · círculos suaves · fluxo ~5 g/s",
     "preparation": [
-      "Aquecer o porta-filtro V60 em água quente da torneira.",
-      "Enxaguar o papel e descartar a água do enxágue antes de coar."
+      "Moagem: JX-Pro 3.5.0",
+      "Aquecer o porta-filtro, imersão em água quente da torneira",
+      "Escaldar o filtro"
     ],
-    "preparationNoteSource": "User refinement during Coffee Lab UI review, 2026-11-18; not part of the historical source capture.",
+    "preparationNoteSource": "Explicit user replacement during Coffee Lab UI review, 2026-11-18.",
     "grinderName": "JX-Pro"
   },
   "hoffmann-vo-zico": {
@@ -190,18 +179,6 @@ export const sourceRecipes = {
     "steps": [
       {
         "title": [
-          "Preparação",
-          "Preparação"
-        ],
-        "text": [
-          "Antes: enxaguar filtro e pré-aquecer V60.",
-          "Antes: enxaguar filtro e pré-aquecer V60."
-        ],
-        "readingText": "Enxaguar filtro · pré-aquecer V60",
-        "phase": "preparation"
-      },
-      {
-        "title": [
           "Bloom",
           "Bloom"
         ],
@@ -285,8 +262,11 @@ export const sourceRecipes = {
     ],
     "technique": "Bico baixo · círculos suaves · fluxo ~5 g/s",
     "preparation": [
-      "Antes: enxaguar filtro e pré-aquecer V60."
+      "Moagem: JX-Pro 3.5.0",
+      "Aquecer o porta-filtro, imersão em água quente da torneira",
+      "Escaldar o filtro"
     ],
-    "grinderName": "JX-Pro"
+    "grinderName": "JX-Pro",
+    "preparationNoteSource": "Explicit user replacement during Coffee Lab UI review, 2026-11-18."
   }
 };

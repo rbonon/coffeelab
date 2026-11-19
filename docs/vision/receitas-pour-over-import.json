@@ -1969,7 +1969,17 @@
         }
       ],
       "review_notes": [],
-      "external_source_links": []
+      "external_source_links": [],
+      "preparation": [
+        "Moagem: JX-Pro 3.5.0",
+        "Aquecer o porta-filtro, imersão em água quente da torneira",
+        "Escaldar o filtro"
+      ],
+      "preparation_source": {
+        "kind": "explicit_user_instruction",
+        "date": "2026-11-18",
+        "note": "Replaces preparation for both recipes during UI review; source transcript remains historical evidence."
+      }
     },
     {
       "source_key": "hoffmann-stardust",
@@ -2155,7 +2165,17 @@
         }
       ],
       "review_notes": [],
-      "external_source_links": []
+      "external_source_links": [],
+      "preparation": [
+        "Moagem: JX-Pro 3.5.0",
+        "Aquecer o porta-filtro, imersão em água quente da torneira",
+        "Escaldar o filtro"
+      ],
+      "preparation_source": {
+        "kind": "explicit_user_instruction",
+        "date": "2026-11-18",
+        "note": "Replaces preparation for both recipes during UI review; source transcript remains historical evidence."
+      }
     }
   ],
   "executions": [

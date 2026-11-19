@@ -636,3 +636,9 @@ This file and `AGENTS.md` are the shared memory of this project across sessions 
 **Decision:** The user requested removing A02 from recipes as well as executions.
 
 **Implications:** Delete both A02 recipe candidates and remove A02 from the Home/Recipes fixture. Retained historical plans no longer link to a deleted active base recipe; their source lineage remains separately identified. The prototype selection now contains only the two Hoffmann recipes.
+
+## 2026-11-18 — Replace preparation for both Hoffmann recipes
+
+**Decision:** Replace all preparation content in both displayed Hoffmann recipes with exactly: Moagem: JX-Pro 3.5.0; Aquecer o porta-filtro, imersão em água quente da torneira; Escaldar o filtro.
+
+**Implications:** The prototype and import candidates retain the same three user-authored items, without an additional automatically appended grinder instruction. This supersedes earlier preparation notes.
