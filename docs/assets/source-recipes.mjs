@@ -143,7 +143,8 @@ export const sourceRecipes = {
       "Aquecer o porta-filtro V60 em água quente da torneira.",
       "Enxaguar o papel e descartar a água do enxágue antes de coar."
     ],
-    "preparationNoteSource": "User refinement during Coffee Lab UI review, 2026-11-18; not part of the historical source capture."
+    "preparationNoteSource": "User refinement during Coffee Lab UI review, 2026-11-18; not part of the historical source capture.",
+    "grinderName": "JX-Pro"
   },
   "hoffmann-vo-zico": {
     "title": [
@@ -285,7 +286,8 @@ export const sourceRecipes = {
     "technique": "Bico baixo · círculos suaves · fluxo ~5 g/s",
     "preparation": [
       "Antes: enxaguar filtro e pré-aquecer V60."
-    ]
+    ],
+    "grinderName": "JX-Pro"
   },
   "a02-three-pour": {
     "title": [
@@ -382,6 +384,7 @@ export const sourceRecipes = {
     "technique": "Bico baixo · fluxo suave · sem swirl",
     "preparation": [
       "Enxaguar o filtro com água quente. Descartar a água do enxágue. Colocar café, nivelar e zerar a balança."
-    ]
+    ],
+    "grinderName": "JX-Pro"
   }
 };

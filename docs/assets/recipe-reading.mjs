@@ -104,7 +104,7 @@ if (typeof document !== 'undefined') {
     $('open-settings').setAttribute('aria-label',t(['Settings','Configurações']));
     const recipe = examples[$('method').value];
     $('recipe-title').textContent = t(recipe.title);
-    $('recipe-context').textContent = recipe.grinder ? `V60 · JX-Pro ${recipe.grinder}` : '';
+    $('recipe-context').textContent = '';
     $('quantities').replaceChildren();
     function tile(label, value) {
       const el = document.createElement('div'); el.className = 'quantity';
@@ -120,10 +120,12 @@ if (typeof document !== 'undefined') {
     if (ratioValue(recipe.dose, basis) != null) tile(recipe.water != null ? ['Dose : brewing water', 'Dose : água de infusão'] : ['Dose : drink', 'Dose : bebida'], `1:${num(ratioValue(recipe.dose, basis))}`);
     if (recipe.water != null && recipe.yield != null) tile(['Dose : final drink', 'Dose : bebida final'], `1:${num(ratioValue(recipe.dose, recipe.yield))}`);
     $('preparation-notes').replaceChildren();
-    for (const note of recipe.preparation ?? []) {
+    const preparation = [...(recipe.preparation ?? [])];
+    if (recipe.grinderName && recipe.grinder) preparation.push(t([`Grind with ${recipe.grinderName}, setting ${recipe.grinder}.`, `Moer no ${recipe.grinderName}, regulagem ${recipe.grinder}.`]));
+    for (const note of preparation) {
       const item = document.createElement('li'); item.textContent = note; $('preparation-notes').append(item);
     }
-    $('preparation').hidden = !recipe.preparation?.length;
+    $('preparation').hidden = !preparation.length;
     $('schedule').replaceChildren();
     for (const step of recipe.steps.filter(step => step.phase !== 'preparation')) {
       const row = document.createElement('tr');

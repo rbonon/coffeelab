@@ -600,3 +600,9 @@ This file and `AGENTS.md` are the shared memory of this project across sessions 
 **Decision:** The user requested a preparation section before the brewing steps. For Hoffmann/Stardust, warm the V60 with hot tap water, rinse the paper and discard the rinse water before brewing.
 
 **Implications:** Keep preparation and the full brewing schedule visible together. Label the new Stardust preparation note as a user refinement in prototype provenance, without rewriting the historical capture.
+
+## 2026-11-18 — Grinder and setting belong in Preparation
+
+**Decision:** Always present the known grinder identity and its setting in the Preparation section, as requested by the user.
+
+**Implications:** Move the JX-Pro 3.5.0 guidance out of the heading into a preparation instruction. Preserve grinder-specific notation and leave unknown equipment/settings unspecified.
