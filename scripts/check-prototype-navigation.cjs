@@ -18,16 +18,17 @@ const {chromium} = require(process.env.COFFEELAB_PLAYWRIGHT_PATH || 'playwright'
     await page.goBack(); await title('Diário');
     await page.goForward(); await title('B01 · Stardust');
     await page.reload(); await title('B01 · Stardust');
-    await page.getByRole('button',{name:'← Voltar',exact:true}).click(); await title('Diário');
+    await page.goBack(); await title('Diário');
     await page.goBack(); await page.waitForSelector('#setup:visible');
     await page.click('#open-settings'); await page.waitForSelector('#configuration:visible');
     await page.goBack(); await page.waitForSelector('#setup:visible');
     await page.goForward(); await page.waitForSelector('#configuration:visible');
-    await page.click('#close-settings'); await page.waitForSelector('#setup:visible');
+    await page.goBack(); await page.waitForSelector('#setup:visible');
     await page.click('[data-screen="recipes"]'); await title('Receitas');
     await page.locator('#browse .browse-row').first().click(); await page.waitForSelector('#reader:visible');
-    await page.click('#exit'); await title('Receitas');
+    await page.goBack(); await title('Receitas');
+    assert.equal(await page.locator('#exit, #close-settings, .back-link').count(),0);
     assert.deepEqual(errors,[]);
-    console.log('PASS: native Back/Forward, detail-to-reading return, Settings, reload restoration, and in-app back buttons');
+    console.log('PASS: native Back/Forward, detail-to-reading return, Settings, reload restoration, and no redundant top back buttons');
   } finally { await browser.close(); }
 })().catch(error=>{console.error(error);process.exitCode=1;});

@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Recipe reading · Coffee Lab design</title>
-  <link rel="stylesheet" href="../assets/recipe-reading.css?v=browser-history-1">
-  <script type="module" src="../assets/recipe-reading.mjs?v=browser-history-1"></script>
+  <link rel="stylesheet" href="../assets/recipe-reading.css?v=native-back-1">
+  <script type="module" src="../assets/recipe-reading.mjs?v=native-back-1"></script>
 </head>
 <body>
   <main>
@@ -30,8 +30,7 @@
       <button id="start" class="reading-action">Read recipe <span aria-hidden="true">→</span></button>
     </section>
     <section id="configuration" hidden aria-labelledby="settings-title">
-      <header><button id="close-settings">← <span id="settings-back">Back</span></button></header>
-      <h1 id="settings-title">Settings</h1>
+      <h1 id="settings-title" tabindex="-1">Settings</h1>
       <div class="settings">
         <label><span id="language-label">Language</span><select id="language"><option value="en">English</option><option value="pt-BR" selected>Português (Brasil)</option></select></label>
         <label><span id="weight-label">Weight</span><select id="weight"><option value="g">g</option><option value="oz">oz</option></select></label>
@@ -40,7 +39,6 @@
       </div>
     </section>
     <section id="reader" hidden aria-labelledby="recipe-title">
-      <header><button id="exit">← <span id="exit-label">Recipes</span></button></header>
       <h1 id="recipe-title"></h1>
       <p id="recipe-context" class="recipe-context"></p>
       <div id="quantities" class="quantities"></div>

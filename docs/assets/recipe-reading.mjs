@@ -1,4 +1,4 @@
-import { renderBrowse } from './browse-pages.mjs?v=browser-history-1';
+import { renderBrowse } from './browse-pages.mjs?v=native-back-1';
 import { sourceRecipes } from './source-recipes.mjs';
 // Illustrative layout fixtures. These are not imported recipes or historical records.
 const illustrativeExamples = {
@@ -79,10 +79,10 @@ if (typeof document !== 'undefined') {
     'demo': ['From your recipe journal', 'Do seu caderno de receitas'],
     'setup-title': ['Coffee Lab', 'Coffee Lab'],
     'intro': ['Choose a recipe to begin.', 'Escolha uma receita para começar.'],
-    'settings-title': ['Settings', 'Configurações'], 'settings-back': ['Back', 'Voltar'],
+    'settings-title': ['Settings', 'Configurações'],
     'language-label': ['Language', 'Idioma'], 'method-label': ['Recipe', 'Receita'],
     'weight-label': ['Weight', 'Peso'], 'temperature-label': ['Temperature', 'Temperatura'],
-    'start': ['Read recipe', 'Ler receita'], 'exit-label': ['Recipes', 'Receitas'],
+    'start': ['Read recipe', 'Ler receita'],
     'preparation-title': ['Preparation', 'Preparação'], 'time-label': ['Time', 'Tempo'], 'action-label': ['Action', 'Etapa'], 'water-label': ['Water', 'Água'],
     'wake-label': ['Keep screen awake while reading', 'Manter a tela acesa durante a leitura'],
   };
@@ -112,7 +112,7 @@ if (typeof document !== 'undefined') {
       if(button.dataset.screen === current)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');
     });
     $('main-navigation').setAttribute('aria-label',t(['Main navigation','Navegação principal']));
-    if (!$('browse').hidden) renderBrowse($('browse'),{screen,detail,go,read,back,t,mass});
+    if (!$('browse').hidden) renderBrowse($('browse'),{screen,detail,go,read,t,mass});
     $('open-settings').setAttribute('aria-label',t(['Settings','Configurações']));
     const recipe = examples[$('method').value];
     $('recipe-title').textContent = t(recipe.title);
@@ -173,10 +173,6 @@ if (typeof document !== 'undefined') {
   }
   function go(next, selected=null) { navigate({...snapshot(), screen:next, detail:selected, reading:false, configuring:false}); }
   function read(key) { navigate({...snapshot(), recipe:key, reading:true, configuring:false}); $('instruction').focus({preventScroll:true}); }
-  function back() {
-    if ((history.state?.coffeeLab?.depth ?? 0) > 0) history.back();
-    else go('home');
-  }
   window.addEventListener('popstate', event => { if (event.state?.coffeeLab) restore(event.state.coffeeLab); });
   const savedRoute = history.state?.coffeeLab;
   if (savedRoute && examples[savedRoute.recipe]) restore(savedRoute);
@@ -185,10 +181,8 @@ if (typeof document !== 'undefined') {
   document.querySelectorAll('select').forEach(el => el.addEventListener('change', () => { render(); }));
   $('wake-enabled').addEventListener('change', () => { if (!$('wake-enabled').checked) void wake.stop(); });
   $('recipe-picker').addEventListener('keydown', event => { if (event.key === 'Escape') { $('recipe-picker').open = false; document.querySelector('#recipe-picker summary').focus(); } });
-  $('open-settings').addEventListener('click', () => { navigate({...snapshot(), configuring:true}); $('close-settings').focus(); });
-  $('close-settings').addEventListener('click', back);
+  $('open-settings').addEventListener('click', () => { navigate({...snapshot(), configuring:true}); $('settings-title').focus(); });
   $('start').addEventListener('click', () => read($('method').value));
-  $('exit').addEventListener('click', back);
   document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && reading && $('wake-enabled').checked) void wake.acquire(); });
   window.addEventListener('pagehide', () => void wake.stop());
   window.addEventListener('pageshow', () => { if (reading && $('wake-enabled').checked) void wake.start(); });

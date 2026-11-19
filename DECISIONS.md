@@ -612,3 +612,9 @@ This file and `AGENTS.md` are the shared memory of this project across sessions 
 **Decision:** The user requested Portuguese as the default language during prototype review.
 
 **Implications:** The prototype opens in pt-BR, with English still available in Settings. Unit choices remain independent.
+
+## 2026-11-18 — Remove redundant top Back controls
+
+**Decision:** With browser-native history working, the user requested removing the top Back buttons.
+
+**Implications:** Settings, reading and details use the browser/OS Back gesture or browser control. Keep normal Back/Forward history and the bottom destination navigation outside reading/Settings.

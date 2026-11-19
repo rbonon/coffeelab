@@ -96,7 +96,6 @@ body.browsing main { padding-bottom: 6rem; }
 .row-title, .row-subtitle { display: block; }
 .row-title { font-size: 1.05rem; }
 .row-subtitle { color: var(--reading-muted); font-size: .85rem; margin-top: .3rem; }
-.back-link { background: transparent; border: 0; padding-left: 0; font-weight: 400; }
 .detail-field { display: flex; justify-content: space-between; gap: 1rem; border-bottom: 1px solid var(--reading-border); padding: .75rem 0; }
 .detail-field dt { color: var(--reading-muted); font-size: .9rem; }
 .detail-field dd { text-align: right; margin: 0; max-width: 65%; }
