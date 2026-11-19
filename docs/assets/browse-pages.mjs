@@ -1,6 +1,6 @@
 import { sourceRecipes } from './source-recipes.mjs';
 import { libraryData } from './library-data.mjs';
-export function renderBrowse(root, {screen, detail, go, read, t, mass}) {
+export function renderBrowse(root, {screen, detail, go, read, back, t, mass}) {
   root.replaceChildren();
   function el(tag, text, cls) { const node=document.createElement(tag); if(text) node.textContent=text; if(cls)node.className=cls; return node; }
   function heading(text) { const title=el('h1',text);title.id='browse-title';root.append(title); }
@@ -12,7 +12,7 @@ export function renderBrowse(root, {screen, detail, go, read, t, mass}) {
   const coffeeName=key=>libraryData.coffees.find(c=>c.source_key===key)?.name ?? key;
   const duration=n=>`${Math.floor(n/60)}:${String(n%60).padStart(2,'0')}`;
   if(screen==='detail') {
-    const back=el('button',t(['← Back','← Voltar']),'back-link');back.addEventListener('click',()=>go(detail.origin));root.append(back);
+    const backButton=el('button',t(['← Back','← Voltar']),'back-link');backButton.addEventListener('click',back);root.append(backButton);
     const record=detail.record;
     heading(record.name ?? `${record.source_key} · ${coffeeName(record.coffee_key)}`);
     if(detail.kind==='execution') {

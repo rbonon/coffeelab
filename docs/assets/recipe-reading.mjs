@@ -1,4 +1,4 @@
-import { renderBrowse } from './browse-pages.mjs';
+import { renderBrowse } from './browse-pages.mjs?v=browser-history-1';
 import { sourceRecipes } from './source-recipes.mjs';
 // Illustrative layout fixtures. These are not imported recipes or historical records.
 const illustrativeExamples = {
@@ -112,7 +112,7 @@ if (typeof document !== 'undefined') {
       if(button.dataset.screen === current)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');
     });
     $('main-navigation').setAttribute('aria-label',t(['Main navigation','Navegação principal']));
-    if (!$('browse').hidden) renderBrowse($('browse'),{screen,detail,go,read,t,mass});
+    if (!$('browse').hidden) renderBrowse($('browse'),{screen,detail,go,read,back,t,mass});
     $('open-settings').setAttribute('aria-label',t(['Settings','Configurações']));
     const recipe = examples[$('method').value];
     $('recipe-title').textContent = t(recipe.title);
@@ -154,17 +154,43 @@ if (typeof document !== 'undefined') {
     $('technique-note').textContent = recipe.technique ?? '';
     $('instruction').setAttribute('aria-label',t(['Complete brewing schedule', 'Sequência completa de preparo']));
   }
-  function go(next, selected=null) { screen=next;detail=selected;render();window.scrollTo(0,0);if(screen!=='home')$('browse-title').setAttribute('tabindex','-1'); }
-  function read(key) { $('method').value=key;reading=true;render();window.scrollTo(0,0);$('instruction').focus({preventScroll:true});if($('wake-enabled').checked)void wake.start(); }
+  function snapshot() { return {reading, configuring, screen, detail, recipe: $('method').value}; }
+  function restore(route) {
+    const wasReading = reading;
+    ({reading, configuring, screen, detail} = route);
+    $('method').value = route.recipe;
+    render(); window.scrollTo(0, route.scrollY ?? 0);
+    if (wasReading && !reading) void wake.stop();
+    if (reading && !wasReading && $('wake-enabled').checked) void wake.start();
+  }
+  function navigate(route) {
+    const current = history.state?.coffeeLab;
+    if (JSON.stringify(snapshot()) === JSON.stringify(route)) return;
+    history.replaceState({...history.state, coffeeLab: {...current, ...snapshot(), scrollY: window.scrollY}}, '');
+    const hash = route.configuring ? 'settings' : route.reading ? `recipe/${route.recipe}` : route.screen === 'detail' ? `${route.detail.origin}/${route.detail.record.source_key}` : route.screen;
+    history.pushState({coffeeLab: {...route, depth: (current?.depth ?? 0) + 1, scrollY: 0}}, '', `#${hash}`);
+    restore(route);
+  }
+  function go(next, selected=null) { navigate({...snapshot(), screen:next, detail:selected, reading:false, configuring:false}); }
+  function read(key) { navigate({...snapshot(), recipe:key, reading:true, configuring:false}); $('instruction').focus({preventScroll:true}); }
+  function back() {
+    if ((history.state?.coffeeLab?.depth ?? 0) > 0) history.back();
+    else go('home');
+  }
+  window.addEventListener('popstate', event => { if (event.state?.coffeeLab) restore(event.state.coffeeLab); });
+  const savedRoute = history.state?.coffeeLab;
+  if (savedRoute && examples[savedRoute.recipe]) restore(savedRoute);
+  else history.replaceState({...history.state, coffeeLab: {...snapshot(), depth:0, scrollY:0}}, '', '#home');
   document.querySelectorAll('[data-screen]').forEach(button=>button.addEventListener('click',()=>go(button.dataset.screen)));
   document.querySelectorAll('select').forEach(el => el.addEventListener('change', () => { render(); }));
   $('wake-enabled').addEventListener('change', () => { if (!$('wake-enabled').checked) void wake.stop(); });
   $('recipe-picker').addEventListener('keydown', event => { if (event.key === 'Escape') { $('recipe-picker').open = false; document.querySelector('#recipe-picker summary').focus(); } });
-  $('open-settings').addEventListener('click', () => { configuring = true; render(); $('close-settings').focus(); });
-  $('close-settings').addEventListener('click', () => { configuring = false; render(); $('open-settings').focus(); });
-  $('start').addEventListener('click', () => { reading = true; render(); $('instruction').focus({preventScroll:true}); if ($('wake-enabled').checked) void wake.start(); });
-  $('exit').addEventListener('click', () => { reading = false; void wake.stop(); render(); if(screen==='home')$('start').focus(); });
+  $('open-settings').addEventListener('click', () => { navigate({...snapshot(), configuring:true}); $('close-settings').focus(); });
+  $('close-settings').addEventListener('click', back);
+  $('start').addEventListener('click', () => read($('method').value));
+  $('exit').addEventListener('click', back);
   document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && reading && $('wake-enabled').checked) void wake.acquire(); });
   window.addEventListener('pagehide', () => void wake.stop());
+  window.addEventListener('pageshow', () => { if (reading && $('wake-enabled').checked) void wake.start(); });
   render();
 }
