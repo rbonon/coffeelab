@@ -1,19 +1,29 @@
 # Coffee Lab status
 
-Foundation and [#2 — Specification](https://github.com/rbonon/coffeelab/issues/2) are complete. [#3 — UI/UX](https://github.com/rbonon/coffeelab/issues/3) is the current stage.
+Foundation and Specification are complete. [#3 — UI/UX](https://github.com/rbonon/coffeelab/issues/3) is current. #22 journeys and #23 screen plan are merged/closed; #24 phone reading and #25 components/validation remain open and In Progress.
 
-The user approved the consolidated [product specification](docs/spec/requirements.md), [user stories](docs/spec/user-stories.md), and [first-release boundaries](docs/spec/non-goals.md).
+## Current work
 
-The specification is now aligned around recipe learning, coffee-specific variants across bags, selective execution logging, and AI comparisons based on recorded results. Routine Keeper brews may go unrecorded; usage totals are secondary.
+The latest prototype and real initial data are on `feat/define-ui-components-validation`, based on the unmerged `feat/design-phone-recipe-reading`. Subsequent reading refinements also live on the current #25 branch. Preserve this dependency and reconcile the final #24 work before close-out; do not archive the stale reading branch blindly.
 
-The required/optional field matrix and recipe defaults are approved. Minimums support partial records; AI entry can populate all available relevant details.
+The user preauthorized remaining UI/UX proposals, apply, commits, pushes, archives and merges, with pauses for material decisions and human visual/device checks. Announce every skill. Preauthorization is not a visual-validation pass.
 
-The shared pour-over source is captured locally with a readable transcript and structured historical import candidates. See the [source inventory and coverage report](docs/vision/README.md#historical-pour-over-source). The shared rendering omits 75 user-message bodies and the original bytes for 17 uploaded-image references.
+## Current prototype
 
-The source-field review added optional manufacture and best-before dates, original bag weight, altitude, storage notes, and historical identifier aliases. Source gaps remain an import-reconciliation follow-up.
+[Open the static prototype](docs/prototypes/recipe-reading.html). Portuguese is the default. Home-only centered filter logo, gear Settings, independent units, settings-only screen-awake preference without visible status, and Início/Receitas/Diário/Biblioteca navigation are implemented. Native Back/Forward and image enlargement use browser history; redundant top Back buttons are removed.
 
-The four approved UI/UX tasks are #22–#25, linked from [screens](docs/spec/screens.md#approved-uiux-tasks). They are assigned to v0. #22–#23 are complete; #24–#25 are In Progress.
+Brewing shows preparation and the complete timed schedule at once: no swiping, scrolling, paging, tapping, app timer, or forced logging. Read the agreed design in [phone reading](docs/spec/phone-reading.md) and [screens](docs/spec/screens.md).
 
-The user approved the six [user journeys](docs/spec/user-journeys.md) for #22 and authorized archive and merge. The user approved the #23 [screen plan](docs/spec/screens.md). Remaining UI/UX lifecycle steps are preauthorized; pause only for material product decisions or human visual/device checks. The #24 [phone-reading design](docs/spec/phone-reading.md) and static prototype are implemented on `feat/design-phone-recipe-reading`. The complete source-based schedules replaced the rejected paged trial. Automated fixture, conversion, viewport and wake-lock lifecycle checks pass. #24 remains open for actual-phone validation. At the user’s request, #25 has started on dependent branch `feat/define-ui-components-validation`, with Home/Recipes/Journal/Library browsing and source-based details. Next step: review Home navigation and Recipes first, then Journal/Library and later entry/comparison states. Do not merge the dependent branch before #24 validation/close. See [later-stage follow-ups](docs/planning/open-questions.md).
+## Real initial application data
 
-[GitHub Project](https://github.com/users/rbonon/projects/8)
+The curated [import dataset](docs/vision/receitas-pour-over-import.json), source documents and 18 unchanged original photos in `docs/assets/photos/` are real data for eventual application import, not disposable mock values. Preview data is in `docs/assets/library-data.mjs` and `source-recipes.mjs`; keep corresponding updates synchronized.
+
+Only two executions and two displayed recipes remain: **Hoffman V60 Better - Stardust** and **Hoffman V60 Better - Vô Zico**. Both executions are dated 18/11/2026 and rated Gostei. Excluded executions and A02 recipes must not be restored from archived transcripts. Legacy codes remain internal only. Original evaluation dialogue, separate evaluation summaries, both final-filter photos and the shared cup-comparison photo are retained. See [source inventory](docs/vision/README.md) for coffee/bag/photo provenance and known gaps.
+
+## Validation and next session
+
+Automated checks pass for quantity/ratio equivalence, source provenance, wake-lock lifecycle, phone-size schedule fit, native Back/Forward/reload, photo enlargement and both coffee library galleries/fields. Runnable checks are `scripts/check-phone-reading.mjs` and `scripts/check-prototype-navigation.cjs` (requires Playwright/browser; invocation documented in file).
+
+**Next:** resume human review of the latest Library/Journal details and collect explicit S25 Ultra browser/readability/wake-lock results. Continue #25 entry/comparison/partial/error-state designs, then required human review. Do not close UI/UX or merge the dependent branches before remaining checks pass. A temporary HTTPS preview was used; check/restart the local preview and tunnel if needed.
+
+[Active handoff](docs/planning/handoff.md) · [Later-stage follow-ups](docs/planning/open-questions.md) · [GitHub Project](https://github.com/users/rbonon/projects/8)

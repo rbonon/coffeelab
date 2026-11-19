@@ -6,9 +6,9 @@ S04 needs a concrete phone-reading design to validate readable instructions with
 
 ## What Changes
 
-- Document a manually paged instruction design with persistent quantities, method-specific ratios, explicit step timing, and no mandatory logging.
-- Build a static, clearly labeled illustrative prototype covering the five categories, English/pt-BR, grams/ounces, Celsius/Fahrenheit, long text, and partial recipes.
-- Exercise native screen wake lock with honest active/unavailable/released status and prepare the actual-device review checklist.
+- Document a complete no-interaction brewing schedule with persistent quantities, method-specific ratios, explicit step timing, and no mandatory logging.
+- Build a static reading prototype using the two real source-based Hoffmann recipes selected by the user, English/pt-BR and independent units. Retain synthetic five-category/partial examples for data checks; broader category/long-recipe UI validation remains pending.
+- Exercise native screen wake lock controlled from Settings without visible status, per user refinement and prepare the actual-device review checklist.
 - Link the design and prototype from the screen inventory. Keep human phone validation pending until the user performs it.
 
 ## Capabilities
@@ -23,4 +23,4 @@ None.
 
 ## Impact
 
-Primary design: `docs/spec/phone-reading.md`. Prototype: `docs/prototypes/recipe-reading.html` and dedicated assets. Links: `docs/spec/screens.md`. Tracking: #24 under #3. No account data, app services, framework selection, timer, or persistent brew records.
+Primary design: `docs/spec/phone-reading.md`. Prototype: `docs/prototypes/recipe-reading.html` and dedicated assets. Links: `docs/spec/screens.md`. Tracking: #24 under #3. Real curated records and original photos are persisted as repository input data; this is not a running account/database service. No application framework or app timer is introduced.

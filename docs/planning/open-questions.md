@@ -9,7 +9,7 @@ The functional requirements, field minimums, ratio presentation, optional sensor
 ## UI/UX follow-ups
 
 - Use the approved recipe-first priorities and delegated layout choices to produce the journeys, screen inventory, and reusable design components.
-- Validate long-recipe readability and screen-awake behavior on the Samsung S25 Ultra with the available Brave or Dia browser.
+- The user rejected paging during brewing: preparation and the complete schedule must be visible without swiping, scrolling or tapping. Validate actual-phone readability and screen-awake behavior on the Samsung S25 Ultra with the available Brave or Dia browser.
 - Check English/pt-BR layouts, independent measurement settings, incomplete entries, optional rating controls, and routine Keeper use without logging.
 - Approved UI/UX tasks #22–#25 are linked in `docs/spec/screens.md`. Start each leaf through the issue/branch/OpenSpec lifecycle.
 
@@ -23,7 +23,7 @@ The current specification covers brewing and bypass water, finished yield, exact
 - Brewer model and capacity constraints. The source questions whether the larger adapted water quantity fits an AeroPress Original.
 - Preserve the distinction between the source method, proposed adaptations, and the user's selected version when importing recipes.
 
-The shared Receitas Pour Over link now supplies accessible earlier recipe and execution content. See the [capture, coverage report, and import candidates](../vision/README.md#historical-pour-over-source). The capture preserves all 177 message positions and 63 tables; 75 user bodies and original bytes for 17 uploaded-image references remain unavailable. The field audit includes optional manufacture date distinct from roast date, best-before date, original bag weight, altitude, storage notes, and corrected historical identifiers. Resolve historical source gaps before final application import.
+The shared Receitas Pour Over link now supplies accessible earlier recipe and execution content. See the [capture, coverage report, and import candidates](../vision/README.md#historical-pour-over-source). The capture preserves all 177 message positions and 63 tables; 75 user bodies and original bytes for 17 uploaded-image references remain unavailable. The field audit includes optional manufacture date distinct from roast date, best-before date, original bag weight, altitude, storage notes, and corrected historical identifiers. The user subsequently supplied 18 original photos and confirmed current coffee/bag/execution details; see the source inventory. The curated retained dataset is real initial application data. Preserve unknowns and exclusions; the original shared rendering still has historical gaps.
 
 ## Architecture and later-stage questions
 

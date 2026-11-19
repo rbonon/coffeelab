@@ -654,3 +654,9 @@ This file and `AGENTS.md` are the shared memory of this project across sessions 
 **Decision:** Use exactly “Hoffman V60 Better - Stardust” and “Hoffman V60 Better - Vô Zico” for the two corresponding recipes and executions.
 
 **Implications:** Apply names consistently in Home selection, recipe lists/reading, journal lists/details and photo captions, retaining internal source links. This replaces the earlier display names.
+
+## 2026-11-18 — Real curated initial data and session checkpoint
+
+**Decision:** The user clarified that the current texts, photos and records are real inputs for the future Coffee Lab platform, not disposable prototype data. End the session with committed/pushed work and an active handoff.
+
+**Implications:** Keep curated import records, preview data and unchanged original-photo links synchronized. Preserve explicit corrections and exclusions. #24 and #25 remain open pending their human validation; subsequent reading refinements currently live on the dependent #25 branch and must be reconciled before close-out.
