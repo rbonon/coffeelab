@@ -1,6 +1,6 @@
 import { sourceRecipes } from './source-recipes.mjs?v=preparation-final-1';
-import { libraryData } from './library-data.mjs?v=execution-names-1';
-export function renderBrowse(root, {screen, detail, go, read, t, mass}) {
+import { libraryData } from './library-data.mjs?v=real-photo-1';
+export function renderBrowse(root, {screen, detail, go, read, openPhoto, t, mass}) {
   root.replaceChildren();
   function el(tag, text, cls) { const node=document.createElement(tag); if(text) node.textContent=text; if(cls)node.className=cls; return node; }
   function heading(text) { const title=el('h1',text);title.id='browse-title';root.append(title); }
@@ -29,6 +29,17 @@ export function renderBrowse(root, {screen, detail, go, read, t, mass}) {
     const record = collection?.find(item=>item.source_key===detail.record.source_key);
     if (!record) { heading(t(['Record unavailable','Registro indisponível'])); root.append(el('p',t(['This record was removed.','Este registro foi removido.']),'source-note')); return; }
     heading(record.name ?? `${record.source_key} · ${coffeeName(record.coffee_key)}`);
+    if (record.photos?.length) {
+      const gallery=el('div',null,'record-photos');
+      for (const photo of record.photos) {
+        const button=el('button',null,'record-photo');button.type='button';
+        button.setAttribute('aria-label',t(['Enlarge photo: ','Ampliar foto: '])+photo.caption);
+        const image=document.createElement('img');image.src='../'+photo.file.replace(/^docs\//,'');image.alt=photo.alt;image.loading='lazy';image.decoding='async';
+        const caption=el('span',photo.caption,'photo-caption');button.append(image,caption);
+        button.addEventListener('click',()=>openPhoto({src:image.src,alt:photo.alt,caption:photo.caption}));gallery.append(button);
+      }
+      root.append(gallery);
+    }
     if(detail.kind==='execution') {
       field(t(['Coffee','Café']),coffeeName(record.coffee_key));
       field(t(['Rating','Avaliação']),ratingLabel(record.quick_rating));

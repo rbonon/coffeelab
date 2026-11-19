@@ -1,5 +1,5 @@
-import { renderBrowse } from './browse-pages.mjs?v=preparation-final-1';
-import { sourceRecipes } from './source-recipes.mjs?v=preparation-final-1';
+import { renderBrowse } from './browse-pages.mjs?v=real-photo-1';
+import { sourceRecipes } from './source-recipes.mjs?v=real-photo-1';
 // Illustrative layout fixtures. These are not imported recipes or historical records.
 const illustrativeExamples = {
   pour: { title: ['Pour Over · five pours', 'Coado · cinco despejos'], dose: 15, water: 250, temp: 96, steps: Array.from({length: 5}, (_, i) => ({ title: [`Pour ${i + 1}`, `Despejo ${i + 1}`], text: ['Add water gently, then allow it to drain. Follow the timing of your recipe on the scale.', 'Adicione a água suavemente e deixe escoar. Siga os tempos da sua receita no cronômetro da balança.'], add: 50, cumulative: (i + 1) * 50 })) },
@@ -69,7 +69,7 @@ export class ReadingWakeLock {
 
 if (typeof document !== 'undefined') {
   const $ = id => document.getElementById(id);
-  let reading = false, configuring = false, screen = 'home', detail = null;
+  let reading = false, configuring = false, screen = 'home', detail = null, photo = null;
   const pt = () => $('language').value === 'pt-BR';
   const t = pair => pair[pt() ? 1 : 0];
   const num = n => new Intl.NumberFormat($('language').value, {maximumFractionDigits: 2}).format(n);
@@ -112,7 +112,12 @@ if (typeof document !== 'undefined') {
       if(button.dataset.screen === current)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');
     });
     $('main-navigation').setAttribute('aria-label',t(['Main navigation','Navegação principal']));
-    if (!$('browse').hidden) renderBrowse($('browse'),{screen,detail,go,read,t,mass});
+    if (!$('browse').hidden) renderBrowse($('browse'),{screen,detail,go,read,openPhoto,t,mass});
+    $('close-photo').setAttribute('aria-label',t(['Close photo','Fechar foto']));
+    if (photo) {
+      $('photo-full').src=photo.src;$('photo-full').alt=photo.alt;$('photo-title').textContent=photo.caption;
+      if (!$('photo-viewer').open) $('photo-viewer').showModal();
+    } else if ($('photo-viewer').open) $('photo-viewer').close();
     $('open-settings').setAttribute('aria-label',t(['Settings','Configurações']));
     const recipe = examples[$('method').value];
     $('recipe-title').textContent = t(recipe.title);
@@ -153,11 +158,11 @@ if (typeof document !== 'undefined') {
     $('technique-note').textContent = recipe.technique ?? '';
     $('instruction').setAttribute('aria-label',t(['Complete brewing schedule', 'Sequência completa de preparo']));
   }
-  function snapshot() { return {reading, configuring, screen, detail, recipe: $('method').value}; }
+  function snapshot() { return {reading, configuring, screen, detail, photo, recipe: $('method').value}; }
   function restore(route) {
     if (!examples[route.recipe]) route = {...route, recipe:'hoffmann-stardust', screen:route.reading ? 'recipes' : route.screen, reading:false};
     const wasReading = reading;
-    ({reading, configuring, screen, detail} = route);
+    ({reading, configuring, screen, detail, photo=null} = route);
     $('method').value = route.recipe;
     render(); window.scrollTo(0, route.scrollY ?? 0);
     if (wasReading && !reading) void wake.stop();
@@ -167,12 +172,15 @@ if (typeof document !== 'undefined') {
     const current = history.state?.coffeeLab;
     if (JSON.stringify(snapshot()) === JSON.stringify(route)) return;
     history.replaceState({...history.state, coffeeLab: {...current, ...snapshot(), scrollY: window.scrollY}}, '');
-    const hash = route.configuring ? 'settings' : route.reading ? `recipe/${route.recipe}` : route.screen === 'detail' ? `${route.detail.origin}/${route.detail.record.source_key}` : route.screen;
+    const hash = route.photo ? 'photo' : route.configuring ? 'settings' : route.reading ? `recipe/${route.recipe}` : route.screen === 'detail' ? `${route.detail.origin}/${route.detail.record.source_key}` : route.screen;
     history.pushState({coffeeLab: {...route, depth: (current?.depth ?? 0) + 1, scrollY: 0}}, '', `#${hash}`);
     restore(route);
   }
   function go(next, selected=null) { navigate({...snapshot(), screen:next, detail:selected, reading:false, configuring:false}); }
   function read(key) { navigate({...snapshot(), recipe:key, reading:true, configuring:false}); $('instruction').focus({preventScroll:true}); }
+  function openPhoto(image) { navigate({...snapshot(), photo:image}); }
+  $('close-photo').addEventListener('click',()=>history.back());
+  $('photo-viewer').addEventListener('cancel',event=>{event.preventDefault();history.back();});
   window.addEventListener('popstate', event => { if (event.state?.coffeeLab) restore(event.state.coffeeLab); });
   const savedRoute = history.state?.coffeeLab;
   if (savedRoute && examples[savedRoute.recipe]) restore(savedRoute);

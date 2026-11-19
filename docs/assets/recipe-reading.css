@@ -104,3 +104,13 @@ body.browsing main { padding-bottom: 6rem; }
 
 .rated-row { position: relative; padding-right: 2.7rem; }
 .rating-icon { position: absolute; right: .4rem; top: 50%; transform: translateY(-50%); display: flex; align-items: center; color: var(--reading-accent); }
+
+.record-photos { margin: 1.25rem 0; display: grid; gap: .75rem; }
+.record-photo { border: 0; padding: 0; background: transparent; text-align: left; font-weight: 400; }
+.record-photo img { display: block; width: 100%; max-height: 24rem; object-fit: contain; border-radius: .75rem; background: var(--reading-surface); }
+.photo-caption { display: block; font-size: .8rem; line-height: 1.4; color: var(--reading-muted); padding: .5rem .2rem; }
+#photo-viewer { width: min(94vw, 60rem); max-height: 94dvh; padding: 2.75rem .75rem .75rem; border: 0; border-radius: .8rem; color: var(--reading-ink); background: var(--surface); }
+#photo-viewer::backdrop { background: rgb(0 0 0 / .7); }
+#photo-full { display: block; width: 100%; max-height: 78dvh; object-fit: contain; }
+#photo-title { font-size: .85rem; text-align: center; }
+.photo-close { position: absolute; right: .25rem; top: 0; border: 0; background: transparent; font-size: 1.6rem; font-weight: 400; min-height: 2.75rem; min-width: 2.75rem; }

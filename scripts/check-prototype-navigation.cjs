@@ -27,6 +27,12 @@ const {chromium} = require(process.env.COFFEELAB_PLAYWRIGHT_PATH || 'playwright'
     await page.click('[data-screen="recipes"]'); await title('Receitas');
     await page.locator('#browse .browse-row').first().click(); await page.waitForSelector('#reader:visible');
     await page.goBack(); await title('Receitas');
+    await page.click('[data-screen="journal"]'); await title('Diário');
+    await page.getByRole('button',{name:'Hoffman Better 1 Cup - Vô Zico',exact:false}).click();
+    await page.waitForFunction(()=>document.querySelector('.record-photo img')?.naturalWidth>0);
+    await page.click('.record-photo'); await page.waitForSelector('#photo-viewer[open]');
+    await page.goBack(); await page.waitForSelector('#photo-viewer:not([open])',{state:'attached'});
+    await title('Hoffman Better 1 Cup - Vô Zico');
     assert.equal(await page.locator('#exit, #close-settings, .back-link').count(),0);
     assert.deepEqual(errors,[]);
     console.log('PASS: native Back/Forward, detail-to-reading return, Settings, reload restoration, and no redundant top back buttons');

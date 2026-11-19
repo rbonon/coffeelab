@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Recipe reading · Coffee Lab design</title>
-  <link rel="stylesheet" href="../assets/recipe-reading.css?v=preparation-final-1">
-  <script type="module" src="../assets/recipe-reading.mjs?v=preparation-final-1"></script>
+  <link rel="stylesheet" href="../assets/recipe-reading.css?v=real-photo-1">
+  <script type="module" src="../assets/recipe-reading.mjs?v=real-photo-1"></script>
 </head>
 <body>
   <main>
@@ -52,6 +52,11 @@
     <nav id="main-navigation" class="main-navigation" aria-label="Navegação principal">
       <button data-screen="home">Início</button><button data-screen="recipes">Receitas</button><button data-screen="journal">Diário</button><button data-screen="library">Biblioteca</button>
     </nav>
+    <dialog id="photo-viewer" aria-labelledby="photo-title">
+      <button id="close-photo" class="photo-close" aria-label="Fechar foto">×</button>
+      <img id="photo-full" alt="">
+      <p id="photo-title"></p>
+    </dialog>
     <noscript>This design prototype needs JavaScript to show instruction cards.</noscript>
   </main>
 </body>

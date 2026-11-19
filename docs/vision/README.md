@@ -34,6 +34,10 @@ The candidates are staged data for the future application. They have not been im
 - Numeric sensory slider defaults are not user ratings. Both retained executions have an explicit Gostei rating assigned by the user during the UI review; sensory scores remain empty. The directly available comparative tasting statement is preserved verbatim for A06 and B01.
 - Historical bag identities are provisional contexts. The Vô Zico discussion mentions reserve packaging and jars, so the source does not establish a unique physical bag for every execution.
 
+## Recovered photo supplied during review
+
+The user supplied `Hoffman Vo Zico.jpg` during UI review. Its unchanged original is stored at [A06 final extraction photo](../assets/photos/hoffman-vo-zico-final.jpg), linked to A06 in the import candidates and prototype with attachment provenance. It shows the final bed and scale readings 3:23 / 249.0 g, consistent with that execution. The historical shared-page capture remains unchanged; this newly supplied file does not establish recovery of every original upload.
+
 ## Field audit
 
 The source supports the current dose, water, temperature, grind, timing, range, pour-target, technique, photo, and narrative-observation fields. The Specification field review added optional manufacture date, best-before date, original bag weight, origin altitude, storage notes, and corrected historical identifiers. The staged import file preserves the source evidence for these additions. Original bag weight does not require automatic remaining-inventory tracking.
