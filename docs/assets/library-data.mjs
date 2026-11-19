@@ -50,7 +50,13 @@ export const libraryData = {
       },
       "review_notes": [
         "Brand/producer/descriptors transcribed from the supplied packaging. No individual numerical sensory score, variety or roast level is assigned from appearance."
-      ]
+      ],
+      "official_product_url": "https://abigailcoffee.com.br/products/produto-1?variant=49737048588547",
+      "official_product_url_source": {
+        "kind": "user_provided_link",
+        "received_on": "2026-11-18",
+        "retrieval_status": "automated_access_blocked; content not verified"
+      }
     }
   ],
   "bags": [

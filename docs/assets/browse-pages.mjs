@@ -1,5 +1,5 @@
-import { sourceRecipes } from './source-recipes.mjs?v=stardust-library-1';
-import { libraryData } from './library-data.mjs?v=stardust-library-1';
+import { sourceRecipes } from './source-recipes.mjs?v=stardust-official-link-1';
+import { libraryData } from './library-data.mjs?v=stardust-official-link-1';
 export function renderBrowse(root, {screen, detail, go, read, openPhoto, t, mass}) {
   root.replaceChildren();
   function el(tag, text, cls) { const node=document.createElement(tag); if(text) node.textContent=text; if(cls)node.className=cls; return node; }
@@ -72,6 +72,10 @@ export function renderBrowse(root, {screen, detail, go, read, openPhoto, t, mass
       if(sourceRecipes[record.recipe_key])row(t(['Open recipe','Abrir receita']),null,()=>read(record.recipe_key));
     } else if(detail.kind==='coffee') {
       field(t(['Brand','Marca']),record.brand_or_roaster_label);
+      if (record.official_product_url) {
+        const link=el('a',t(['View product on Abigail’s website','Ver produto no site da Abigail']));
+        link.href=record.official_product_url;root.append(link);
+      }
       field(t(['Altitude','Altitude']),record.altitude_m==null?null:`${new Intl.NumberFormat('pt-BR').format(record.altitude_m)} m`);
       field(t(['Origin','Origem']),record.origin);field(t(['Processing','Processo']),record.processing);field(t(['Variety','Variedade']),record.variety);field(t(['Producer','Produtor']),record.producer);
       field(t(['Packaging descriptors','Descritores da embalagem']),record.packaging_descriptors?.join(' · '));

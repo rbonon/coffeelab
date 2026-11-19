@@ -56,6 +56,8 @@ Coffee label fields: Abigail Coffee Co., Fazenda Daterra Coffee, Cerrado Mineiro
 
 These are real curated initial application data, not disposable mock values. User corrections, original files and relationships must survive the eventual application import.
 
+The user supplied the [official Stardust product link](https://abigailcoffee.com.br/products/produto-1?variant=49737048588547), now retained on the coffee record and linked from Library. Automated retrieval was blocked (HTTP 429); no price or product claims were added from unverified page contents.
+
 ## Field audit
 
 The source supports the current dose, water, temperature, grind, timing, range, pour-target, technique, photo, and narrative-observation fields. The Specification field review added optional manufacture date, best-before date, original bag weight, origin altitude, storage notes, and corrected historical identifiers. The staged import file preserves the source evidence for these additions. Original bag weight does not require automatic remaining-inventory tracking.
