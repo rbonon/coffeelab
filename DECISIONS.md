@@ -606,3 +606,9 @@ This file and `AGENTS.md` are the shared memory of this project across sessions 
 **Decision:** Always present the known grinder identity and its setting in the Preparation section, as requested by the user.
 
 **Implications:** Move the JX-Pro 3.5.0 guidance out of the heading into a preparation instruction. Preserve grinder-specific notation and leave unknown equipment/settings unspecified.
+
+## 2026-11-18 — Portuguese as prototype default
+
+**Decision:** The user requested Portuguese as the default language during prototype review.
+
+**Implications:** The prototype opens in pt-BR, with English still available in Settings. Unit choices remain independent.
