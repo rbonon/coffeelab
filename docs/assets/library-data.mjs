@@ -60,7 +60,6 @@ export const libraryData = {
   "executions": [
     {
       "source_key": "A06",
-      "source_aliases": [],
       "coffee_key": "vo-zico",
       "recipe_key": "hoffmann-vo-zico",
       "date": "2026-11-18",
@@ -133,9 +132,6 @@ export const libraryData = {
     },
     {
       "source_key": "B01",
-      "source_aliases": [
-        "B02"
-      ],
       "coffee_key": "stardust",
       "recipe_key": "hoffmann-stardust",
       "date": "2026-11-18",

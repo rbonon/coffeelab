@@ -1,5 +1,5 @@
 import { sourceRecipes } from './source-recipes.mjs?v=preparation-final-1';
-import { libraryData } from './library-data.mjs?v=stardust-photo-1';
+import { libraryData } from './library-data.mjs?v=descriptive-names-1';
 export function renderBrowse(root, {screen, detail, go, read, openPhoto, t, mass}) {
   root.replaceChildren();
   function el(tag, text, cls) { const node=document.createElement(tag); if(text) node.textContent=text; if(cls)node.className=cls; return node; }
@@ -28,7 +28,7 @@ export function renderBrowse(root, {screen, detail, go, read, openPhoto, t, mass
     const collection = {execution:libraryData.executions,coffee:libraryData.coffees,equipment:libraryData.equipment}[detail.kind];
     const record = collection?.find(item=>item.source_key===detail.record.source_key);
     if (!record) { heading(t(['Record unavailable','Registro indisponível'])); root.append(el('p',t(['This record was removed.','Este registro foi removido.']),'source-note')); return; }
-    heading(record.name ?? `${record.source_key} · ${coffeeName(record.coffee_key)}`);
+    heading(record.name ?? coffeeName(record.coffee_key));
     if (record.photos?.length) {
       const gallery=el('div',null,'record-photos');
       for (const photo of record.photos) {
@@ -67,7 +67,6 @@ export function renderBrowse(root, {screen, detail, go, read, openPhoto, t, mass
         original.append(el('summary',t(['Original shared observation','Relato original compartilhado'])));
         original.append(el('p',record.tasting_description,'source-note'));root.append(original);
       }
-      if(record.source_aliases.length)field(t(['Earlier identifier','Identificação anterior']),record.source_aliases.join(', '));
       if(sourceRecipes[record.recipe_key])row(t(['Open recipe','Abrir receita']),null,()=>read(record.recipe_key));
     } else if(detail.kind==='coffee') {
       field(t(['Origin','Origem']),record.origin);field(t(['Processing','Processo']),record.processing);field(t(['Variety','Variedade']),record.variety);field(t(['Producer','Produtor']),record.producer);
@@ -86,7 +85,7 @@ export function renderBrowse(root, {screen, detail, go, read, openPhoto, t, mass
     for(const [key,r] of Object.entries(sourceRecipes))row(t(r.title),`${mass(r.dose)} · ${mass(r.water)} · V60`,()=>read(key));
   } else if(screen==='journal') {
     heading(t(['Journal','Diário']));root.append(el('p',t(['Selected recorded brews.','Extrações registradas para lembrar e comparar.']),'page-intro'));
-    for(const r of [...libraryData.executions].reverse())row(r.name ?? `${r.source_key} · ${coffeeName(r.coffee_key)}`,`${duration(r.quantities.elapsed_seconds)} · ${mass(r.quantities.brewing_water_g)} ${t(['brewing water','de água'])}`,()=>go('detail',{kind:'execution',record:r,origin:'journal'}),r.quick_rating);
+    for(const r of [...libraryData.executions].reverse())row(r.name ?? coffeeName(r.coffee_key),`${duration(r.quantities.elapsed_seconds)} · ${mass(r.quantities.brewing_water_g)} ${t(['brewing water','de água'])}`,()=>go('detail',{kind:'execution',record:r,origin:'journal'}),r.quick_rating);
   } else if(screen==='library') {
     heading(t(['Library','Biblioteca']));root.append(el('h2',t(['Coffees','Cafés'])));
     for(const r of libraryData.coffees)row(r.name,[r.origin,r.processing].filter(Boolean).join(' · '),()=>go('detail',{kind:'coffee',record:r,origin:'library'}));

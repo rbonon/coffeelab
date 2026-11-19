@@ -1,5 +1,5 @@
-import { renderBrowse } from './browse-pages.mjs?v=stardust-photo-1';
-import { sourceRecipes } from './source-recipes.mjs?v=stardust-photo-1';
+import { renderBrowse } from './browse-pages.mjs?v=descriptive-names-1';
+import { sourceRecipes } from './source-recipes.mjs?v=descriptive-names-1';
 // Illustrative layout fixtures. These are not imported recipes or historical records.
 const illustrativeExamples = {
   pour: { title: ['Pour Over · five pours', 'Coado · cinco despejos'], dose: 15, water: 250, temp: 96, steps: Array.from({length: 5}, (_, i) => ({ title: [`Pour ${i + 1}`, `Despejo ${i + 1}`], text: ['Add water gently, then allow it to drain. Follow the timing of your recipe on the scale.', 'Adicione a água suavemente e deixe escoar. Siga os tempos da sua receita no cronômetro da balança.'], add: 50, cumulative: (i + 1) * 50 })) },
@@ -165,14 +165,19 @@ if (typeof document !== 'undefined') {
     ({reading, configuring, screen, detail, photo=null} = route);
     $('method').value = route.recipe;
     render(); window.scrollTo(0, route.scrollY ?? 0);
+    history.replaceState(history.state, '', `#${routeHash(route)}`);
     if (wasReading && !reading) void wake.stop();
     if (reading && !wasReading && $('wake-enabled').checked) void wake.start();
+  }
+  function routeHash(route) {
+    const detailSlug = route.detail?.record.name?.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'') ?? 'registro';
+    return route.photo ? 'photo' : route.configuring ? 'settings' : route.reading ? `recipe/${route.recipe}` : route.screen === 'detail' ? `${route.detail.origin}/${detailSlug}` : route.screen;
   }
   function navigate(route) {
     const current = history.state?.coffeeLab;
     if (JSON.stringify(snapshot()) === JSON.stringify(route)) return;
     history.replaceState({...history.state, coffeeLab: {...current, ...snapshot(), scrollY: window.scrollY}}, '');
-    const hash = route.photo ? 'photo' : route.configuring ? 'settings' : route.reading ? `recipe/${route.recipe}` : route.screen === 'detail' ? `${route.detail.origin}/${route.detail.record.source_key}` : route.screen;
+    const hash = routeHash(route);
     history.pushState({coffeeLab: {...route, depth: (current?.depth ?? 0) + 1, scrollY: 0}}, '', `#${hash}`);
     restore(route);
   }

@@ -26,7 +26,7 @@ The candidates are staged data for the future application. They have not been im
 
 - At the user’s request, the active import data and prototype retain only Hoffmann executions A06 and B01. A01, A02 and A04 were removed from both datasets. The original conversation archive/transcript remains documentary evidence, not an instruction to reimport excluded executions.
 - Both A02 recipe candidates (earlier proposal and revised three-pour recipe) were excluded at the user’s request. Retained plans preserve their historical lineage separately without an active link to a deleted base recipe.
-- B02 was explicitly renamed B01. Preserve B02 as an alias and import one execution.
+- The historical Stardust renaming was reconciled to one execution. At the user’s request, legacy identifier aliases are removed from current import data and display; the original conversation remains archival evidence.
 - A03 has no recorded result, A05 is planned, and the Kasuya A06 plan was replaced by Hoffmann. Preserve their plans without inventing completed executions.
 - The initial three-pour B01 plan is superseded by the final Hoffmann B01 assignment.
 - Vô Zico's 2026-09-15 date is manufacture, with a 2027-09-15 best-before date. Its roast date remains unknown.

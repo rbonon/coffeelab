@@ -642,3 +642,9 @@ This file and `AGENTS.md` are the shared memory of this project across sessions 
 **Decision:** Replace all preparation content in both displayed Hoffmann recipes with exactly: Moagem: JX-Pro 3.5.0; Aquecer o porta-filtro, imersão em água quente da torneira; Escaldar o filtro.
 
 **Implications:** The prototype and import candidates retain the same three user-authored items, without an additional automatically appended grinder instruction. This supersedes earlier preparation notes.
+
+## 2026-11-18 — Hide legacy execution codes
+
+**Decision:** The user requested eliminating A06/B01 and similar references from presentation.
+
+**Implications:** Use the full named executions in headings, lists and detail URLs; remove the displayed earlier-identifier field and active execution aliases. Internal source keys remain for referential integrity and archived source provenance, without being presented as names.

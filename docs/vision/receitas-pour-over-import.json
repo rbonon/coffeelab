@@ -2181,7 +2181,6 @@
   "executions": [
     {
       "source_key": "A06",
-      "source_aliases": [],
       "coffee_key": "vo-zico",
       "bag_key": "vo-zico-historical-bag-context",
       "recipe_key": "hoffmann-vo-zico",
@@ -2304,9 +2303,6 @@
     },
     {
       "source_key": "B01",
-      "source_aliases": [
-        "B02"
-      ],
       "coffee_key": "stardust",
       "bag_key": "stardust-historical-bag-context",
       "recipe_key": "hoffmann-stardust",
