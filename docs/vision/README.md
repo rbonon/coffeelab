@@ -40,6 +40,8 @@ The user supplied `Hoffman Vo Zico.jpg` during UI review. Its unchanged original
 
 The user also supplied a [comparison photo of Stardust and Vô Zico](../assets/photos/hoffman-comparativo-stardust-vo-zico.jpg). One unchanged file is linked to both A06 and B01; attachment metadata preserves the original filename, while its caption avoids assigning sides from that filename.
 
+The final-filter photo for B01 was subsequently supplied as `Hoffman Stardust.jpg` and saved unchanged as [Stardust final extraction](../assets/photos/hoffman-stardust-final.jpg). It is the first photo on B01, followed by the shared cup comparison; its scale readings match the saved 3:38 and 252.3 g. Both retained executions now have their own final-filter photo.
+
 ## Follow-up evaluation dialogue
 
 The [user-supplied comparison/evaluation dialogue](hoffmann-comparacao-avaliacao.md) is preserved unchanged. A06 and B01 have separate evaluation summaries and observations derived from it, with the discussed hypotheses and suggested next trial clearly separated. Existing original tasting text and Gostei ratings remain intact; no numerical sensory scores or roast dates were inferred.

@@ -158,6 +158,16 @@ export const libraryData = {
       "name": "Hoffman Better 1 Cup - Stardust",
       "photos": [
         {
+          "file": "docs/assets/photos/hoffman-stardust-final.jpg",
+          "caption": "Final da extração — Hoffman Better 1 Cup - Stardust",
+          "alt": "Leito do Stardust no filtro V60 após a extração; a balança indica 3:38 e 252,3 g.",
+          "source": {
+            "kind": "user_attachment",
+            "filename": "Hoffman Stardust.jpg",
+            "received_on": "2026-11-18"
+          }
+        },
+        {
           "file": "docs/assets/photos/hoffman-comparativo-stardust-vo-zico.jpg",
           "caption": "Comparativo — Stardust e Vô Zico",
           "alt": "Duas xícaras de café lado a lado, identificadas na imagem como Stardust e Vô Zico.",
