@@ -1,5 +1,5 @@
-import { sourceRecipes } from './source-recipes.mjs?v=uniform-names-1';
-import { libraryData } from './library-data.mjs?v=uniform-names-1';
+import { sourceRecipes } from './source-recipes.mjs?v=stardust-library-1';
+import { libraryData } from './library-data.mjs?v=stardust-library-1';
 export function renderBrowse(root, {screen, detail, go, read, openPhoto, t, mass}) {
   root.replaceChildren();
   function el(tag, text, cls) { const node=document.createElement(tag); if(text) node.textContent=text; if(cls)node.className=cls; return node; }
@@ -29,9 +29,11 @@ export function renderBrowse(root, {screen, detail, go, read, openPhoto, t, mass
     const record = collection?.find(item=>item.source_key===detail.record.source_key);
     if (!record) { heading(t(['Record unavailable','Registro indisponível'])); root.append(el('p',t(['This record was removed.','Este registro foi removido.']),'source-note')); return; }
     heading(record.name ?? coffeeName(record.coffee_key));
-    if (record.photos?.length) {
-      const gallery=el('div',null,'record-photos');
-      for (const photo of record.photos) {
+    const bags = detail.kind==='coffee' ? libraryData.bags.filter(bag=>bag.coffee_key===record.source_key) : [];
+    const photos = [...bags.flatMap(bag=>bag.photos??[]), ...(record.photos??[])];
+    if (photos.length) {
+      const gallery=el('div',null,photos.length>2?'record-photos photo-grid':'record-photos');
+      for (const photo of photos) {
         const button=el('button',null,'record-photo');button.type='button';
         button.setAttribute('aria-label',t(['Enlarge photo: ','Ampliar foto: '])+photo.caption);
         const image=document.createElement('img');image.src='../'+photo.file.replace(/^docs\//,'');image.alt=photo.alt;image.loading='lazy';image.decoding='async';
@@ -69,12 +71,23 @@ export function renderBrowse(root, {screen, detail, go, read, openPhoto, t, mass
       }
       if(sourceRecipes[record.recipe_key])row(t(['Open recipe','Abrir receita']),null,()=>read(record.recipe_key));
     } else if(detail.kind==='coffee') {
+      field(t(['Brand','Marca']),record.brand_or_roaster_label);
+      field(t(['Altitude','Altitude']),record.altitude_m==null?null:`${new Intl.NumberFormat('pt-BR').format(record.altitude_m)} m`);
       field(t(['Origin','Origem']),record.origin);field(t(['Processing','Processo']),record.processing);field(t(['Variety','Variedade']),record.variety);field(t(['Producer','Produtor']),record.producer);
       field(t(['Packaging descriptors','Descritores da embalagem']),record.packaging_descriptors?.join(' · '));
-      root.append(el('h2',t(['Historical bag','Lote histórico'])));
-      root.append(el('p',t(['Physical bag details still need reconciliation.','Os detalhes dos pacotes físicos ainda precisam ser conferidos.']),'source-note'));
-      for(const bag of libraryData.bags.filter(b=>b.coffee_key===record.source_key)){
-        field(t(['Roast date','Data de torra']),bag.roast_date??t(['Not recorded','Não registrada']));field(t(['Manufacture date','Data de fabricação']),bag.manufacture_date);field(t(['Best before','Validade']),bag.best_before_date);field(t(['Original weight','Peso original']),bag.bag_weight_g==null?null:mass(bag.bag_weight_g));field(t(['Retailer','Loja']),bag.retailer);
+      root.append(el('h2',t(['Bags','Pacotes'])));
+      for(const bag of bags){
+        if(bag.name)root.append(el('p',bag.name));
+        if(bag.identity_status!=='confirmed')root.append(el('p',t(['Physical bag details still need reconciliation.','Os detalhes dos pacotes físicos ainda precisam ser conferidos.']),'source-note'));
+        const date=value=>value ? value.split('-').reverse().join('/') : null;
+        field(t(['Roast date','Data de torra']),date(bag.roast_date)??t(['Not recorded','Não registrada']));
+        field(t(['Purchase date','Data de compra']),date(bag.purchase_date));
+        field(t(['Manufacture date','Data de fabricação']),date(bag.manufacture_date));
+        field(t(['Best before','Validade']),date(bag.best_before_date));
+        field(t(['Label shelf life','Validade indicada']),bag.shelf_life_months==null?null:`${bag.shelf_life_months} ${t(['months','meses'])}`);
+        field(t(['Original weight','Peso original']),bag.bag_weight_g==null?null:mass(bag.bag_weight_g));
+        field(t(['Retailer','Loja']),bag.retailer);
+        field(t(['Purchase channel','Forma de compra']),bag.purchase_channel);
       }
       for(const [key,recipe] of Object.entries(sourceRecipes).filter(([key])=>record.source_key==='stardust'?key==='hoffmann-stardust':key!=='hoffmann-stardust'))row(t(recipe.title),t(['Read recipe','Ler receita']),()=>read(key));
     } else {field(t(['Type','Tipo']),record.type==='grinder'?t(['Grinder','Moedor']):t(['Brewer','Porta-filtro']));field(t(['Model','Modelo']),record.model);}

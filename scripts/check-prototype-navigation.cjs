@@ -35,6 +35,15 @@ const {chromium} = require(process.env.COFFEELAB_PLAYWRIGHT_PATH || 'playwright'
     await page.goBack(); await page.waitForSelector('#photo-viewer:not([open])',{state:'attached'});
     await title('Hoffman V60 Better - Vô Zico');
     assert.equal(await page.locator('#exit, #close-settings, .back-link').count(),0);
+    await page.click('[data-screen="library"]'); await title('Biblioteca');
+    await page.getByRole('button',{name:'Stardust',exact:false}).first().click(); await title('Stardust');
+    assert.equal(await page.locator('.record-photo').count(),10);
+    const coffeeText=await page.locator('#browse').innerText();
+    assert.ok(coffeeText.includes('04/11/2026') && coffeeText.includes('17/11/2026'));
+    assert.ok(coffeeText.includes('250 g') && coffeeText.includes('1.100 m'));
+    await page.locator('.record-photo').first().click(); await page.waitForSelector('#photo-viewer[open]');
+    await page.waitForFunction(()=>document.querySelector('#photo-full')?.naturalWidth>0);
+    await page.goBack(); await page.waitForSelector('#photo-viewer:not([open])',{state:'attached'}); await title('Stardust');
     assert.deepEqual(errors,[]);
     console.log('PASS: native Back/Forward, detail-to-reading return, Settings, reload restoration, and no redundant top back buttons');
   } finally { await browser.close(); }

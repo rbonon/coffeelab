@@ -23,7 +23,33 @@ export const libraryData = {
         "Pêssego bem maduro",
         "Damasco",
         "Toque de frutas vermelhas",
-        "Acidez láctica lembrando iogurte"
+        "Acidez lática lembrando iogurte"
+      ],
+      "brand_or_roaster_label": "Abigail Coffee Co.",
+      "altitude_m": 1100,
+      "roast_level_label": null,
+      "photos": [
+        {
+          "file": "docs/assets/photos/stardust/stardust-04.jpg",
+          "caption": "Grãos do Stardust",
+          "alt": "Grãos do Stardust em um recipiente de vidro.",
+          "source": {
+            "kind": "user_attachment",
+            "filename": "Stardust 04.jpg",
+            "received_on": "2026-11-18"
+          }
+        }
+      ],
+      "profile_source": {
+        "kind": "user_attachments",
+        "received_on": "2026-11-18",
+        "label_photos": [
+          "docs/assets/photos/stardust/stardust-01.jpg",
+          "docs/assets/photos/stardust/stardust-02.jpg"
+        ]
+      },
+      "review_notes": [
+        "Brand/producer/descriptors transcribed from the supplied packaging. No individual numerical sensory score, variety or roast level is assigned from appearance."
       ]
     }
   ],
@@ -39,9 +65,121 @@ export const libraryData = {
     {
       "source_key": "stardust-historical-bag-context",
       "coffee_key": "stardust",
-      "roast_date": null,
+      "roast_date": "2026-11-04",
       "bag_weight_g": 250,
-      "retailer": "Abigail Cafés Campinas"
+      "retailer": "Abigail — loja de Campinas",
+      "name": "Stardust — compra 17/11/2026",
+      "identity_status": "confirmed",
+      "purchase_date": "2026-11-17",
+      "purchase_channel": "Loja física, diretamente na Abigail",
+      "price": null,
+      "shelf_life_months": 6,
+      "best_before_date": null,
+      "photos": [
+        {
+          "file": "docs/assets/photos/stardust/stardust-05.jpg",
+          "caption": "Embalagem — frente",
+          "alt": "Frente da embalagem colorida da Abigail Coffee Co.",
+          "source": {
+            "kind": "user_attachment",
+            "filename": "Stardust 05.jpg",
+            "received_on": "2026-11-18"
+          }
+        },
+        {
+          "file": "docs/assets/photos/stardust/stardust-02.jpg",
+          "caption": "Identificação — Stardust",
+          "alt": "Faixa da embalagem com a marca Abigail Coffee Co. e o nome Stardust.",
+          "source": {
+            "kind": "user_attachment",
+            "filename": "Stardust 02.jpg",
+            "received_on": "2026-11-18"
+          }
+        },
+        {
+          "file": "docs/assets/photos/stardust/stardust-01.jpg",
+          "caption": "Rótulo — origem, processo e descritores",
+          "alt": "Rótulo do Stardust com Daterra Coffee, Cerrado Mineiro, altitude 1.100 m, processo natural e conteúdo de 250 g.",
+          "source": {
+            "kind": "user_attachment",
+            "filename": "Stardust 01.jpg",
+            "received_on": "2026-11-18"
+          }
+        },
+        {
+          "file": "docs/assets/photos/stardust/stardust-09.jpg",
+          "caption": "Data de torra e validade",
+          "alt": "Embalagem indicando data de torra 04/11/26 e validade de 6 meses.",
+          "source": {
+            "kind": "user_attachment",
+            "filename": "Stardust 09.jpg",
+            "received_on": "2026-11-18"
+          }
+        },
+        {
+          "file": "docs/assets/photos/stardust/stardust-03.jpg",
+          "caption": "Informações sobre a Daterra",
+          "alt": "Texto da embalagem apresentando a Daterra Coffee e suas alegações de premiações e sustentabilidade.",
+          "source": {
+            "kind": "user_attachment",
+            "filename": "Stardust 03.jpg",
+            "received_on": "2026-11-18"
+          }
+        },
+        {
+          "file": "docs/assets/photos/stardust/stardust-06.jpg",
+          "caption": "Embalagem — verso",
+          "alt": "Verso da embalagem com textos sobre a marca, cafés e material da embalagem.",
+          "source": {
+            "kind": "user_attachment",
+            "filename": "Stardust 06.jpg",
+            "received_on": "2026-11-18"
+          }
+        },
+        {
+          "file": "docs/assets/photos/stardust/stardust-07.jpg",
+          "caption": "Embalagem — distribuidor",
+          "alt": "Detalhe do verso e das informações do distribuidor.",
+          "source": {
+            "kind": "user_attachment",
+            "filename": "Stardust 07.jpg",
+            "received_on": "2026-11-18"
+          }
+        },
+        {
+          "file": "docs/assets/photos/stardust/stardust-08.jpg",
+          "caption": "Embalagem — origem",
+          "alt": "Lateral da embalagem com apresentação da Daterra Coffee.",
+          "source": {
+            "kind": "user_attachment",
+            "filename": "Stardust 08.jpg",
+            "received_on": "2026-11-18"
+          }
+        },
+        {
+          "file": "docs/assets/photos/stardust/stardust-10.jpg",
+          "caption": "Embalagem — lateral",
+          "alt": "Lateral da embalagem com o perfil @abigailcoffeeco.",
+          "source": {
+            "kind": "user_attachment",
+            "filename": "Stardust 10.jpg",
+            "received_on": "2026-11-18"
+          }
+        }
+      ],
+      "purchase_source": {
+        "kind": "explicit_user_confirmation",
+        "confirmed_on": "2026-11-18"
+      },
+      "roast_date_source": {
+        "kind": "packaging_photo",
+        "file": "docs/assets/photos/stardust/stardust-09.jpg",
+        "label_text": "Data de Torra: 04/11/26; Validade: 6 meses"
+      },
+      "review_notes": [
+        "Roast date recovered from the supplied packaging photo; supersedes the earlier missing roast date.",
+        "Purchase date and direct physical-store purchase in Campinas confirmed by the user. Price not supplied; no best-before date derived from the six-month label."
+      ]
     }
   ],
   "equipment": [

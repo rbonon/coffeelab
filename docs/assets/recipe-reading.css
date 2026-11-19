@@ -119,3 +119,8 @@ body.browsing main { padding-bottom: 6rem; }
 .evaluation-observations li + li { margin-top: .6rem; }
 .evaluation-discussion { margin: 1rem 0; }
 .evaluation-discussion summary { color: var(--reading-muted); font-size: .85rem; cursor: pointer; padding-block: .4rem; }
+
+.photo-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: start; gap: .5rem; }
+.photo-grid .record-photo { min-width: 0; }
+.photo-grid .record-photo img { height: 6rem; max-height: none; object-fit: cover; border-radius: .4rem; }
+.photo-grid .photo-caption { font-size: .65rem; padding: .3rem .1rem; }

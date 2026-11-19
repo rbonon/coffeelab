@@ -46,6 +46,16 @@ The final-filter photo for B01 was subsequently supplied as `Hoffman Stardust.jp
 
 The [user-supplied comparison/evaluation dialogue](hoffmann-comparacao-avaliacao.md) is preserved unchanged. A06 and B01 have separate evaluation summaries and observations derived from it, with the discussed hypotheses and suggested next trial clearly separated. Existing original tasting text and Gostei ratings remain intact; no numerical sensory scores or roast dates were inferred.
 
+## Stardust library data confirmed during review
+
+The user supplied ten original photos, retained unchanged under `docs/assets/photos/stardust/`. Packaging photos belong to the individual bag; the beans photo belongs to the coffee record. The import data and library preview share the same associations and attachment provenance.
+
+Confirmed bag information: roast date 04/11/2026 from photo 09; purchase date 17/11/2026 and direct purchase at Abigail's Campinas store from the user; original weight 250 g; label shelf life 6 months. Price remains unspecified and no calendar expiry date is fabricated. These confirmations supersede the earlier missing roast/purchase dates and provisional Stardust bag context. The stable internal bag key keeps existing execution links intact.
+
+Coffee label fields: Abigail Coffee Co., Fazenda Daterra Coffee, Cerrado Mineiro, 1,100 m, natural process and the packaging descriptors. Roast level, variety and an individual cupping score are not inferred from appearance or generic brand claims. The photos preserve additional packaging text without promoting advertising statements to verified measurements.
+
+These are real curated initial application data, not disposable mock values. User corrections, original files and relationships must survive the eventual application import.
+
 ## Field audit
 
 The source supports the current dose, water, temperature, grind, timing, range, pour-target, technique, photo, and narrative-observation fields. The Specification field review added optional manufacture date, best-before date, original bag weight, origin altitude, storage notes, and corrected historical identifiers. The staged import file preserves the source evidence for these additions. Original bag weight does not require automatic remaining-inventory tracking.

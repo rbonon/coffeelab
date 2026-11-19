@@ -257,3 +257,5 @@ Journal rows use small, single-color outline happy/neutral/sad face rating icons
 A06 now includes the real user-supplied final-extraction photo. Record-photo previews preserve the whole image and open an enlarged dialog. Browser Back closes the photo to the same detail view; the caption and accessible description identify it. Other records have no invented photos. The same photo component can display later coffee/equipment attachments.
 
 Execution detail now shows a separate evaluation summary and observations for each retained brew. Discussed hypotheses/recommendations and original shared tasting text are expandable, preserving the distinction between observations and interpretations. The source dialogue is retained under `docs/vision/hoffmann-comparacao-avaliacao.md`.
+
+Stardust coffee detail now combines its beans photo with nine bag/packaging photos in a compact gallery, with full-image enlargement. Coffee identity fields and individual bag purchase/roast/weight/shelf-life fields remain distinct. Ten originals and the confirmed data are retained for initial application import.
