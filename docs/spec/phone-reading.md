@@ -12,7 +12,7 @@ This replaces the earlier paged-card trial, which the user rejected because oper
 
 For a pour, show both the addition and cumulative scale target. Filter recipes emphasize dose:brewing-water ratio. AeroPress with bypass also shows final-drink target and ratio without assuming a fixed dilution quantity. Espresso uses dose:beverage-yield. Missing values remain absent. A name/category-only recipe can be read without invented instructions or quantities; it may need enrichment before it is useful for brewing.
 
-Home now offers source-derived Hoffmann/Stardust, Hoffmann/Café do Vô Zico, and revised A02 recipes from the captured pour-over import. The dedicated `source-recipes.mjs` retains source keys/message references, planned quantities, temperature and JX-Pro setting. Schedule rows are compact Portuguese excerpts with structured additions, cumulative targets and source timing; they remain Portuguese in an English interface. These are prototype reading examples, not newly saved executions. The synthetic five-category and long/partial fixtures remain available only to automated checks, outside the Home picker. Paired example text allows English/pt-BR layout testing; production interface language will not translate stored personal recipe text. Weight (g/oz) and temperature (°C/°F) are independent choices. Prototype choices reset on reload and never write personal data.
+Home now offers source-derived Hoffmann/Stardust and Hoffmann/Café do Vô Zico recipes from the captured pour-over import. The dedicated `source-recipes.mjs` retains source keys/message references, planned quantities, temperature and JX-Pro setting. Schedule rows are compact Portuguese excerpts with structured additions, cumulative targets and source timing; they remain Portuguese in an English interface. These are prototype reading examples, not newly saved executions. The synthetic five-category and long/partial fixtures remain available only to automated checks, outside the Home picker. Paired example text allows English/pt-BR layout testing; production interface language will not translate stored personal recipe text. Weight (g/oz) and temperature (°C/°F) are independent choices. Prototype choices reset on reload and never write personal data.
 
 ## Concrete prototype
 
@@ -33,7 +33,7 @@ References: [MDN Screen Wake Lock API](https://developer.mozilla.org/en-US/docs/
 | Check | Status / evidence |
 | --- | --- |
 | Conversion equivalence and explicit ratio bases | Runnable check in `scripts/check-phone-reading.mjs` |
-| Current source-based schedules | PASS: Chrome headless, 412 × 800 CSS pixels; all three complete schedules visible without scrolling in English/pt-BR and g/oz; no JavaScript errors or paging controls. Not a device pass. Synthetic five-category fixtures remain data checks only. |
+| Current source-based schedules | PASS: Chrome headless, 412 × 800 CSS pixels; both complete schedules visible without scrolling in English/pt-BR and g/oz; no JavaScript errors or paging controls. Not a device pass. Synthetic five-category fixtures remain data checks only. |
 | Wake-lock unavailable/rejected/released/reacquire/late completion | Mocked platform checks; these do not prove device behavior |
 | Samsung S25 Ultra browser/version and default font size | Pending human input |
 | Complete source-based schedules readable without scrolling or touching during execution | Pending human check |
@@ -43,7 +43,7 @@ References: [MDN Screen Wake Lock API](https://developer.mozilla.org/en-US/docs/
 ### Human review sequence
 
 1. Open Hoffmann · Stardust on the phone. Confirm preparation, all five pours, final drainage, quantities and technique notes are visible together at normal text size. No swipe, scroll or Next action should be needed. Report the browser/version and anything missing or hard to read.
-2. Check Hoffmann · Café do Vô Zico and the revised A02 schedule. Repeat with English/pt-BR and g/oz/°C/°F preferences to verify fit and quantities. Source instructions remain Portuguese. Five-category expansion and arbitrarily long recipes need their own concrete no-interaction validation; synthetic fixtures are not a passed UI check.
+2. Check Hoffmann · Café do Vô Zico. Repeat with English/pt-BR and g/oz/°C/°F preferences to verify fit and quantities. Source instructions remain Portuguese. Five-category expansion and arbitrarily long recipes need their own concrete no-interaction validation; synthetic fixtures are not a passed UI check.
 
 3. On a secure phone URL, enable Keep screen awake in Settings, enter reading and leave the page visible beyond the device's normal timeout, switch away and return, then exit reading. Record denial/release/interruption instead of assuming support. Do not count a desktop mock as a phone pass.
 

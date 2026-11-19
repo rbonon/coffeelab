@@ -47,4 +47,4 @@ for (const recipe of Object.values(examples).filter(recipe => recipe.sourceKey))
   assert.equal(recipe.steps.reduce((sum, step) => sum + (step.add ?? 0), 0), recipe.water);
   for (const step of recipe.steps) assert.equal(step.text[0], step.text[1], 'Source language must be retained');
 }
-console.log('PASS: three source-derived recipes match captured parameters/provenance and retain Portuguese instructions');
+console.log('PASS: Source-derived recipes match captured parameters/provenance and retain Portuguese instructions');

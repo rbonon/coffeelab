@@ -308,120 +308,13 @@
       "external_source_links": []
     },
     {
-      "source_key": "a02-early",
-      "name": "A02 — earlier two-pour proposal",
-      "brewing_category": "Pour Over",
-      "brewer": "V60",
-      "source_state": "superseded_proposal",
-      "app_status": null,
-      "base_recipe_key": "hedrick-two-pour",
-      "coffee_key": "vo-zico",
-      "parameters": {
-        "dose_g": 20,
-        "brewing_water_g": 340,
-        "temperature_c": 94,
-        "grinder_setting": "3.5.0",
-        "finished_drink_g": null
-      },
-      "source_refs": [
-        {
-          "sequence": 48,
-          "message_id": "8298a336-24fd-4854-bcbb-1559dfd19406"
-        },
-        {
-          "sequence": 52,
-          "message_id": "bfed3842-1893-4faf-849b-c71ee60a3736"
-        }
-      ],
-      "source_instructions": [
-        {
-          "sequence": 48,
-          "text": "V60 — Teste 02 | Amanhã, 13/11/2026\n\nVamos manter a receita de Lance Hedrick com duas adições, bloom de 1:30 e reduzir a turbulência durante o segundo despejo. Também utilizaremos a regulagem atual do JX-Pro, 3.5.0 (140 cliques).\n\nCafé\n\n20 g\n\nÁgua\n\n340 g\n\nTemperatura\n\n94 °C\n\nMoagem JX-Pro\n\n3.5.0\n\nBloom\n\n1:30\n\nProporção\n\n1:17\nProcedimento\n\n0:00 — Bloom\n\nAdicionar 60 g de água, molhando todo o café. Fazer uma leve movimentação apenas se necessário para saturar o pó.\n\n0:00–1:30 — Espera\n\nDeixar o café liberar gases sem agitação adicional.\n\n1:30 — Segundo despejo\n\nAdicionar continuamente os 280 g restantes até atingir 340 g, preferencialmente em 45–60 segundos.\n\nManter o bico próximo à superfície, com fluxo estável e movimentos circulares suaves, evitando despejar diretamente sobre o papel.\n\nApós o despejo — Drenagem\n\nNão fazer swirl nem agitar o V60. Aguardar o escoamento completo e registrar o tempo.\n\nO que estamos testando\n\nEm relação ao Teste 01, teremos duas mudanças:\n\nMoagem: 4.0.0 → 3.5.0 (mais fina).\n\nAgitação: menor turbulência no segundo despejo.\n\nComo mudaremos duas variáveis, não conseguiremos atribuir eventuais diferenças a uma causa isolada. Mas é um teste prático para buscar mais doçura e menos amargor.\n\nTempo: não vamos forçar um tempo-alvo. Registraremos o resultado e avaliaremos principalmente o sabor.\n\nAvaliação após o preparo\nTempo total (min:ss)\nDoçura\n\n3/5\n\n1\n2\n3\n4\n5\nAcidez\n\n3/5\n\n1\n2\n3\n4\n5\nAmargor\n\n3/5\n\n1\n2\n3\n4\n5\nCorpo\n\n3/5\n\n1\n2\n3\n4\n5\nObservações de sabor\nRegistrar resultado do Teste 02\n\nAmanhã, após provar, vamos comparar especialmente a doçura e o amargor residual com o Teste 01.",
-          "tables": []
-        },
-        {
-          "sequence": 52,
-          "text": "V60 — Teste 02\n\n13/11/2026 • Receita adaptada de Lance Hedrick\n\nCafé\n\n20 g\n\nÁgua\n\n340 g\n\nTemperatura\n\n94 °C\n\nJX-Pro\n\n3.5.0\n\nBloom\n\n1 min 30 s\n\nProporção\n\n1:17\nPreparação\nAquecer a água a 94 °C.\nAjustar o JX-Pro em 3.5.0 (140 cliques).\nMoer 20 g de café.\nColocar o filtro no V60 e enxaguar com água quente.\nDescartar a água do enxágue.\nAdicionar o café moído, nivelar e zerar a balança.\nExtração\n0:00\n\n60 g\n\n1. Bloom\n\nIniciar o cronômetro no primeiro contato da água com o café.\n\nAdicionar 60 g de água, molhando todo o pó. Movimentar levemente apenas se necessário.\n\n1:30\n\n340 g\n\n2. Segundo despejo\n\nAdicionar os 280 g restantes de forma contínua, terminando por volta de 2:15–2:30.\n\nMovimentos circulares suaves.\n\nBico próximo à superfície da água.\n\nFluxo estável, sem provocar turbulência excessiva.\n\nEvitar despejar diretamente sobre o papel.\n\nDrenagem\n\n3. Finalização\n\nNão agitar nem fazer swirl. Deixar toda a água escoar.\n\nRegistrar o tempo total desde 0:00 até o final da drenagem.\n\nAvaliação\n\nProvar o café quente e novamente quando estiver morno.\n\nObserve apenas:\n\nFicou mais ou menos ácido?\n\nO amargor diminuiu?\n\nFicou mais encorpado?\n\nGostou mais ou menos do que o Teste 01?\n\nReferência anterior: 4.0.0, 338 g de água, bloom de 1:30, extração de 4:30. Resultado mais ácido, leve e com amargor residual.\n\nObjetivo do Teste 02: buscar mais doçura e equilíbrio, com menos amargor. Estamos usando moagem mais fina e despejo mais suave; portanto, o resultado ajudará a orientar os próximos testes, mas não isolará o efeito de cada mudança.",
-          "tables": []
-        }
-      ],
-      "review_notes": [
-        "Planned 2026-11-13 is not proof of execution date."
-      ],
-      "external_source_links": []
-    },
-    {
-      "source_key": "a02-three-pour",
-      "name": "A02 — revised three-pour recipe",
-      "brewing_category": "Pour Over",
-      "brewer": "V60",
-      "source_state": "recipe_with_recorded_execution",
-      "app_status": null,
-      "base_recipe_key": "hedrick-two-pour",
-      "coffee_key": "vo-zico",
-      "parameters": {
-        "dose_g": 20,
-        "brewing_water_g": 320,
-        "temperature_c": 91,
-        "grinder_setting": "3.5.0",
-        "finished_drink_g": null
-      },
-      "source_refs": [
-        {
-          "sequence": 60,
-          "message_id": "4369aea7-6c6c-42fe-86e2-1ef2edf7e873"
-        },
-        {
-          "sequence": 62,
-          "message_id": "be2d095b-76ae-4339-a01c-4c1220d74bc5"
-        }
-      ],
-      "source_instructions": [
-        {
-          "sequence": 60,
-          "text": "☕ V60 — Teste 02\n\nReceita revisada • Menos amargor, mais doçura e corpo\n\nCafé\n\n20 g\n\nÁgua\n\n320 g\n\nTemperatura\n\n91 °C\n\nJX-Pro\n\n3.5.0\n\nBloom\n\n45 s\n\nProporção\n\n1:16\n1. Preparação\nAquecer água a 91 °C\nMoer 20 g — JX-Pro 3.5.0 (140 cliques)\nEnxaguar o filtro com água quente\nDescartar a água do enxágue\nColocar café, nivelar e zerar a balança\n2. Extração\n0:00\n60 g\n\nBloom\n\nMolhar todo o café com 60 g de água.\n\nDespejo suave. Aguardar até 0:45.\n\n0:45\n190 g\n\nSegundo despejo\n\nAdicionar 130 g em círculos suaves.\n\nBico baixo, fluxo contínuo e sem turbulência excessiva.\n\n1:30\n320 g\n\nTerceiro despejo\n\nAdicionar os 130 g restantes, suavemente.\n\nNão despejar diretamente sobre o papel.\n\nFinal\n\nDrenagem\n\nDeixar escoar naturalmente, sem agitar.\n\nRegistrar o tempo total quando a água desaparecer da superfície do café.\n\n3. Cuidados importantes\n\nFluxo suave: evitar que o jato penetre profundamente na água.\n\nSem swirl: não girar nem sacudir o V60.\n\nNão perseguir um tempo exato: referência inicial de 3–4 minutos, mas registrar o tempo real.\n\n4. Depois de provar\nTempo total\nComparado ao café anterior\nMais agradável\nParecido\nMenos agradável\nAmargor no final\nNão percebi\nMenor\nIgual\nMaior\nOutras observações (opcional)\nRegistrar resultado",
-          "tables": []
-        },
-        {
-          "sequence": 62,
-          "text": "☕ V60 — Teste 02\n\nCafé\n\n20 g\n\nÁgua\n\n320 g\n\nTemp.\n\n91 °C\n\nJX-Pro\n\n3.5.0\n\nBloom\n\n45 s\n\nRatio\n\n1:16\n\n0:00\n\n\t\n60 g\n\tBloom, molhar todo o pó\n\n\n0:45\n\n\t\n190 g\n\tDespejo circular suave\n\n\n1:30\n\n\t\n320 g\n\tDespejo circular suave\nFinal\t3–4 min*\tDrenagem natural\n\nCuidados: bico baixo, fluxo suave, sem swirl. Não despejar no papel.\n\n*Tempo apenas de referência. Registrar o tempo real e avaliar o amargor residual.",
-          "tables": [
-            [
-              [
-                "0:00",
-                "60 g",
-                "Bloom, molhar todo o pó"
-              ],
-              [
-                "0:45",
-                "190 g",
-                "Despejo circular suave"
-              ],
-              [
-                "1:30",
-                "320 g",
-                "Despejo circular suave"
-              ],
-              [
-                "Final",
-                "3–4 min*",
-                "Drenagem natural"
-              ]
-            ]
-          ]
-        }
-      ],
-      "review_notes": [],
-      "external_source_links": []
-    },
-    {
       "source_key": "a03-repeat",
       "name": "A03 — repeat A02",
       "brewing_category": "Pour Over",
       "brewer": "V60",
       "source_state": "planned_no_recorded_result",
       "app_status": null,
-      "base_recipe_key": "a02-three-pour",
+      "base_recipe_key": null,
       "coffee_key": "vo-zico",
       "parameters": {
         "dose_g": 20,
@@ -540,8 +433,11 @@
           ]
         }
       ],
-      "review_notes": [],
-      "external_source_links": []
+      "review_notes": [
+        "A02 base recipe excluded from active import data by user request; original lineage remains in the source capture."
+      ],
+      "external_source_links": [],
+      "excluded_source_base_key": "a02-three-pour"
     },
     {
       "source_key": "a04-five-pour",
@@ -801,7 +697,7 @@
       "brewer": "V60",
       "source_state": "planned_no_recorded_result",
       "app_status": null,
-      "base_recipe_key": "a02-three-pour",
+      "base_recipe_key": null,
       "coffee_key": "vo-zico",
       "parameters": {
         "dose_g": 20,
@@ -976,8 +872,11 @@
           ]
         }
       ],
-      "review_notes": [],
-      "external_source_links": []
+      "review_notes": [
+        "A02 base recipe excluded from active import data by user request; original lineage remains in the source capture."
+      ],
+      "external_source_links": [],
+      "excluded_source_base_key": "a02-three-pour"
     },
     {
       "source_key": "kasuya-30s",
@@ -1324,7 +1223,7 @@
       "brewer": "V60",
       "source_state": "superseded_assignment",
       "app_status": null,
-      "base_recipe_key": "a02-three-pour",
+      "base_recipe_key": null,
       "coffee_key": "stardust",
       "parameters": {
         "dose_g": 20,
@@ -1456,9 +1355,11 @@
         }
       ],
       "review_notes": [
-        "Final B01 refers to the Hoffmann execution, not proof this earlier plan was brewed."
+        "Final B01 refers to the Hoffmann execution, not proof this earlier plan was brewed.",
+        "A02 base recipe excluded from active import data by user request; original lineage remains in the source capture."
       ],
-      "external_source_links": []
+      "external_source_links": [],
+      "excluded_source_base_key": "a02-three-pour"
     },
     {
       "source_key": "hoffmann-original",

@@ -1,4 +1,4 @@
-import { sourceRecipes } from './source-recipes.mjs';
+import { sourceRecipes } from './source-recipes.mjs?v=no-a02-1';
 import { libraryData } from './library-data.mjs?v=execution-names-1';
 export function renderBrowse(root, {screen, detail, go, read, t, mass}) {
   root.replaceChildren();

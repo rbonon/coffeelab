@@ -10,7 +10,7 @@ The user designated the [shared Receitas Pour Over conversation](https://chatgpt
 | --- | --- |
 | [Source archive](receitas-pour-over-source.json) | All 177 message positions with IDs, roles, accessible text, 63 tables, links, and the browser DOM snapshot |
 | [Readable transcript](receitas-pour-over-transcript.md) | Accessible content in message order, with explicit markers for unavailable bodies |
-| [Import candidates](receitas-pour-over-import.json) | Two coffees, two provisional historical bag contexts, equipment evidence, 14 recipe/reference candidates, two retained Hoffmann executions, corrections, and missing-image references |
+| [Import candidates](receitas-pour-over-import.json) | Two coffees, two provisional historical bag contexts, equipment evidence, 12 recipe/reference candidates, two retained Hoffmann executions, corrections, and missing-image references |
 
 ## Coverage and gaps
 
@@ -25,6 +25,7 @@ The capture is the full accessible rendered material, not a complete original-ch
 The candidates are staged data for the future application. They have not been imported into a running Coffee Lab database. Each candidate links to source message IDs and sequence numbers. Many historical facts come from assistant summaries because the corresponding user message is unavailable.
 
 - At the user’s request, the active import data and prototype retain only Hoffmann executions A06 and B01. A01, A02 and A04 were removed from both datasets. The original conversation archive/transcript remains documentary evidence, not an instruction to reimport excluded executions.
+- Both A02 recipe candidates (earlier proposal and revised three-pour recipe) were excluded at the user’s request. Retained plans preserve their historical lineage separately without an active link to a deleted base recipe.
 - B02 was explicitly renamed B01. Preserve B02 as an alias and import one execution.
 - A03 has no recorded result, A05 is planned, and the Kasuya A06 plan was replaced by Hoffmann. Preserve their plans without inventing completed executions.
 - The initial three-pour B01 plan is superseded by the final Hoffmann B01 assignment.

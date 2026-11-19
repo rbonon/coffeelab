@@ -1,5 +1,5 @@
-import { renderBrowse } from './browse-pages.mjs?v=execution-names-1';
-import { sourceRecipes } from './source-recipes.mjs';
+import { renderBrowse } from './browse-pages.mjs?v=no-a02-1';
+import { sourceRecipes } from './source-recipes.mjs?v=no-a02-1';
 // Illustrative layout fixtures. These are not imported recipes or historical records.
 const illustrativeExamples = {
   pour: { title: ['Pour Over · five pours', 'Coado · cinco despejos'], dose: 15, water: 250, temp: 96, steps: Array.from({length: 5}, (_, i) => ({ title: [`Pour ${i + 1}`, `Despejo ${i + 1}`], text: ['Add water gently, then allow it to drain. Follow the timing of your recipe on the scale.', 'Adicione a água suavemente e deixe escoar. Siga os tempos da sua receita no cronômetro da balança.'], add: 50, cumulative: (i + 1) * 50 })) },
@@ -156,6 +156,7 @@ if (typeof document !== 'undefined') {
   }
   function snapshot() { return {reading, configuring, screen, detail, recipe: $('method').value}; }
   function restore(route) {
+    if (!examples[route.recipe]) route = {...route, recipe:'hoffmann-stardust', screen:route.reading ? 'recipes' : route.screen, reading:false};
     const wasReading = reading;
     ({reading, configuring, screen, detail} = route);
     $('method').value = route.recipe;
