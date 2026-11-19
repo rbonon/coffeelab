@@ -1,4 +1,4 @@
-import { renderBrowse } from './browse-pages.mjs?v=hoffmann-only-1';
+import { renderBrowse } from './browse-pages.mjs?v=execution-names-1';
 import { sourceRecipes } from './source-recipes.mjs';
 // Illustrative layout fixtures. These are not imported recipes or historical records.
 const illustrativeExamples = {

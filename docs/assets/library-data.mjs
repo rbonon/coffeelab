@@ -79,7 +79,8 @@ export const libraryData = {
         "kind": "explicit_user_instruction",
         "date": "2026-11-18",
         "note": "Assigned during Coffee Lab UI review: all shown executions did not enjoy, except Hoffmann executions enjoyed. Not inferred from historical observations."
-      }
+      },
+      "name": "Hoffman Better 1 Cup - Vô Zico"
     },
     {
       "source_key": "B01",
@@ -104,7 +105,8 @@ export const libraryData = {
         "kind": "explicit_user_instruction",
         "date": "2026-11-18",
         "note": "Assigned during Coffee Lab UI review: all shown executions did not enjoy, except Hoffmann executions enjoyed. Not inferred from historical observations."
-      }
+      },
+      "name": "Hoffman Better 1 Cup - Stardust"
     }
   ]
 };

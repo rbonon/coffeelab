@@ -1,5 +1,5 @@
 import { sourceRecipes } from './source-recipes.mjs';
-import { libraryData } from './library-data.mjs?v=hoffmann-only-1';
+import { libraryData } from './library-data.mjs?v=execution-names-1';
 export function renderBrowse(root, {screen, detail, go, read, t, mass}) {
   root.replaceChildren();
   function el(tag, text, cls) { const node=document.createElement(tag); if(text) node.textContent=text; if(cls)node.className=cls; return node; }
@@ -58,7 +58,7 @@ export function renderBrowse(root, {screen, detail, go, read, t, mass}) {
     for(const [key,r] of Object.entries(sourceRecipes))row(t(r.title),`${mass(r.dose)} · ${mass(r.water)} · V60`,()=>read(key));
   } else if(screen==='journal') {
     heading(t(['Journal','Diário']));root.append(el('p',t(['Selected recorded brews.','Extrações registradas para lembrar e comparar.']),'page-intro'));
-    for(const r of [...libraryData.executions].reverse())row(`${r.source_key} · ${coffeeName(r.coffee_key)}`,`${duration(r.quantities.elapsed_seconds)} · ${mass(r.quantities.brewing_water_g)} ${t(['brewing water','de água'])}`,()=>go('detail',{kind:'execution',record:r,origin:'journal'}),r.quick_rating);
+    for(const r of [...libraryData.executions].reverse())row(r.name ?? `${r.source_key} · ${coffeeName(r.coffee_key)}`,`${duration(r.quantities.elapsed_seconds)} · ${mass(r.quantities.brewing_water_g)} ${t(['brewing water','de água'])}`,()=>go('detail',{kind:'execution',record:r,origin:'journal'}),r.quick_rating);
   } else if(screen==='library') {
     heading(t(['Library','Biblioteca']));root.append(el('h2',t(['Coffees','Cafés'])));
     for(const r of libraryData.coffees)row(r.name,[r.origin,r.processing].filter(Boolean).join(' · '),()=>go('detail',{kind:'coffee',record:r,origin:'library'}));

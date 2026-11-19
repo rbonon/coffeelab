@@ -10,14 +10,14 @@ const {chromium} = require(process.env.COFFEELAB_PLAYWRIGHT_PATH || 'playwright'
     await page.goto(process.env.COFFEELAB_PREVIEW_URL || 'http://127.0.0.1:8765/docs/prototypes/recipe-reading.html');
     const title=async expected=>{await page.waitForFunction(value=>document.querySelector('#browse-title')?.textContent===value,expected);};
     await page.click('[data-screen="journal"]'); await title('Diário');
-    await page.locator('#browse .browse-row').first().click(); await title('B01 · Stardust');
+    await page.locator('#browse .browse-row').first().click(); await title('Hoffman Better 1 Cup - Stardust');
     await page.getByRole('button',{name:'Abrir receita',exact:true}).click();
     assert.equal(await page.locator('#reader').isVisible(),true);
-    await page.goBack(); await title('B01 · Stardust');
+    await page.goBack(); await title('Hoffman Better 1 Cup - Stardust');
     assert.equal(await page.locator('#reader').isVisible(),false);
     await page.goBack(); await title('Diário');
-    await page.goForward(); await title('B01 · Stardust');
-    await page.reload(); await title('B01 · Stardust');
+    await page.goForward(); await title('Hoffman Better 1 Cup - Stardust');
+    await page.reload(); await title('Hoffman Better 1 Cup - Stardust');
     await page.goBack(); await title('Diário');
     await page.goBack(); await page.waitForSelector('#setup:visible');
     await page.click('#open-settings'); await page.waitForSelector('#configuration:visible');
