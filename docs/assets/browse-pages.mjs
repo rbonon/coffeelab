@@ -1,5 +1,5 @@
 import { sourceRecipes } from './source-recipes.mjs?v=preparation-final-1';
-import { libraryData } from './library-data.mjs?v=evaluation-notes-1';
+import { libraryData } from './library-data.mjs?v=extraction-date-1';
 export function renderBrowse(root, {screen, detail, go, read, openPhoto, t, mass}) {
   root.replaceChildren();
   function el(tag, text, cls) { const node=document.createElement(tag); if(text) node.textContent=text; if(cls)node.className=cls; return node; }

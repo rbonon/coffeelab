@@ -63,7 +63,7 @@ export const libraryData = {
       "source_aliases": [],
       "coffee_key": "vo-zico",
       "recipe_key": "hoffmann-vo-zico",
-      "date": null,
+      "date": "2026-11-18",
       "quantities": {
         "dose_g": 15,
         "brewing_water_g": 249.0,
@@ -124,6 +124,11 @@ export const libraryData = {
         "discussion_hypotheses": [
           "A menor atividade no bloom pode ser compatível com menor liberação de CO₂ e maior tempo desde a torra, mas também depende das características do café. Não comprova frescor nem inadequação do bloom."
         ]
+      },
+      "date_source": {
+        "kind": "explicit_user_confirmation",
+        "confirmed_on": "2026-11-18",
+        "timezone": "America/Sao_Paulo"
       }
     },
     {
@@ -133,7 +138,7 @@ export const libraryData = {
       ],
       "coffee_key": "stardust",
       "recipe_key": "hoffmann-stardust",
-      "date": null,
+      "date": "2026-11-18",
       "quantities": {
         "dose_g": 15,
         "brewing_water_g": 252.3,
@@ -186,6 +191,11 @@ export const libraryData = {
           "O ChatGPT discutiu a possibilidade de uma distribuição granulométrica diferente, talvez com mais finos, contribuindo para o leito compacto e a drenagem mais lenta. Isso não foi confirmado.",
           "A descrição “lembra suco” foi interpretada no diálogo como possível acidez frutada e leveza, sem uma avaliação sensorial específica confirmada."
         ]
+      },
+      "date_source": {
+        "kind": "explicit_user_confirmation",
+        "confirmed_on": "2026-11-18",
+        "timezone": "America/Sao_Paulo"
       }
     }
   ]
