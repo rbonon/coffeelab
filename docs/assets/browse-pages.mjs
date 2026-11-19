@@ -1,5 +1,5 @@
 import { sourceRecipes } from './source-recipes.mjs?v=preparation-final-1';
-import { libraryData } from './library-data.mjs?v=comparison-photo-1';
+import { libraryData } from './library-data.mjs?v=evaluation-notes-1';
 export function renderBrowse(root, {screen, detail, go, read, openPhoto, t, mass}) {
   root.replaceChildren();
   function el(tag, text, cls) { const node=document.createElement(tag); if(text) node.textContent=text; if(cls)node.className=cls; return node; }
@@ -49,7 +49,24 @@ export function renderBrowse(root, {screen, detail, go, read, openPhoto, t, mass
       field(t(['Brewing water used','Água utilizada na extração']),q.brewing_water_g==null?null:mass(q.brewing_water_g));
       field(t(['Elapsed time','Tempo total']),q.elapsed_seconds==null?null:duration(q.elapsed_seconds));
       field(t(['Grinder','Moedor']),q.grinder_setting?`JX-Pro · ${q.grinder_setting}`:null);
-      if(record.tasting_description){root.append(el('h2',t(['Observations','Observações'])));root.append(el('p',record.tasting_description,'source-note'));if(record.tasting_description_scope)root.append(el('small',t(['Shared comparison of both coffees.','Comparação compartilhada entre os dois cafés.'])));}
+      if(record.evaluation) {
+        const evaluation=record.evaluation;
+        root.append(el('h2',t(['Evaluation','Avaliação'])));
+        root.append(el('p',evaluation.summary));
+        const observations=el('ul',null,'evaluation-observations');
+        for(const note of evaluation.observations)observations.append(el('li',note));
+        root.append(observations);
+        root.append(el('p',evaluation.conclusion));
+        const discussion=el('details',null,'evaluation-discussion');
+        discussion.append(el('summary',t(['Discussion and unconfirmed hypotheses','Discussão e hipóteses não confirmadas'])));
+        for(const hypothesis of evaluation.discussion_hypotheses)discussion.append(el('p',hypothesis,'source-note'));
+        discussion.append(el('p',evaluation.discussion_recommendation,'source-note'));root.append(discussion);
+      }
+      if(record.tasting_description){
+        const original=el('details',null,'evaluation-discussion');
+        original.append(el('summary',t(['Original shared observation','Relato original compartilhado'])));
+        original.append(el('p',record.tasting_description,'source-note'));root.append(original);
+      }
       if(record.source_aliases.length)field(t(['Earlier identifier','Identificação anterior']),record.source_aliases.join(', '));
       if(sourceRecipes[record.recipe_key])row(t(['Open recipe','Abrir receita']),null,()=>read(record.recipe_key));
     } else if(detail.kind==='coffee') {

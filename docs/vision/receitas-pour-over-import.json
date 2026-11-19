@@ -2277,7 +2277,25 @@
             "received_on": "2026-11-18"
           }
         }
-      ]
+      ],
+      "evaluation": {
+        "conclusion": "Os dois cafés ficaram bastante bons para nosso paladar, agradáveis e sem amargor perceptível. A receita é uma referência promissora para repetir.",
+        "discussion_recommendation": "No diálogo, a recomendação foi manter JX-Pro 3.5.0, água a 96 °C, bloom de 45 segundos e swirl suave, verificando a repetibilidade antes de novos ajustes.",
+        "source": {
+          "file": "docs/vision/hoffmann-comparacao-avaliacao.md",
+          "kind": "user_supplied_chat_dialogue",
+          "received_on": "2026-11-18",
+          "note": "Summary of user observations and discussion; hypotheses remain explicitly unconfirmed. B02 is the earlier alias of B01."
+        },
+        "summary": "Resultado agradável para nosso paladar, sem amargor perceptível. Em comparação, menos aberto que o Stardust.",
+        "observations": [
+          "Todo o pó ficou molhado no bloom, mas houve menos bolhas e menor atividade que no Stardust. A impressão inicial de um bloom mais seco foi esclarecida: não havia pó seco.",
+          "Leito visualmente mais granular que o Stardust. Drenagem de 3:23, 15 segundos mais rápida."
+        ],
+        "discussion_hypotheses": [
+          "A menor atividade no bloom pode ser compatível com menor liberação de CO₂ e maior tempo desde a torra, mas também depende das características do café. Não comprova frescor nem inadequação do bloom."
+        ]
+      }
     },
     {
       "source_key": "B01",
@@ -2366,7 +2384,27 @@
             "received_on": "2026-11-18"
           }
         }
-      ]
+      ],
+      "evaluation": {
+        "conclusion": "Os dois cafés ficaram bastante bons para nosso paladar, agradáveis e sem amargor perceptível. A receita é uma referência promissora para repetir.",
+        "discussion_recommendation": "No diálogo, a recomendação foi manter JX-Pro 3.5.0, água a 96 °C, bloom de 45 segundos e swirl suave, verificando a repetibilidade antes de novos ajustes.",
+        "source": {
+          "file": "docs/vision/hoffmann-comparacao-avaliacao.md",
+          "kind": "user_supplied_chat_dialogue",
+          "received_on": "2026-11-18",
+          "note": "Summary of user observations and discussion; hypotheses remain explicitly unconfirmed. B02 is the earlier alias of B01."
+        },
+        "summary": "Resultado muito agradável para nosso paladar, sem amargor perceptível; mais aberto e suculento, lembrando suco. Não foram identificadas notas aromáticas específicas.",
+        "observations": [
+          "Em comparação com o Vô Zico, os grãos pareceram um pouco menores e a torra visualmente mais escura; o leito final pareceu menos poroso e mais compacto. São impressões visuais, não medições.",
+          "O usuário considera o Stardust mais novo, por algumas semanas ou meses, sem data de torra confirmada.",
+          "Maior atividade de bolhas no bloom em comparação com o Vô Zico. Drenagem de 3:38, 15 segundos mais lenta."
+        ],
+        "discussion_hypotheses": [
+          "O ChatGPT discutiu a possibilidade de uma distribuição granulométrica diferente, talvez com mais finos, contribuindo para o leito compacto e a drenagem mais lenta. Isso não foi confirmado.",
+          "A descrição “lembra suco” foi interpretada no diálogo como possível acidez frutada e leveza, sem uma avaliação sensorial específica confirmada."
+        ]
+      }
     }
   ],
   "unexecuted_or_unconfirmed": [

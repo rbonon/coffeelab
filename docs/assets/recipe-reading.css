@@ -114,3 +114,8 @@ body.browsing main { padding-bottom: 6rem; }
 #photo-full { display: block; width: 100%; max-height: 78dvh; object-fit: contain; }
 #photo-title { font-size: .85rem; text-align: center; }
 .photo-close { position: absolute; right: .25rem; top: 0; border: 0; background: transparent; font-size: 1.6rem; font-weight: 400; min-height: 2.75rem; min-width: 2.75rem; }
+
+.evaluation-observations { padding-left: 1.1rem; line-height: 1.55; }
+.evaluation-observations li + li { margin-top: .6rem; }
+.evaluation-discussion { margin: 1rem 0; }
+.evaluation-discussion summary { color: var(--reading-muted); font-size: .85rem; cursor: pointer; padding-block: .4rem; }

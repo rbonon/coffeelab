@@ -40,6 +40,10 @@ The user supplied `Hoffman Vo Zico.jpg` during UI review. Its unchanged original
 
 The user also supplied a [comparison photo of Stardust and Vô Zico](../assets/photos/hoffman-comparativo-stardust-vo-zico.jpg). One unchanged file is linked to both A06 and B01; attachment metadata preserves the original filename, while its caption avoids assigning sides from that filename.
 
+## Follow-up evaluation dialogue
+
+The [user-supplied comparison/evaluation dialogue](hoffmann-comparacao-avaliacao.md) is preserved unchanged. A06 and B01 have separate evaluation summaries and observations derived from it, with the discussed hypotheses and suggested next trial clearly separated. Existing original tasting text and Gostei ratings remain intact; no numerical sensory scores or roast dates were inferred.
+
 ## Field audit
 
 The source supports the current dose, water, temperature, grind, timing, range, pour-target, technique, photo, and narrative-observation fields. The Specification field review added optional manufacture date, best-before date, original bag weight, origin altitude, storage notes, and corrected historical identifiers. The staged import file preserves the source evidence for these additions. Original bag weight does not require automatic remaining-inventory tracking.
