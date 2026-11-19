@@ -73,7 +73,13 @@ export const libraryData = {
         "grinder_setting": "4.0.0",
         "finished_drink_g": null
       },
-      "tasting_description": null
+      "tasting_description": null,
+      "quick_rating": "did_not_enjoy",
+      "quick_rating_source": {
+        "kind": "explicit_user_instruction",
+        "date": "2026-11-18",
+        "note": "Assigned during Coffee Lab UI review: all shown executions did not enjoy, except Hoffmann executions enjoyed. Not inferred from historical observations."
+      }
     },
     {
       "source_key": "A02",
@@ -90,7 +96,13 @@ export const libraryData = {
         "grinder_setting": "3.5.0",
         "finished_drink_g": null
       },
-      "tasting_description": null
+      "tasting_description": null,
+      "quick_rating": "did_not_enjoy",
+      "quick_rating_source": {
+        "kind": "explicit_user_instruction",
+        "date": "2026-11-18",
+        "note": "Assigned during Coffee Lab UI review: all shown executions did not enjoy, except Hoffmann executions enjoyed. Not inferred from historical observations."
+      }
     },
     {
       "source_key": "A04",
@@ -106,7 +118,13 @@ export const libraryData = {
         "grinder_setting": "3.8.0",
         "finished_drink_g": null
       },
-      "tasting_description": null
+      "tasting_description": null,
+      "quick_rating": "did_not_enjoy",
+      "quick_rating_source": {
+        "kind": "explicit_user_instruction",
+        "date": "2026-11-18",
+        "note": "Assigned during Coffee Lab UI review: all shown executions did not enjoy, except Hoffmann executions enjoyed. Not inferred from historical observations."
+      }
     },
     {
       "source_key": "A06",
@@ -123,7 +141,13 @@ export const libraryData = {
         "finished_drink_g": null
       },
       "tasting_description": "A esquerda Stardust a direita Vó Zico. Ambos semnl amargor. Stardust um pouco mais aberto parecido com suco mas ambos muito agradáveis ",
-      "tasting_description_scope": "shared comparison of Stardust on the left and Vo Zico on the right"
+      "tasting_description_scope": "shared comparison of Stardust on the left and Vo Zico on the right",
+      "quick_rating": "enjoyed",
+      "quick_rating_source": {
+        "kind": "explicit_user_instruction",
+        "date": "2026-11-18",
+        "note": "Assigned during Coffee Lab UI review: all shown executions did not enjoy, except Hoffmann executions enjoyed. Not inferred from historical observations."
+      }
     },
     {
       "source_key": "B01",
@@ -142,7 +166,13 @@ export const libraryData = {
         "finished_drink_g": null
       },
       "tasting_description": "A esquerda Stardust a direita Vó Zico. Ambos semnl amargor. Stardust um pouco mais aberto parecido com suco mas ambos muito agradáveis ",
-      "tasting_description_scope": "shared comparison of Stardust on the left and Vo Zico on the right"
+      "tasting_description_scope": "shared comparison of Stardust on the left and Vo Zico on the right",
+      "quick_rating": "enjoyed",
+      "quick_rating_source": {
+        "kind": "explicit_user_instruction",
+        "date": "2026-11-18",
+        "note": "Assigned during Coffee Lab UI review: all shown executions did not enjoy, except Hoffmann executions enjoyed. Not inferred from historical observations."
+      }
     }
   ]
 };

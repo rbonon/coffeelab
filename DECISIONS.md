@@ -618,3 +618,9 @@ This file and `AGENTS.md` are the shared memory of this project across sessions 
 **Decision:** With browser-native history working, the user requested removing the top Back buttons.
 
 **Implications:** Settings, reading and details use the browser/OS Back gesture or browser control. Keep normal Back/Forward history and the bottom destination navigation outside reading/Settings.
+
+## 2026-11-18 — Explicit ratings for displayed executions
+
+**Decision:** The user assigned Não gostei to displayed executions A01, A02 and A04, and Gostei to the Hoffmann executions A06 and B01. This applies to executions, not recipe-level ratings.
+
+**Implications:** Persist these explicit current ratings in import candidates and preview data with user-instruction provenance. Preserve original source capture and historical tasting text; do not infer sensory intensity scores or retroactively attribute the ratings to the old conversation. Show ratings in the journal and execution details.

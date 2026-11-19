@@ -2280,7 +2280,7 @@
       },
       "tasting_description": null,
       "sensory_scores": null,
-      "quick_rating": null,
+      "quick_rating": "did_not_enjoy",
       "source_refs": [
         {
           "sequence": 8,
@@ -2308,7 +2308,12 @@
         "Water 338 g is labeled added water in the later source; the initial photo interpretation questioned its basis.",
         "Source summaries describe acidity, light body and residual bitterness. Original corresponding user text is unavailable.",
         "Temperature 94–95 °C appears approximately in a later comparison; leave actual temperature unresolved."
-      ]
+      ],
+      "quick_rating_source": {
+        "kind": "explicit_user_instruction",
+        "date": "2026-11-18",
+        "note": "Assigned during Coffee Lab UI review: all shown executions did not enjoy, except Hoffmann executions enjoyed. Not inferred from historical observations."
+      }
     },
     {
       "source_key": "A02",
@@ -2332,7 +2337,7 @@
       },
       "tasting_description": null,
       "sensory_scores": null,
-      "quick_rating": null,
+      "quick_rating": "did_not_enjoy",
       "source_refs": [
         {
           "sequence": 60,
@@ -2363,7 +2368,12 @@
         "Source summaries describe better balance, more body, pleasant citrus/fruity acidity, and reduced/integrated bitterness.",
         "The 2026-11-13 date is shown in an earlier recipe plan; actual execution date remains unverified.",
         "Do not import 3/5 slider defaults from message 48 as user ratings."
-      ]
+      ],
+      "quick_rating_source": {
+        "kind": "explicit_user_instruction",
+        "date": "2026-11-18",
+        "note": "Assigned during Coffee Lab UI review: all shown executions did not enjoy, except Hoffmann executions enjoyed. Not inferred from historical observations."
+      }
     },
     {
       "source_key": "A04",
@@ -2386,7 +2396,7 @@
       },
       "tasting_description": null,
       "sensory_scores": null,
-      "quick_rating": null,
+      "quick_rating": "did_not_enjoy",
       "source_refs": [
         {
           "sequence": 74,
@@ -2416,7 +2426,12 @@
       "review_notes": [
         "Message 82 revises the earlier bitterness summary: more body but possibly slightly more bitter than A02.",
         "Date 2026-11-16 comes from the source heading at message 74."
-      ]
+      ],
+      "quick_rating_source": {
+        "kind": "explicit_user_instruction",
+        "date": "2026-11-18",
+        "note": "Assigned during Coffee Lab UI review: all shown executions did not enjoy, except Hoffmann executions enjoyed. Not inferred from historical observations."
+      }
     },
     {
       "source_key": "A06",
@@ -2439,7 +2454,7 @@
       },
       "tasting_description": "A esquerda Stardust a direita Vó Zico. Ambos semnl amargor. Stardust um pouco mais aberto parecido com suco mas ambos muito agradáveis ",
       "sensory_scores": null,
-      "quick_rating": null,
+      "quick_rating": "enjoyed",
       "source_refs": [
         {
           "sequence": 116,
@@ -2484,7 +2499,12 @@
           "sequence": 129,
           "message_id": "bbb21664-e7ad-4a48-8ef1-8178a1ac4282"
         }
-      ]
+      ],
+      "quick_rating_source": {
+        "kind": "explicit_user_instruction",
+        "date": "2026-11-18",
+        "note": "Assigned during Coffee Lab UI review: all shown executions did not enjoy, except Hoffmann executions enjoyed. Not inferred from historical observations."
+      }
     },
     {
       "source_key": "B01",
@@ -2509,7 +2529,7 @@
       },
       "tasting_description": "A esquerda Stardust a direita Vó Zico. Ambos semnl amargor. Stardust um pouco mais aberto parecido com suco mas ambos muito agradáveis ",
       "sensory_scores": null,
-      "quick_rating": null,
+      "quick_rating": "enjoyed",
       "source_refs": [
         {
           "sequence": 122,
@@ -2551,7 +2571,12 @@
           "sequence": 129,
           "message_id": "bbb21664-e7ad-4a48-8ef1-8178a1ac4282"
         }
-      ]
+      ],
+      "quick_rating_source": {
+        "kind": "explicit_user_instruction",
+        "date": "2026-11-18",
+        "note": "Assigned during Coffee Lab UI review: all shown executions did not enjoy, except Hoffmann executions enjoyed. Not inferred from historical observations."
+      }
     }
   ],
   "unexecuted_or_unconfirmed": [
