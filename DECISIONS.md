@@ -648,3 +648,9 @@ This file and `AGENTS.md` are the shared memory of this project across sessions 
 **Decision:** The user requested eliminating A06/B01 and similar references from presentation.
 
 **Implications:** Use the full named executions in headings, lists and detail URLs; remove the displayed earlier-identifier field and active execution aliases. Internal source keys remain for referential integrity and archived source provenance, without being presented as names.
+
+## 2026-11-18 — Uniform recipe and execution names
+
+**Decision:** Use exactly “Hoffman V60 Better - Stardust” and “Hoffman V60 Better - Vô Zico” for the two corresponding recipes and executions.
+
+**Implications:** Apply names consistently in Home selection, recipe lists/reading, journal lists/details and photo captions, retaining internal source links. This replaces the earlier display names.

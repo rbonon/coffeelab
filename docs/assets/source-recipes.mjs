@@ -3,8 +3,8 @@
 export const sourceRecipes = {
   "hoffmann-stardust": {
     "title": [
-      "Hoffmann · Stardust",
-      "Hoffmann · Stardust"
+      "Hoffman V60 Better - Stardust",
+      "Hoffman V60 Better - Stardust"
     ],
     "dose": 15,
     "water": 250,
@@ -137,8 +137,8 @@ export const sourceRecipes = {
   },
   "hoffmann-vo-zico": {
     "title": [
-      "Hoffmann · Café do Vô Zico",
-      "Hoffmann · Café do Vô Zico"
+      "Hoffman V60 Better - Vô Zico",
+      "Hoffman V60 Better - Vô Zico"
     ],
     "dose": 15,
     "water": 250,

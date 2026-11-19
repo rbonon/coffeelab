@@ -79,11 +79,11 @@ export const libraryData = {
         "date": "2026-11-18",
         "note": "Assigned during Coffee Lab UI review: all shown executions did not enjoy, except Hoffmann executions enjoyed. Not inferred from historical observations."
       },
-      "name": "Hoffman Better 1 Cup - Vô Zico",
+      "name": "Hoffman V60 Better - Vô Zico",
       "photos": [
         {
           "file": "docs/assets/photos/hoffman-vo-zico-final.jpg",
-          "caption": "Final da extração — Hoffman Better 1 Cup - Vô Zico",
+          "caption": "Final da extração — Hoffman V60 Better - Vô Zico",
           "alt": "Leito de café no V60 após a extração, com a balança indicando 3:23 e 249,0 g.",
           "source": {
             "kind": "user_attachment",
@@ -151,11 +151,11 @@ export const libraryData = {
         "date": "2026-11-18",
         "note": "Assigned during Coffee Lab UI review: all shown executions did not enjoy, except Hoffmann executions enjoyed. Not inferred from historical observations."
       },
-      "name": "Hoffman Better 1 Cup - Stardust",
+      "name": "Hoffman V60 Better - Stardust",
       "photos": [
         {
           "file": "docs/assets/photos/hoffman-stardust-final.jpg",
-          "caption": "Final da extração — Hoffman Better 1 Cup - Stardust",
+          "caption": "Final da extração — Hoffman V60 Better - Stardust",
           "alt": "Leito do Stardust no filtro V60 após a extração; a balança indica 3:38 e 252,3 g.",
           "source": {
             "kind": "user_attachment",
