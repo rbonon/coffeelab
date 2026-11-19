@@ -30,7 +30,8 @@ const {chromium} = require(process.env.COFFEELAB_PLAYWRIGHT_PATH || 'playwright'
     await page.click('[data-screen="journal"]'); await title('Diário');
     await page.getByRole('button',{name:'Hoffman Better 1 Cup - Vô Zico',exact:false}).click();
     await page.waitForFunction(()=>document.querySelector('.record-photo img')?.naturalWidth>0);
-    await page.click('.record-photo'); await page.waitForSelector('#photo-viewer[open]');
+    assert.equal(await page.locator('.record-photo').count(),2);
+    await page.locator('.record-photo').last().click(); await page.waitForSelector('#photo-viewer[open]');
     await page.goBack(); await page.waitForSelector('#photo-viewer:not([open])',{state:'attached'});
     await title('Hoffman Better 1 Cup - Vô Zico');
     assert.equal(await page.locator('#exit, #close-settings, .back-link').count(),0);

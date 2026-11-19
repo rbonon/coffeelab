@@ -2262,6 +2262,20 @@
             "filename": "Hoffman Vo Zico.jpg",
             "received_on": "2026-11-18"
           }
+        },
+        {
+          "file": "docs/assets/photos/hoffman-comparativo-stardust-vo-zico.jpg",
+          "caption": "Comparativo — Stardust e Vô Zico",
+          "alt": "Duas xícaras de café lado a lado, identificadas na imagem como Stardust e Vô Zico.",
+          "execution_keys": [
+            "A06",
+            "B01"
+          ],
+          "source": {
+            "kind": "user_attachment",
+            "filename": "Hoffman Stardust Direita Vo Zico Esquerda.jpg",
+            "received_on": "2026-11-18"
+          }
         }
       ]
     },
@@ -2336,7 +2350,23 @@
         "date": "2026-11-18",
         "note": "Assigned during Coffee Lab UI review: all shown executions did not enjoy, except Hoffmann executions enjoyed. Not inferred from historical observations."
       },
-      "name": "Hoffman Better 1 Cup - Stardust"
+      "name": "Hoffman Better 1 Cup - Stardust",
+      "photos": [
+        {
+          "file": "docs/assets/photos/hoffman-comparativo-stardust-vo-zico.jpg",
+          "caption": "Comparativo — Stardust e Vô Zico",
+          "alt": "Duas xícaras de café lado a lado, identificadas na imagem como Stardust e Vô Zico.",
+          "execution_keys": [
+            "A06",
+            "B01"
+          ],
+          "source": {
+            "kind": "user_attachment",
+            "filename": "Hoffman Stardust Direita Vo Zico Esquerda.jpg",
+            "received_on": "2026-11-18"
+          }
+        }
+      ]
     }
   ],
   "unexecuted_or_unconfirmed": [
