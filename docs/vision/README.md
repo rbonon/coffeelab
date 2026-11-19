@@ -10,7 +10,7 @@ The user designated the [shared Receitas Pour Over conversation](https://chatgpt
 | --- | --- |
 | [Source archive](receitas-pour-over-source.json) | All 177 message positions with IDs, roles, accessible text, 63 tables, links, and the browser DOM snapshot |
 | [Readable transcript](receitas-pour-over-transcript.md) | Accessible content in message order, with explicit markers for unavailable bodies |
-| [Import candidates](receitas-pour-over-import.json) | Two coffees, two provisional historical bag contexts, equipment evidence, 14 recipe/reference candidates, five recorded executions, corrections, and missing-image references |
+| [Import candidates](receitas-pour-over-import.json) | Two coffees, two provisional historical bag contexts, equipment evidence, 14 recipe/reference candidates, two retained Hoffmann executions, corrections, and missing-image references |
 
 ## Coverage and gaps
 
@@ -24,14 +24,13 @@ The capture is the full accessible rendered material, not a complete original-ch
 
 The candidates are staged data for the future application. They have not been imported into a running Coffee Lab database. Each candidate links to source message IDs and sequence numbers. Many historical facts come from assistant summaries because the corresponding user message is unavailable.
 
-- Completed executions supported by the available records are A01, A02, A04, A06, and B01.
+- At the user’s request, the active import data and prototype retain only Hoffmann executions A06 and B01. A01, A02 and A04 were removed from both datasets. The original conversation archive/transcript remains documentary evidence, not an instruction to reimport excluded executions.
 - B02 was explicitly renamed B01. Preserve B02 as an alias and import one execution.
 - A03 has no recorded result, A05 is planned, and the Kasuya A06 plan was replaced by Hoffmann. Preserve their plans without inventing completed executions.
 - The initial three-pour B01 plan is superseded by the final Hoffmann B01 assignment.
 - Vô Zico's 2026-09-15 date is manufacture, with a 2027-09-15 best-before date. Its roast date remains unknown.
-- A01's 20 g dose is explicitly unconfirmed. Leave the normalized actual dose empty and retain the candidate in its review notes.
-- Preserve A02's 323.9 g, A04's 375.8 g, A06's 249.0 g, and B01's 252.3 g water values separately from their recipe targets. These are water-input records, not measured final drink yields.
-- Numeric sensory slider defaults are not user ratings. Quick ratings and sensory scores stay empty. The directly available comparative tasting statement is preserved verbatim for A06 and B01.
+- Preserve A06's 249.0 g and B01's 252.3 g water values separately from their recipe targets. These are water-input records, not measured final drink yields.
+- Numeric sensory slider defaults are not user ratings. Both retained executions have an explicit Gostei rating assigned by the user during the UI review; sensory scores remain empty. The directly available comparative tasting statement is preserved verbatim for A06 and B01.
 - Historical bag identities are provisional contexts. The Vô Zico discussion mentions reserve packaging and jars, so the source does not establish a unique physical bag for every execution.
 
 ## Field audit

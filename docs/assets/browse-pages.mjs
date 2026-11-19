@@ -1,5 +1,5 @@
 import { sourceRecipes } from './source-recipes.mjs';
-import { libraryData } from './library-data.mjs?v=user-ratings-1';
+import { libraryData } from './library-data.mjs?v=hoffmann-only-1';
 export function renderBrowse(root, {screen, detail, go, read, t, mass}) {
   root.replaceChildren();
   function el(tag, text, cls) { const node=document.createElement(tag); if(text) node.textContent=text; if(cls)node.className=cls; return node; }
@@ -26,7 +26,8 @@ export function renderBrowse(root, {screen, detail, go, read, t, mass}) {
   const duration=n=>`${Math.floor(n/60)}:${String(n%60).padStart(2,'0')}`;
   if(screen==='detail') {
     const collection = {execution:libraryData.executions,coffee:libraryData.coffees,equipment:libraryData.equipment}[detail.kind];
-    const record = collection?.find(item=>item.source_key===detail.record.source_key) ?? detail.record;
+    const record = collection?.find(item=>item.source_key===detail.record.source_key);
+    if (!record) { heading(t(['Record unavailable','Registro indisponível'])); root.append(el('p',t(['This record was removed.','Este registro foi removido.']),'source-note')); return; }
     heading(record.name ?? `${record.source_key} · ${coffeeName(record.coffee_key)}`);
     if(detail.kind==='execution') {
       field(t(['Coffee','Café']),coffeeName(record.coffee_key));

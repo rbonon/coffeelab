@@ -624,3 +624,9 @@ This file and `AGENTS.md` are the shared memory of this project across sessions 
 **Decision:** The user assigned Não gostei to displayed executions A01, A02 and A04, and Gostei to the Hoffmann executions A06 and B01. This applies to executions, not recipe-level ratings.
 
 **Implications:** Persist these explicit current ratings in import candidates and preview data with user-instruction provenance. Preserve original source capture and historical tasting text; do not infer sensory intensity scores or retroactively attribute the ratings to the old conversation. Show ratings in the journal and execution details.
+
+## 2026-11-18 — Keep only Hoffmann executions
+
+**Decision:** The user requested keeping only the two Hoffmann executions, removing the others from prototype and source/import data.
+
+**Implications:** Retain A06 and B01, both Gostei. Delete A01/A02/A04 execution entries from import candidates and preview fixtures. Recipes remain because the requested deletion concerns executions. Original conversation captures remain archival evidence; they must not restore excluded execution records. Supersedes the earlier retained execution set.
