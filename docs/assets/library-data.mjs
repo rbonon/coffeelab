@@ -10,6 +10,48 @@ export const libraryData = {
       "packaging_descriptors": [
         "Chocolate 70%",
         "Caramelo"
+      ],
+      "brand_or_roaster_label": "Café do Vô",
+      "species": "Arabica",
+      "arabica_percentage": 100,
+      "roast_level_label": "Clara",
+      "single_origin": true,
+      "soil": "Vulcânico",
+      "producer": "Gean (cafeicultor responsável pela safra, conforme rótulo)",
+      "packaging_profile": {
+        "sweetness": "Elevada",
+        "acidity": "Cítrica média-baixa",
+        "body": "Intenso",
+        "finish": "Prolongada"
+      },
+      "packaging_score": {
+        "value": 82,
+        "method": "SCA Cupping",
+        "source_file": "docs/assets/photos/vo-zico/vo-zico-01.jpg"
+      },
+      "photos": [
+        {
+          "file": "docs/assets/photos/vo-zico/vo-zico-04.jpg",
+          "caption": "Grãos do Vô Zico",
+          "alt": "Grãos do Café do Vô Zico em um recipiente de vidro.",
+          "source": {
+            "kind": "user_attachment",
+            "filename": "Vô Zico 04.jpg",
+            "received_on": "2026-11-18"
+          }
+        }
+      ],
+      "profile_source": {
+        "kind": "user_packaging_photos",
+        "received_on": "2026-11-18",
+        "files": [
+          "docs/assets/photos/vo-zico/vo-zico-01.jpg",
+          "docs/assets/photos/vo-zico/vo-zico-02.jpg"
+        ]
+      },
+      "review_notes": [
+        "Roast level and profile are packaging declarations, not inferred from bean appearance.",
+        "82 points is the packaging score, distinct from user enjoyment and optional sensory intensity ratings."
       ]
     },
     {
@@ -66,7 +108,64 @@ export const libraryData = {
       "roast_date": null,
       "manufacture_date": "2026-09-15",
       "best_before_date": "2027-09-15",
-      "retailer": null
+      "retailer": null,
+      "name": "Café do Vô Zico — 500 g",
+      "identity_status": "confirmed",
+      "bag_weight_g": 500,
+      "purchase_date": null,
+      "price": null,
+      "storage_notes": "Manter em local seco e fresco. Após aberto, manter a embalagem bem fechada, longe de odores fortes e consumir preferencialmente em 30 dias.",
+      "photos": [
+        {
+          "file": "docs/assets/photos/vo-zico/vo-zico-01.jpg",
+          "caption": "Embalagem — frente",
+          "alt": "Frente do Café do Vô com indicação de 82 pontos, 100% arábica, torra clara e peso líquido de 500 g.",
+          "source": {
+            "kind": "user_attachment",
+            "filename": "Vô Zico 01.jpg",
+            "received_on": "2026-11-18"
+          }
+        },
+        {
+          "file": "docs/assets/photos/vo-zico/vo-zico-02.jpg",
+          "caption": "Rótulo — origem e perfil",
+          "alt": "Rótulo Café do Vô Zico Especial: Cabo Verde–MG, Catuaí Vermelho, processo natural e descritores da embalagem.",
+          "source": {
+            "kind": "user_attachment",
+            "filename": "Vô Zico 02.jpg",
+            "received_on": "2026-11-18"
+          }
+        },
+        {
+          "file": "docs/assets/photos/vo-zico/vo-zico-03.jpg",
+          "caption": "Fabricação e validade",
+          "alt": "Carimbo da embalagem: fabricação em 15/09/2026 e validade em 15/09/2027.",
+          "source": {
+            "kind": "user_attachment",
+            "filename": "Vô Zico 03.jpg",
+            "received_on": "2026-11-18"
+          }
+        },
+        {
+          "file": "docs/assets/photos/vo-zico/vo-zico-05.jpg",
+          "caption": "Distribuidor e conservação",
+          "alt": "Detalhe do rótulo com informações do distribuidor, industrialização e orientação de conservação.",
+          "source": {
+            "kind": "user_attachment",
+            "filename": "Vô Zico 05.jpg",
+            "received_on": "2026-11-18"
+          }
+        }
+      ],
+      "packaging_source": {
+        "kind": "user_attachments",
+        "received_on": "2026-11-18",
+        "date_photo": "docs/assets/photos/vo-zico/vo-zico-03.jpg"
+      },
+      "review_notes": [
+        "The supplied packaging confirms net weight, manufacture and best-before dates. Manufacture is not a roast date.",
+        "Purchase date, retailer, price and opening date remain unknown. Earlier historical reserve packaging/jar counts have not been reconstructed."
+      ]
     },
     {
       "source_key": "stardust-historical-bag-context",

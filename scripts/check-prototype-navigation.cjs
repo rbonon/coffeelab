@@ -44,6 +44,12 @@ const {chromium} = require(process.env.COFFEELAB_PLAYWRIGHT_PATH || 'playwright'
     await page.locator('.record-photo').first().click(); await page.waitForSelector('#photo-viewer[open]');
     await page.waitForFunction(()=>document.querySelector('#photo-full')?.naturalWidth>0);
     await page.goBack(); await page.waitForSelector('#photo-viewer:not([open])',{state:'attached'}); await title('Stardust');
+    await page.click('[data-screen="library"]'); await title('Biblioteca');
+    await page.getByRole('button',{name:'Café do Vô Zico — Especial',exact:false}).click(); await title('Café do Vô Zico — Especial');
+    assert.equal(await page.locator('.record-photo').count(),5);
+    const voText=await page.locator('#browse').innerText();
+    assert.ok(voText.includes('500 g') && voText.includes('15/09/2026') && voText.includes('15/09/2027'));
+    assert.ok(voText.includes('82 pontos') && voText.includes('Não registrada'));
     assert.deepEqual(errors,[]);
     console.log('PASS: native Back/Forward, detail-to-reading return, Settings, reload restoration, and no redundant top back buttons');
   } finally { await browser.close(); }

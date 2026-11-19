@@ -1,5 +1,5 @@
-import { sourceRecipes } from './source-recipes.mjs?v=stardust-official-link-1';
-import { libraryData } from './library-data.mjs?v=stardust-official-link-1';
+import { sourceRecipes } from './source-recipes.mjs?v=vo-zico-library-1';
+import { libraryData } from './library-data.mjs?v=vo-zico-library-1';
 export function renderBrowse(root, {screen, detail, go, read, openPhoto, t, mass}) {
   root.replaceChildren();
   function el(tag, text, cls) { const node=document.createElement(tag); if(text) node.textContent=text; if(cls)node.className=cls; return node; }
@@ -76,9 +76,20 @@ export function renderBrowse(root, {screen, detail, go, read, openPhoto, t, mass
         const link=el('a',t(['View product on Abigail’s website','Ver produto no site da Abigail']));
         link.href=record.official_product_url;root.append(link);
       }
+      field(t(['Species','Espécie']),record.arabica_percentage===100?'100% Arábica':record.species);
+      field(t(['Label roast level','Torra indicada']),record.roast_level_label);
+      field(t(['Soil','Solo']),record.soil);
+      field(t(['Packaging score','Pontuação da embalagem']),record.packaging_score?`${record.packaging_score.value} ${t(['points','pontos'])} · ${record.packaging_score.method}`:null);
       field(t(['Altitude','Altitude']),record.altitude_m==null?null:`${new Intl.NumberFormat('pt-BR').format(record.altitude_m)} m`);
       field(t(['Origin','Origem']),record.origin);field(t(['Processing','Processo']),record.processing);field(t(['Variety','Variedade']),record.variety);field(t(['Producer','Produtor']),record.producer);
       field(t(['Packaging descriptors','Descritores da embalagem']),record.packaging_descriptors?.join(' · '));
+      if(record.packaging_profile){
+        const profile=record.packaging_profile;
+        field(t(['Label sweetness','Doçura — embalagem']),profile.sweetness);
+        field(t(['Label acidity','Acidez — embalagem']),profile.acidity);
+        field(t(['Label body','Corpo — embalagem']),profile.body);
+        field(t(['Label finish','Finalização — embalagem']),profile.finish);
+      }
       root.append(el('h2',t(['Bags','Pacotes'])));
       for(const bag of bags){
         if(bag.name)root.append(el('p',bag.name));
@@ -92,6 +103,7 @@ export function renderBrowse(root, {screen, detail, go, read, openPhoto, t, mass
         field(t(['Original weight','Peso original']),bag.bag_weight_g==null?null:mass(bag.bag_weight_g));
         field(t(['Retailer','Loja']),bag.retailer);
         field(t(['Purchase channel','Forma de compra']),bag.purchase_channel);
+        field(t(['Storage','Conservação']),bag.storage_notes);
       }
       for(const [key,recipe] of Object.entries(sourceRecipes).filter(([key])=>record.source_key==='stardust'?key==='hoffmann-stardust':key!=='hoffmann-stardust'))row(t(recipe.title),t(['Read recipe','Ler receita']),()=>read(key));
     } else {field(t(['Type','Tipo']),record.type==='grinder'?t(['Grinder','Moedor']):t(['Brewer','Porta-filtro']));field(t(['Model','Modelo']),record.model);}
