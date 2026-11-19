@@ -1,4 +1,4 @@
-import { renderBrowse } from './browse-pages.mjs?v=rating-icons-1';
+import { renderBrowse } from './browse-pages.mjs?v=rating-faces-1';
 import { sourceRecipes } from './source-recipes.mjs';
 // Illustrative layout fixtures. These are not imported recipes or historical records.
 const illustrativeExamples = {

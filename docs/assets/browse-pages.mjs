@@ -11,10 +11,12 @@ export function renderBrowse(root, {screen, detail, go, read, t, mass}) {
       const badge=el('span',null,'rating-icon');badge.setAttribute('role','img');badge.setAttribute('aria-label',ratingLabel(rating));badge.title=ratingLabel(rating);
       const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');
       for(const [key,value] of Object.entries({viewBox:'0 0 24 24',width:'22',height:'22',fill:'none',stroke:'currentColor','stroke-width':'1.5','stroke-linecap':'round','stroke-linejoin':'round','aria-hidden':'true'}))svg.setAttribute(key,value);
-      const path=document.createElementNS('http://www.w3.org/2000/svg','path');
-      path.setAttribute('d',rating==='okay'?'M6 12h12':'M7 10H4a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h3V10l4-7c.7-1 2-.4 2 1l-1 6h6a2 2 0 0 1 2 2.4l-1.4 6A2 2 0 0 1 16.6 20H7');
-      if(rating==='did_not_enjoy')path.setAttribute('transform','rotate(180 12 12)');
-      svg.append(path);badge.append(svg);button.append(badge);
+      const outline=document.createElementNS('http://www.w3.org/2000/svg','circle');
+      outline.setAttribute('cx','12');outline.setAttribute('cy','12');outline.setAttribute('r','9');
+      const face=document.createElementNS('http://www.w3.org/2000/svg','path');
+      const mouth={enjoyed:'M8 14c1 3 7 3 8 0',okay:'M8.5 15h7',did_not_enjoy:'M8 17c1-3 7-3 8 0'}[rating];
+      face.setAttribute('d',`M8.5 9h.01M15.5 9h.01${mouth}`);
+      svg.append(outline,face);badge.append(svg);button.append(badge);
     }
     button.addEventListener('click',action);root.append(button);
   }
